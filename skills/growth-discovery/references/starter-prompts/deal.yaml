@@ -1,0 +1,58 @@
+capability:
+  id: deal
+  name: Deal Strategy
+  description: Assess a deal, find what could stop it, and plan the win.
+  domain: Sales
+  slash_command: /deal
+  aliases: []
+  audience: all
+  routes_to:
+    skill: deal-intelligence
+    intent: deal_analysis
+  example_outcomes:
+  - Deal health, win probability and slip risk with evidence
+  - A dated close plan
+  primary_prompts:
+  - text: Assess the health of [[{opportunity}|this deal]].
+    category: Analyze
+  - text: Tell me what could prevent us from winning.
+    category: Investigate
+  - text: Build my deal strategy[[ for {opportunity}]].
+    category: Prepare
+  - text: Identify the missing stakeholders[[ in {opportunity}]].
+    category: Investigate
+  - text: Show me the competitive risks in [[{opportunity}|this deal]].
+    category: Investigate
+  - text: Tell me what I should do next on this deal.
+    category: Act
+  additional_prompts:
+  - text: What is the customer's likely decision process?
+    category: Analyze
+  - text: What objections should I expect?
+    category: Prepare
+  - text: Where is this deal stuck?
+    category: Investigate
+  - text: What evidence supports the deal forecast?
+    category: Investigate
+  - text: What could change the outcome?
+    category: Analyze
+  - text: Prepare my executive strategy for this deal.
+    category: Prepare
+  - text: Create a deal review.
+    category: Prepare
+  - text: Show me deal momentum.
+    category: Monitor
+  - text: Build a close plan with dates.
+    category: Act
+  - text: Which of my deals will slip?
+    category: Monitor
+  follow_up_prompts:
+  - Build a close plan with dates.
+  - Map the buying committee.
+  - Prepare my executive strategy for this deal.
+  - Analyze the pricing for this deal.
+  persona_prompts:
+    sales_director:
+    - Show me which deals need intervention.
+    ae:
+    - What should I do next on [[{opportunity}|this deal]]?

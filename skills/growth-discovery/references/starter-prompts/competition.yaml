@@ -1,0 +1,56 @@
+capability:
+  id: competition
+  name: Competitive Intelligence
+  description: See the competitive landscape and where it threatens or helps us.
+  domain: Competition
+  slash_command: /competition
+  aliases: []
+  audience: all
+  routes_to:
+    skill: competitive-intelligence
+    intent: competitive
+  example_outcomes:
+  - Competitor footprint, threat and momentum, with early warnings
+  primary_prompts:
+  - text: Show me the competitive landscape[[ in {account}]].
+    category: Discover
+  - text: Identify competitive threats[[ in {account}]].
+    category: Investigate
+  - text: Show me where competitors are gaining ground.
+    category: Monitor
+  - text: Find where we can displace competitors.
+    category: Discover
+  - text: Analyze [[{competitor}|this competitor]].
+    category: Analyze
+  - text: Show me recent competitive signals.
+    category: Monitor
+  additional_prompts:
+  - text: What is [[{competitor}|this competitor]] doing in my accounts?
+    category: Investigate
+  - text: Where is [[{competitor}|this competitor]] appearing in opportunities?
+    category: Investigate
+  - text: Which accounts are most exposed to competitors?
+    category: Analyze
+  - text: What competitive patterns are emerging?
+    category: Monitor
+  - text: Show me competitor pricing signals.
+    category: Investigate
+  - text: What should I do about [[{competitor}|this competitor]]?
+    category: Decide
+  - text: Build a battlecard for [[{competitor}|this competitor]].
+    category: Prepare
+  - text: Who are we losing to?
+    category: Analyze
+  - text: Compare our win rate against each competitor.
+    category: Analyze
+  - text: Show me emerging competitors.
+    category: Monitor
+  follow_up_prompts:
+  - Show me active competitive threads.
+  - Build a battlecard for [[{competitor}|this competitor]].
+  - Prepare a competitive response.
+  persona_prompts:
+    ceo:
+    - Where are competitors gaining ground?
+    marketing_leader:
+    - Which competitor content is getting attention?

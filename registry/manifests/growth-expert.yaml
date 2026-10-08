@@ -1,0 +1,41 @@
+agent_id: growth-expert
+name: growth-expert
+version: 6.1.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+kind: reasoning-tier
+description: "T4 reasoning tier \u2014 High-stakes reasoning, conflicting evidence, high-value decisions, independent review and challenge of\
+  \ T3 recommendations \u2014 never used by default."
+business_objective: "High-stakes reasoning, conflicting evidence, high-value decisions, independent review and challenge of T3 recommendations\
+  \ \u2014 never used by default"
+allowed_skills:
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- handoff packet only
+memory_permissions: none (packet only)
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: as v6.1
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet
+escalation_rules: ESCALATE to next tier
+model_routing_policy:
+  fixed_model: fable
+  tier: T4
+  use_when: "High-stakes reasoning, conflicting evidence, high-value decisions, independent review and challenge of T3 recommendations \u2014\
+    \ never used by default"
+  never_default: true
+autonomy_level: 0
+action_permissions: []
+approval_requirements: none
+cost_budget:
+  max_relative_units_per_task: 40
+audit_requirements: trace span
+failure_behavior: ESCALATE
+evaluation:
+  suite: evals (v6.1 delegation)

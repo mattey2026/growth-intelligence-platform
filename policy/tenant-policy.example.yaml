@@ -1,0 +1,102 @@
+tenant_id: demo-tenant
+auto_execute_low_risk: false
+max_autonomy_level: 2
+min_evidence_confidence: 0.6
+min_evidence_items: 2
+sensitive_classes:
+- pii
+- mnpi
+- margin
+- personnel
+- financial_confidential
+roles:
+  seller:
+    actions:
+    - crm.create_task
+    - crm.log_note
+    - email.draft
+    - crm.update_field(next_step)
+    - opportunity.create
+    - email.send
+    - proposal.draft
+    data:
+    - crm
+    - email_calendar_meta
+    - transcripts
+    - product_usage
+    - marketing_data
+    - public_filings
+    - web
+    clearance:
+    - pii
+  manager:
+    inherits: seller
+    actions:
+    - crm.update_forecast
+    - crm.update_field(stage|amount|close_date)
+    data:
+    - forecast_submissions
+    - financial_data
+    clearance:
+    - pii
+    - mnpi
+    - financial_confidential
+  deal_desk:
+    actions:
+    - pricing.approval_request
+    data:
+    - cpq_read
+    - pricing_history
+    - margin
+    clearance:
+    - margin
+  cro:
+    inherits: manager
+    actions:
+    - decision.record
+    - workflow.trigger
+    data:
+    - bookings
+    - margin
+    - financial_data
+    - marketing_data
+    clearance:
+    - pii
+    - mnpi
+    - margin
+  cfo:
+    actions:
+    - decision.record
+    data:
+    - erp_read
+    - bookings
+    - margin
+    - forecast_submissions
+    - financial_data
+    - public_filings
+    clearance:
+    - mnpi
+    - margin
+    - financial_confidential
+  admin:
+    actions:
+    - learning.adopt
+    data:
+    - policy
+    - registry
+    - execution_traces
+    clearance: []
+  marketing:
+    actions:
+    - crm.log_note
+    - notify.owner_internal
+    data:
+    - marketing_data
+    - crm
+    - public_filings
+    - web
+    clearance:
+    - pii
+abac:
+- attribute: region
+  rule: user.region == record.region or user.role in ['cro','cfo','ceo']

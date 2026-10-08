@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "gmail": { "type": "http", "url": "https://gmailmcp.googleapis.com/mcp/v1" },
+    "google-calendar": { "type": "http", "url": "https://calendarmcp.googleapis.com/mcp/v1" },
+    "google-drive": { "type": "http", "url": "https://drivemcp.googleapis.com/mcp/v1" }
+  }
+}

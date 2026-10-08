@@ -1,0 +1,53 @@
+agent_id: business-orchestrator
+name: Business Orchestrator
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: main-session
+description: Primary supervisor.
+business_objective: Primary supervisor. Understands the objective, builds the execution plan with the Agent Planner, selects and coordinates agents,
+  resolves conflicts, runs governance and approvals, synthesizes the answer and updates memory — doing the minimum necessary work.
+allowed_skills:
+- business-orchestrator
+- business-context-discovery
+- business-memory
+- daily-growth-briefing
+- business-watch
+- executive-command-center
+- business-intelligence-copilot
+- action-center
+- platform-admin
+- growth-discovery
+allowed_tools:
+- '*main-session*'
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- all authorized via user connectors
+memory_permissions: read/write (single writer)
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet
+escalation_rules: Synthesizes only validated agent results
+model_routing_policy:
+  default_tier: T2
+  max_tier: T4
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 1
+action_permissions:
+- all via action-center + policy gate
+approval_requirements: per action catalog
+cost_budget:
+  max_relative_units_per_task: 40
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/business-orchestrator
+  score: null
+  last_run: null

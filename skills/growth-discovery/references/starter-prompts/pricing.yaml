@@ -1,0 +1,54 @@
+capability:
+  id: pricing
+  name: Pricing
+  description: Price deals with evidence; approvals stay governed.
+  domain: Finance
+  slash_command: /pricing
+  aliases: []
+  audience: all
+  routes_to:
+    skill: pricing-intelligence
+    intent: pricing
+  example_outcomes:
+  - Price → discount → margin → win probability, with approval route; no commitment without approval
+  primary_prompts:
+  - text: Analyze the pricing for this deal.
+    category: Analyze
+  - text: Should we change the commercial structure?
+    category: Decide
+  - text: Show me pricing benchmarks.
+    category: Discover
+  - text: Analyze the discount on this deal.
+    category: Analyze
+  - text: Model pricing scenarios.
+    category: Decide
+  - text: Show me the margin impact of this price.
+    category: Analyze
+  additional_prompts:
+  - text: What happens with a 10% discount?
+    category: Decide
+  - text: What is our historical pricing for similar deals?
+    category: Discover
+  - text: How does this price compare with similar deals?
+    category: Analyze
+  - text: Show me price sensitivity.
+    category: Analyze
+  - text: Build a commercial scenario.
+    category: Decide
+  - text: Will this discount need approval?
+    category: Investigate
+  - text: Where are we leaking discount?
+    category: Investigate
+  - text: Draft the discount approval justification.
+    category: Act
+  - text: Check my quote against guardrails.
+    category: Investigate
+  - text: Show me expected value by discount level.
+    category: Analyze
+  follow_up_prompts:
+  - Will this discount need approval?
+  - Draft the discount approval justification.
+  - Show me the margin impact of this price.
+  persona_prompts:
+    cfo:
+    - Where are we leaking discount?

@@ -1,0 +1,55 @@
+capability:
+  id: marketing
+  name: Marketing Intelligence
+  description: Turn marketing activity into account intelligence.
+  domain: Marketing
+  slash_command: /marketing
+  aliases: []
+  audience: all
+  routes_to:
+    skill: marketing-intelligence
+    intent: marketing_view
+  example_outcomes:
+  - Engagement change, executive engagement, intent and campaign influence labelled as correlation
+  primary_prompts:
+  - text: Show me marketing activity affecting [[{account}|this account]].
+    category: Discover
+  - text: Identify accounts showing buying intent.
+    category: Discover
+  - text: Show me marketing engagement trends.
+    category: Monitor
+  - text: Which campaigns are influencing pipeline?
+    category: Analyze
+  - text: Which accounts are warming?
+    category: Monitor
+  - text: Show me marketing-to-revenue signals.
+    category: Analyze
+  additional_prompts:
+  - text: Which executives are engaging with our marketing?
+    category: Discover
+  - text: Which campaigns influence opportunities?
+    category: Analyze
+  - text: Show me ABM performance.
+    category: Analyze
+  - text: Which accounts are cooling?
+    category: Monitor
+  - text: Find marketing signals sales should act on.
+    category: Act
+  - text: Which competitor-related content is getting attention?
+    category: Investigate
+  - text: Is campaign influence correlation or causation?
+    category: Investigate
+  - text: Show me intent surges this month.
+    category: Monitor
+  - text: Where is marketing creating pipeline?
+    category: Analyze
+  - text: Show me the marketing timeline[[ for {account}]].
+    category: Discover
+  follow_up_prompts:
+  - Find marketing signals sales should act on.
+  - Which accounts are cooling?
+  - Find my biggest growth opportunities[[ in {account}]].
+  persona_prompts:
+    marketing_leader:
+    - Which campaigns are influencing pipeline?
+    - Show me ABM performance.

@@ -1,0 +1,62 @@
+agent_id: opportunity-agent
+name: Opportunity Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Discovers commercial growth — whitespace, cross-sell, upsell, new business units, geographies and use cases, transformation and AI
+  opportunities, modernization, competitive displacement and contract expansion — each with problem, evidence, relevance, buyer, value, relationship,
+  competition, timing, confidence and next action.
+business_objective: Discovers commercial growth — whitespace, cross-sell, upsell, new business units, geographies and use cases, transformation
+  and AI opportunities, modernization, competitive displacement and contract expansion — each with problem, evidence, relevance, buyer, value,
+  relationship, competition, timing, confidence and next action.
+allowed_skills:
+- growth-opportunity-discovery
+- account-intelligence-swot-planning
+- competitive-intelligence
+- market-intelligence
+- knowledge-intelligence
+- account-intel-outreach
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- crm
+- erp_read
+- product_usage
+- install_base
+- files
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet; opportunities without evidence are
+  labelled hypotheses
+escalation_rules: Portfolio > $1M or conflicting evidence → T3
+model_routing_policy:
+  default_tier: T2
+  max_tier: T3
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 1
+action_permissions:
+- opportunity.create (proposal)
+- email.draft
+approval_requirements: Opportunity creation and outreach need approval
+cost_budget:
+  max_relative_units_per_task: 24
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/opportunity-agent
+  score: null
+  last_run: null

@@ -1,0 +1,56 @@
+capability:
+  id: briefing
+  name: Daily Briefing
+  description: Your personalized start-of-day briefing.
+  domain: Growth
+  slash_command: /briefing
+  aliases: []
+  audience: all
+  routes_to:
+    skill: daily-growth-briefing
+    intent: briefing
+  example_outcomes:
+  - 'Ranked changes for your role: what changed, why it matters, what to do'
+  primary_prompts:
+  - text: Give me today's growth briefing.
+    category: Monitor
+  - text: What changed overnight?
+    category: Monitor
+  - text: What needs my attention today?
+    category: Act
+  - text: Show me today's opportunities.
+    category: Discover
+  - text: Show me today's risks.
+    category: Investigate
+  - text: Give me my top priorities for today.
+    category: Decide
+  additional_prompts:
+  - text: Catch me up on my accounts.
+    category: Monitor
+  - text: Which deals moved yesterday?
+    category: Monitor
+  - text: Any new competitive signals today?
+    category: Monitor
+  - text: Which renewals need attention this week?
+    category: Act
+  - text: What did my team close yesterday?
+    category: Monitor
+  - text: Set up my daily briefing.
+    category: Act
+  - text: What should I prepare for tomorrow?
+    category: Prepare
+  - text: Summarize this week so far.
+    category: Monitor
+  - text: Anything I should know before my meetings?
+    category: Prepare
+  - text: Which actions are due today?
+    category: Act
+  follow_up_prompts:
+  - Which actions are due today?
+  - Prep me for my next sales call.
+  - Show me what changed[[ in {account}]].
+  persona_prompts:
+    ae:
+    - What needs my attention today?
+    sales_head:
+    - Catch me up on my team's deals.

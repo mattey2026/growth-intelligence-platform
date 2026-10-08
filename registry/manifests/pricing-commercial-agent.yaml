@@ -1,0 +1,54 @@
+agent_id: pricing-commercial-agent
+name: Pricing & Commercial Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Price optimization, discount analysis, margin, competitive pricing, elasticity (identified or assumed), deal pricing, leakage, commercial
+  scenarios and approval recommendations — never pricing without evidence.
+business_objective: Price optimization, discount analysis, margin, competitive pricing, elasticity (identified or assumed), deal pricing, leakage,
+  commercial scenarios and approval recommendations — never pricing without evidence.
+allowed_skills:
+- pricing-intelligence
+- scenario-planner
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- cpq_read
+- erp_read
+- pricing_history
+- benchmarks
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet; confounding checked; decisions in
+  force applied
+escalation_rules: Non-robust high-value decisions → T4 review
+model_routing_policy:
+  default_tier: T3
+  max_tier: T4
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 1
+action_permissions:
+- pricing.approval_request (draft)
+approval_requirements: All price commitments and discount approvals are human-only
+cost_budget:
+  max_relative_units_per_task: 40
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/pricing-commercial-agent
+  score: null
+  last_run: null

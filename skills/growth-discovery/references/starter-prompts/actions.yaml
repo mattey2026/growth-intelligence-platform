@@ -1,0 +1,54 @@
+capability:
+  id: actions
+  name: Actions
+  description: See, prioritize and execute actions with approval.
+  domain: Operations
+  slash_command: /actions
+  aliases: []
+  audience: all
+  routes_to:
+    skill: action-center
+    intent: action
+  example_outcomes:
+  - 'Governed actions: policy check, human approval, execution and outcome tracking'
+  primary_prompts:
+  - text: Show me my highest-priority actions.
+    category: Act
+  - text: What should I do today?
+    category: Act
+  - text: Show me overdue actions.
+    category: Monitor
+  - text: Prioritize my actions.
+    category: Decide
+  - text: Show me actions linked to opportunities.
+    category: Act
+  - text: Show me actions linked to risks.
+    category: Act
+  additional_prompts:
+  - text: Which actions need approval?
+    category: Act
+  - text: What happened after we acted?
+    category: Monitor
+  - text: Create a follow-up task.
+    category: Act
+  - text: Show me actions by owner.
+    category: Analyze
+  - text: Show me completed actions this week.
+    category: Monitor
+  - text: Which actions had the most impact?
+    category: Analyze
+  - text: Show me actions waiting on me.
+    category: Act
+  - text: Escalate this action.
+    category: Act
+  - text: Show me the approval history.
+    category: Investigate
+  - text: Cancel an action I proposed.
+    category: Act
+  follow_up_prompts:
+  - Which actions need approval?
+  - What happened after we acted?
+  - Show me actions by owner.
+  persona_prompts:
+    sales_director:
+    - Show me actions waiting on me.

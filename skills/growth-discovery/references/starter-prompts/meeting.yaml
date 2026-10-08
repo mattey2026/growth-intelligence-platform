@@ -1,0 +1,56 @@
+capability:
+  id: meeting
+  name: Meeting Preparation
+  description: Walk into any customer meeting prepared.
+  domain: Meetings
+  slash_command: /meeting
+  aliases: []
+  audience: all
+  routes_to:
+    skill: meeting-intelligence-brief
+    intent: meeting_prep
+  example_outcomes:
+  - 'A one-page brief: objectives, attendees, what changed, landmines, questions'
+  primary_prompts:
+  - text: Prep me for my next sales call.
+    category: Prepare
+  - text: Give me a pre-meeting executive briefing.
+    category: Prepare
+  - text: Show me what I need to know before [[{meeting}|this meeting]].
+    category: Prepare
+  - text: Identify the customer's priorities.
+    category: Discover
+  - text: Tell me what questions I should ask.
+    category: Prepare
+  - text: Prepare my meeting strategy.
+    category: Prepare
+  additional_prompts:
+  - text: What changed since our last meeting?
+    category: Monitor
+  - text: What should I avoid discussing?
+    category: Prepare
+  - text: What are the likely objections?
+    category: Prepare
+  - text: Who will attend and what matters to them?
+    category: Discover
+  - text: What competitive issues should I be ready for?
+    category: Investigate
+  - text: Give me a 5-minute briefing.
+    category: Prepare
+  - text: What commitments do we owe them?
+    category: Investigate
+  - text: Draft an agenda for the meeting.
+    category: Act
+  - text: Prepare me for the CIO meeting.
+    category: Prepare
+  - text: Which risks should I raise?
+    category: Decide
+  follow_up_prompts:
+  - Draft an agenda for the meeting.
+  - What are the likely objections?
+  - Process my call notes into follow-ups.
+  persona_prompts:
+    ae:
+    - Prep me for my next sales call.
+    ceo:
+    - Brief me before my executive meeting[[ with {account}]].

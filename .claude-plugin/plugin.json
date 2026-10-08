@@ -1,0 +1,30 @@
+{
+  "name": "growth-intelligence-platform",
+  "version": "8.0.0",
+  "description": "AI-native Enterprise Growth & Decision Intelligence Platform above any CRM, ERP or data source. Start with /growth: curated, context-aware business prompts for 34 capabilities across growth, sales, finance, marketing, customers, competition, market, operations and decisions; every prompt routes through one Business Orchestrator to 21 least-privilege agents. Memory, digital twin, cross-domain signals, evidence-linked dashboards, and governed actions.",
+  "author": {
+    "name": "Sumit Mattey"
+  },
+  "license": "Proprietary",
+  "keywords": [
+    "agent-registry",
+    "agents",
+    "artifact",
+    "business-operating-system",
+    "command-center",
+    "competitive-threads",
+    "dashboard",
+    "decision-intelligence",
+    "digital-twin",
+    "discovery",
+    "financial-intelligence",
+    "governance",
+    "growth-intelligence",
+    "marketing-intelligence",
+    "memory-graph",
+    "model-routing",
+    "orchestration",
+    "slash-commands",
+    "starter-prompts"
+  ]
+}

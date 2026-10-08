@@ -1,0 +1,52 @@
+capability:
+  id: admin
+  name: Platform Administration
+  description: Platform health, usage and governance (administrators only).
+  domain: Operations
+  slash_command: /admin
+  aliases: []
+  audience: administrators
+  routes_to:
+    skill: platform-admin
+    intent: admin
+  example_outcomes:
+  - Registry, traces, cost, evaluations and governance events for administrators
+  primary_prompts:
+  - text: Show me platform health.
+    category: Monitor
+  - text: Show me active capabilities.
+    category: Discover
+  - text: Show me assistant performance.
+    category: Analyze
+  - text: Show me errors.
+    category: Investigate
+  - text: Show me usage.
+    category: Analyze
+  - text: Show me governance events.
+    category: Monitor
+  additional_prompts:
+  - text: Show me what a request cost.
+    category: Analyze
+  - text: Show me recent traces.
+    category: Investigate
+  - text: Run the regression tests.
+    category: Act
+  - text: Show me policy violations.
+    category: Investigate
+  - text: Disable an underperforming capability.
+    category: Act
+  - text: Show me evaluation scores.
+    category: Analyze
+  - text: Show me tenant isolation checks.
+    category: Investigate
+  - text: Show me approval turnaround times.
+    category: Analyze
+  - text: Show me data-source freshness.
+    category: Monitor
+  - text: Show me cost by team.
+    category: Analyze
+  follow_up_prompts:
+  - Show me errors.
+  - Show me evaluation scores.
+  - Run the regression tests.
+  persona_prompts: {}

@@ -1,0 +1,143 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Test: V7 regression",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "tests/run_offline.py"
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: V7.1 intelligence",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "tests/run_v71.py"
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: Dashboard (needs Chromium)",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "tests/run_dashboard.py"
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: Starter prompts",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "tests/run_prompts.py"
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate: strict YAML",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "tests/validate_strict.py",
+        "."
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Validate: registry",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "skills/platform-admin/scripts/registry.py",
+        ".",
+        "validate"
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Catalog: regenerate prompts, commands and SKILL.md sections",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "tools/catalog/regenerate.py"
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Dashboard: build demo Command Center",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "args": [
+        "tools/build_demo_dashboard.py"
+      ],
+      "options": {
+        "env": {
+          "PYTHONUTF8": "1"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test: all suites",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Test: V7 regression",
+        "Test: V7.1 intelligence",
+        "Test: Dashboard (needs Chromium)",
+        "Test: Starter prompts"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

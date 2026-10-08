@@ -1,0 +1,54 @@
+capability:
+  id: relationships
+  name: Relationships
+  description: See who matters, who is engaged and where access is at risk.
+  domain: Customers
+  slash_command: /relationships
+  aliases: []
+  audience: all
+  routes_to:
+    skill: relationship-intelligence
+    intent: relationships
+  example_outcomes:
+  - A stakeholder map with influence, strength, trend and gaps
+  primary_prompts:
+  - text: Map the key stakeholders[[ at {account}]].
+    category: Discover
+  - text: Show me relationship risks[[ at {account}]].
+    category: Investigate
+  - text: Identify my strongest relationships.
+    category: Analyze
+  - text: Show me executive engagement[[ at {account}]].
+    category: Analyze
+  - text: Identify missing relationships[[ at {account}]].
+    category: Investigate
+  - text: Tell me who I should engage next.
+    category: Act
+  additional_prompts:
+  - text: Who is my champion[[ at {account}]]?
+    category: Discover
+  - text: Who has influence over the decision?
+    category: Analyze
+  - text: Where are we losing access?
+    category: Monitor
+  - text: Which relationships are weakening?
+    category: Monitor
+  - text: Who can introduce me to the CIO?
+    category: Act
+  - text: Show me the buying committee.
+    category: Discover
+  - text: Are we single-threaded anywhere?
+    category: Investigate
+  - text: Where do we need executive sponsorship?
+    category: Decide
+  - text: Show me relationship trends over time.
+    category: Monitor
+  - text: Build a plan to re-engage a weakening champion.
+    category: Act
+  follow_up_prompts:
+  - Build a plan to re-engage a weakening champion.
+  - Who can introduce me to the CIO?
+  - Prepare me for my next sales call.
+  persona_prompts:
+    sales_director:
+    - Where are my teams single-threaded?

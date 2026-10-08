@@ -1,0 +1,54 @@
+capability:
+  id: winloss
+  name: Win/Loss
+  description: Learn why deals are won and lost.
+  domain: Sales
+  slash_command: /winloss
+  aliases: []
+  audience: all
+  routes_to:
+    skill: win-loss-intelligence
+    intent: win_loss
+  example_outcomes:
+  - Reliable win/loss patterns fed back into forecasting, pricing and deal strategy
+  primary_prompts:
+  - text: Analyze why we won.
+    category: Investigate
+  - text: Analyze why we lost.
+    category: Investigate
+  - text: Identify recurring loss patterns.
+    category: Analyze
+  - text: Show competitive win/loss patterns.
+    category: Analyze
+  - text: Find lessons from historical deals.
+    category: Discover
+  - text: Recommend changes based on past outcomes.
+    category: Decide
+  additional_prompts:
+  - text: What do our wins have in common?
+    category: Analyze
+  - text: Who are we losing to?
+    category: Analyze
+  - text: Show me the loss-reason Pareto.
+    category: Analyze
+  - text: How does discount affect win rate?
+    category: Investigate
+  - text: Show me win rate by segment.
+    category: Analyze
+  - text: Which loss reasons are increasing?
+    category: Monitor
+  - text: What should we change in how we sell?
+    category: Decide
+  - text: Run a win/loss review for last quarter.
+    category: Prepare
+  - text: Compare win rates by deal size.
+    category: Analyze
+  - text: Which patterns are statistically reliable?
+    category: Investigate
+  follow_up_prompts:
+  - What should we change in how we sell?
+  - Show competitive win/loss patterns.
+  - Build my sales forecast.
+  persona_prompts:
+    cro:
+    - What should we change in how we sell?

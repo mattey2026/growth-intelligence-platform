@@ -1,0 +1,930 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://growth-intelligence/schemas/dashboard.schema.json",
+ "title": "Dashboard Contract",
+ "description": "Canonical, renderer-independent interface between the intelligence layer and any UI (Claude Artifact, React, Next.js, portal, mobile, embedded BI). Every number is computed upstream; renderers only display.",
+ "type": "object",
+ "required": [
+  "contract_version",
+  "dashboard",
+  "navigation",
+  "layout",
+  "filters",
+  "metrics",
+  "narrative",
+  "changes",
+  "trends",
+  "insights",
+  "signals",
+  "opportunities",
+  "risks",
+  "financial",
+  "marketing",
+  "competition",
+  "competitive_threads",
+  "relationships",
+  "swot",
+  "health",
+  "scenarios",
+  "actions",
+  "comparisons",
+  "tables",
+  "drill",
+  "queries",
+  "evidence",
+  "provenance"
+ ],
+ "properties": {
+  "contract_version": {
+   "const": "1.0"
+  },
+  "dashboard": {
+   "$ref": "#/$defs/Dashboard"
+  },
+  "navigation": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "label"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "label": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "layout": {
+   "$ref": "#/$defs/DashboardLayout"
+  },
+  "filters": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardFilter"
+   }
+  },
+  "metrics": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardMetric"
+   }
+  },
+  "narrative": {
+   "type": "object",
+   "required": [
+    "summary",
+    "positive",
+    "negative"
+   ]
+  },
+  "changes": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardChange"
+   }
+  },
+  "trends": {
+   "type": "array"
+  },
+  "insights": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardInsight"
+   }
+  },
+  "signals": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardSignal"
+   }
+  },
+  "drivers": {
+   "type": "object"
+  },
+  "opportunities": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardOpportunity"
+   }
+  },
+  "risks": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardRisk"
+   }
+  },
+  "financial": {
+   "type": "object"
+  },
+  "marketing": {
+   "type": "object"
+  },
+  "competition": {
+   "type": "object"
+  },
+  "competitive_threads": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardThread"
+   }
+  },
+  "relationships": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardStakeholder"
+   }
+  },
+  "swot": {
+   "type": "object",
+   "required": [
+    "strengths",
+    "weaknesses",
+    "opportunities",
+    "threats"
+   ]
+  },
+  "health": {
+   "type": "object",
+   "required": [
+    "dimensions"
+   ]
+  },
+  "scenarios": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardScenario"
+   }
+  },
+  "actions": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardAction"
+   }
+  },
+  "comparisons": {
+   "type": "object"
+  },
+  "tables": {
+   "type": "object"
+  },
+  "decisions": {
+   "type": "array"
+  },
+  "operations": {
+   "type": "array"
+  },
+  "market": {
+   "type": "array"
+  },
+  "drill": {
+   "type": "object",
+   "additionalProperties": {
+    "$ref": "#/$defs/DrillNode"
+   }
+  },
+  "queries": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardQuery"
+   }
+  },
+  "evidence": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/DashboardEvidence"
+   }
+  },
+  "state_defaults": {
+   "type": "object"
+  },
+  "permissions": {
+   "type": "object"
+  },
+  "provenance": {
+   "type": "object",
+   "required": [
+    "builder",
+    "provider",
+    "generated_at"
+   ]
+  },
+  "discovery": {
+   "type": "object",
+   "description": "V8 starter prompts: front-door prompts, Explore categories and per-capability menus (business language only)"
+  }
+ },
+ "$defs": {
+  "DashboardMeasure": {
+   "type": "object",
+   "required": [
+    "id",
+    "label"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "label": {
+     "type": "string"
+    },
+    "value": {},
+    "unit": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "display": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "trend": {
+     "type": [
+      "array",
+      "string",
+      "null"
+     ]
+    },
+    "previous_value": {},
+    "previous_display": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "delta": {},
+    "delta_display": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "direction": {
+     "enum": [
+      "up",
+      "down",
+      "flat",
+      null
+     ]
+    },
+    "sentiment": {
+     "enum": [
+      "positive",
+      "negative",
+      "neutral",
+      null
+     ]
+    },
+    "confidence": {
+     "type": [
+      "number",
+      "null"
+     ],
+     "minimum": 0,
+     "maximum": 1
+    },
+    "source": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "timestamp": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "evidence": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "drill_down_target": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "claim_type": {
+     "enum": [
+      "FACT",
+      "DERIVED",
+      "INFERENCE",
+      "CORRELATION",
+      "HYPOTHESIS",
+      "PREDICTION",
+      "RECOMMENDATION",
+      "MODELED",
+      "INTERNAL_ESTIMATE",
+      null
+     ]
+    },
+    "facets": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "data_mode": {
+     "enum": [
+      "demo",
+      "public",
+      "production",
+      null
+     ]
+    }
+   }
+  },
+  "Dashboard": {
+   "type": "object",
+   "required": [
+    "id",
+    "name",
+    "persona",
+    "scope",
+    "entity_id",
+    "entity_name",
+    "last_updated",
+    "data_freshness",
+    "overall_confidence",
+    "data_mode"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "persona": {
+     "type": "string"
+    },
+    "scope": {
+     "enum": [
+      "account",
+      "portfolio",
+      "enterprise"
+     ]
+    },
+    "entity_id": {
+     "type": "string"
+    },
+    "entity_name": {
+     "type": "string"
+    },
+    "last_updated": {
+     "type": "string"
+    },
+    "data_freshness": {
+     "type": "object"
+    },
+    "overall_confidence": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "data_mode": {
+     "enum": [
+      "demo",
+      "production"
+     ]
+    },
+    "data_notice": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "DashboardLayout": {
+   "type": "object",
+   "required": [
+    "grid_columns",
+    "views"
+   ],
+   "properties": {
+    "grid_columns": {
+     "const": 12
+    },
+    "views": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "$ref": "#/$defs/DashboardWidget"
+      }
+     }
+    }
+   }
+  },
+  "DashboardWidget": {
+   "type": "object",
+   "required": [
+    "id",
+    "type",
+    "title",
+    "span"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "type": {
+     "enum": [
+      "kpi_strip",
+      "narrative",
+      "change_list",
+      "trend_chart",
+      "driver_tree",
+      "opportunity_radar",
+      "risk_matrix",
+      "competitor_landscape",
+      "thread_list",
+      "financial_panel",
+      "waterfall",
+      "mix_bars",
+      "marketing_panel",
+      "heatmap",
+      "relationship_map",
+      "swot",
+      "health",
+      "action_list",
+      "scenario_lab",
+      "comparison",
+      "table",
+      "insight_list",
+      "decision_list",
+      "metric_grid",
+      "event_list",
+      "signal_list"
+     ]
+    },
+    "title": {
+     "type": "string"
+    },
+    "span": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 12
+    },
+    "subtitle": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "source_path": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "DashboardFilter": {
+   "type": "object",
+   "required": [
+    "id",
+    "dimension",
+    "label",
+    "values"
+   ],
+   "properties": {
+    "values": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "value",
+       "count"
+      ]
+     }
+    }
+   }
+  },
+  "DashboardQuery": {
+   "type": "object",
+   "required": [
+    "id",
+    "question",
+    "route"
+   ],
+   "properties": {
+    "route": {
+     "const": "business-orchestrator"
+    },
+    "ui_target": {
+     "type": [
+      "object",
+      "null"
+     ]
+    },
+    "capability": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "capability_id": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "tier": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "why": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "DashboardMetric": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "value",
+      "display"
+     ],
+     "properties": {
+      "by_facet": {
+       "type": "object"
+      },
+      "note": {
+       "type": [
+        "string",
+        "null"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "DashboardChange": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "domain",
+      "date",
+      "source"
+     ],
+     "properties": {
+      "domain": {
+       "enum": [
+        "financial",
+        "marketing",
+        "competitive",
+        "relationship",
+        "customer",
+        "market",
+        "pipeline",
+        "operational"
+       ]
+      },
+      "change_type": {
+       "type": "string"
+      }
+     }
+    }
+   ]
+  },
+  "DashboardInsight": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "text",
+      "claim_type"
+     ],
+     "properties": {
+      "text": {
+       "type": "string"
+      },
+      "severity": {
+       "type": "string"
+      },
+      "anomaly": {
+       "type": "boolean"
+      }
+     }
+    }
+   ]
+  },
+  "DashboardSignal": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "domain",
+      "timestamp"
+     ],
+     "properties": {
+      "domain": {
+       "type": "string"
+      }
+     }
+    }
+   ]
+  },
+  "DashboardOpportunity": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "category",
+      "probability",
+      "value",
+      "strategic_impact"
+     ],
+     "properties": {
+      "category": {
+       "enum": [
+        "New Business",
+        "Expansion",
+        "Cross-sell",
+        "Displacement",
+        "Renewal",
+        "Transformation",
+        "Unclassified"
+       ]
+      },
+      "probability": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "strategic_impact": {
+       "type": [
+        "number",
+        "null"
+       ],
+       "minimum": 0,
+       "maximum": 1,
+       "description": "null when the source does not record strategic impact (never estimated)"
+      }
+     }
+    }
+   ]
+  },
+  "DashboardRisk": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "category",
+      "likelihood",
+      "impact",
+      "owner",
+      "mitigation"
+     ],
+     "properties": {
+      "category": {
+       "enum": [
+        "Customer",
+        "Competitive",
+        "Financial",
+        "Market",
+        "Pipeline",
+        "Operational"
+       ]
+      },
+      "likelihood": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      },
+      "impact": {
+       "type": "number",
+       "minimum": 0,
+       "maximum": 1
+      }
+     }
+    }
+   ]
+  },
+  "DashboardThread": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "competitor",
+      "status",
+      "signal_count",
+      "velocity",
+      "chronology"
+     ],
+     "properties": {
+      "chronology": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "required": [
+         "t",
+         "kind",
+         "label"
+        ]
+       }
+      }
+     }
+    }
+   ]
+  },
+  "DashboardStakeholder": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "role",
+      "influence",
+      "strength"
+     ],
+     "properties": {}
+    }
+   ]
+  },
+  "DashboardAction": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "reason",
+      "owner",
+      "priority",
+      "approval_required"
+     ],
+     "properties": {
+      "approval_required": {
+       "type": "boolean"
+      },
+      "catalog_action": {
+       "type": [
+        "string",
+        "null"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "DashboardScenario": {
+   "allOf": [
+    {
+     "$ref": "#/$defs/DashboardMeasure"
+    },
+    {
+     "type": "object",
+     "required": [
+      "question",
+      "assumptions",
+      "baseline",
+      "scenario",
+      "delta",
+      "modeled"
+     ],
+     "properties": {
+      "modeled": {
+       "const": true
+      },
+      "assumptions": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   ]
+  },
+  "DashboardEvidence": {
+   "type": "object",
+   "required": [
+    "id",
+    "source",
+    "date",
+    "observation",
+    "confidence",
+    "claim_type"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "source": {
+     "type": "string"
+    },
+    "date": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "observation": {
+     "type": "string"
+    },
+    "historical_context": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "confidence": {
+     "type": [
+      "number",
+      "null"
+     ]
+    },
+    "claim_type": {
+     "type": "string"
+    },
+    "related_signals": {
+     "type": "array"
+    },
+    "related_opportunity": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "related_decision": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "data_mode": {
+     "type": "string"
+    }
+   }
+  },
+  "DrillNode": {
+   "type": "object",
+   "required": [
+    "id",
+    "label",
+    "kind"
+   ],
+   "properties": {
+    "children": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "evidence": {
+     "type": "array"
+    },
+    "kind": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

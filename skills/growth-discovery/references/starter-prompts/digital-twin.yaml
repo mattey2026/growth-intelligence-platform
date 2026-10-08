@@ -1,0 +1,52 @@
+capability:
+  id: digital-twin
+  name: Customer Digital Twin
+  description: The customer's current state, history, forecast and what-ifs.
+  domain: Customers
+  slash_command: /digital-twin
+  aliases: []
+  audience: all
+  routes_to:
+    skill: customer-digital-twin
+    intent: twin
+  example_outcomes:
+  - Eight state domains across historical, current, forecast, what-if and target
+  primary_prompts:
+  - text: Show me the current customer state[[ of {account}]].
+    category: Discover
+  - text: What's changed in the customer twin?
+    category: Monitor
+  - text: Show me historical trends[[ for {account}]].
+    category: Analyze
+  - text: Show me the customer forecast.
+    category: Analyze
+  - text: Run a what-if scenario on this customer.
+    category: Decide
+  - text: Show me the target state[[ for {account}]].
+    category: Prepare
+  additional_prompts:
+  - text: Give me the full picture on [[{account}|this customer]].
+    category: Discover
+  - text: Why did this account change?
+    category: Investigate
+  - text: What's likely next for this customer?
+    category: Analyze
+  - text: Show me the account 360.
+    category: Discover
+  - text: Compare the current state with the target.
+    category: Analyze
+  - text: Set a target for this account.
+    category: Act
+  - text: Show me the financial state of the customer.
+    category: Analyze
+  - text: Show me the competitive state of the customer.
+    category: Analyze
+  - text: Show me the relationship state.
+    category: Analyze
+  - text: Show me every snapshot of this account.
+    category: Investigate
+  follow_up_prompts:
+  - Compare the current state with the target.
+  - Run a what-if scenario on this customer.
+  - Build my complete [[{account} ]]account strategy.
+  persona_prompts: {}

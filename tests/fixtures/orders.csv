@@ -1,0 +1,501 @@
+order_id,customer_id,sku,order_value,channel,returned
+0,142,TSHIRT-01,62.16,instagram,1
+1,154,HOODIE-02,22.56,instagram,1
+2,226,HOODIE-02,36.8,website order,1
+3,285,TSHIRT-01,94.95,instagram,0
+4,11,TSHIRT-01,28.4,instagram,0
+5,44,HOODIE-02,51.26,instagram,1
+6,247,CAP-03,45.52,website order,0
+7,284,CAP-03,94.61,instagram,1
+8,75,TSHIRT-01,55.91,instagram,1
+9,94,TSHIRT-01,28.72,website order,1
+10,260,TSHIRT-01,57.04,instagram,0
+11,127,HOODIE-02,52.68,website order,1
+12,82,TSHIRT-01,91.7,instagram,1
+13,248,TSHIRT-01,52.01,instagram,0
+14,77,HOODIE-02,89.36,instagram,0
+15,123,TSHIRT-01,73.86,website order,1
+16,193,TSHIRT-01,108.77,website order,1
+17,165,TSHIRT-01,93.34,instagram,1
+18,26,HOODIE-02,60.79,website order,0
+19,9,HOODIE-02,68.49,website order,0
+20,259,TSHIRT-01,67.14,website order,0
+21,226,HOODIE-02,107.17,instagram,0
+22,251,CAP-03,33.8,website order,0
+23,161,CAP-03,62.42,instagram,0
+24,245,TSHIRT-01,73.49,website order,0
+25,99,TSHIRT-01,63.62,website order,1
+26,136,HOODIE-02,79.8,instagram,0
+27,236,TSHIRT-01,69.88,website order,0
+28,38,HOODIE-02,61.37,website order,1
+29,91,CAP-03,88.68,website order,1
+30,38,CAP-03,52.93,website order,1
+31,136,TSHIRT-01,80.69,website order,0
+32,293,TSHIRT-01,92.86,instagram,0
+33,41,TSHIRT-01,33.06,instagram,0
+34,115,HOODIE-02,52.65,website order,0
+35,121,CAP-03,114.47,instagram,1
+36,271,CAP-03,116.6,instagram,1
+37,61,CAP-03,119.24,instagram,0
+38,151,CAP-03,24.25,instagram,1
+39,79,HOODIE-02,102.65,instagram,0
+40,6,CAP-03,113.53,instagram,0
+41,225,TSHIRT-01,110.19,website order,0
+42,19,TSHIRT-01,91.49,website order,1
+43,84,HOODIE-02,87.56,instagram,0
+44,149,HOODIE-02,91.96,website order,0
+45,146,HOODIE-02,77.49,website order,0
+46,35,HOODIE-02,98.84,website order,0
+47,294,CAP-03,70.19,website order,0
+48,224,HOODIE-02,42.59,instagram,0
+49,288,HOODIE-02,29.43,instagram,0
+50,28,HOODIE-02,110.83,instagram,0
+51,217,TSHIRT-01,95.49,website order,0
+52,88,CAP-03,37.72,instagram,0
+53,162,CAP-03,102.25,website order,0
+54,277,TSHIRT-01,50.03,website order,1
+55,83,HOODIE-02,83.57,instagram,0
+56,218,CAP-03,55.62,instagram,0
+57,49,TSHIRT-01,41.42,website order,0
+58,97,TSHIRT-01,37.56,website order,0
+59,291,TSHIRT-01,27.1,website order,0
+60,126,CAP-03,27.44,website order,1
+61,155,HOODIE-02,26.91,instagram,0
+62,88,CAP-03,28.99,instagram,1
+63,35,TSHIRT-01,103.4,website order,1
+64,127,CAP-03,71.78,website order,1
+65,187,HOODIE-02,32.86,instagram,1
+66,137,HOODIE-02,72.5,website order,1
+67,233,HOODIE-02,74.26,website order,0
+68,109,TSHIRT-01,69.66,instagram,0
+69,184,TSHIRT-01,40.65,website order,0
+70,232,HOODIE-02,63.44,instagram,0
+71,275,CAP-03,107.09,website order,0
+72,128,CAP-03,58.37,website order,0
+73,12,CAP-03,70.4,website order,0
+74,215,HOODIE-02,113.02,instagram,1
+75,159,CAP-03,43.28,instagram,0
+76,261,TSHIRT-01,92.55,instagram,0
+77,138,CAP-03,68.38,instagram,1
+78,111,HOODIE-02,98.74,website order,1
+79,19,CAP-03,55.97,website order,1
+80,137,CAP-03,74.24,website order,1
+81,192,TSHIRT-01,56.83,instagram,1
+82,231,CAP-03,106.61,website order,0
+83,255,TSHIRT-01,111.48,website order,1
+84,65,HOODIE-02,83.18,website order,0
+85,178,TSHIRT-01,118.1,instagram,1
+86,241,TSHIRT-01,93.21,instagram,1
+87,78,CAP-03,103.04,website order,1
+88,104,HOODIE-02,109.47,website order,0
+89,252,HOODIE-02,47.19,instagram,1
+90,174,CAP-03,118.67,website order,0
+91,153,CAP-03,59.04,instagram,0
+92,202,TSHIRT-01,69.72,instagram,1
+93,153,HOODIE-02,38.03,instagram,0
+94,294,CAP-03,102.15,instagram,0
+95,226,CAP-03,53.69,website order,0
+96,17,HOODIE-02,88.93,instagram,0
+97,45,TSHIRT-01,41.84,website order,1
+98,163,HOODIE-02,55.14,website order,0
+99,246,TSHIRT-01,58.42,website order,1
+100,21,CAP-03,43.66,instagram,0
+101,205,TSHIRT-01,23.51,instagram,0
+102,228,HOODIE-02,97.02,instagram,0
+103,236,HOODIE-02,115.04,instagram,1
+104,262,HOODIE-02,42.62,website order,1
+105,58,HOODIE-02,36.27,instagram,1
+106,167,CAP-03,54.76,website order,1
+107,240,HOODIE-02,28.28,website order,0
+108,108,HOODIE-02,84.97,instagram,0
+109,58,HOODIE-02,56.86,instagram,1
+110,144,CAP-03,76.25,instagram,0
+111,25,HOODIE-02,110.58,instagram,1
+112,66,HOODIE-02,106.16,instagram,1
+113,256,CAP-03,112.17,instagram,0
+114,200,TSHIRT-01,113.51,website order,0
+115,258,HOODIE-02,78.98,website order,0
+116,252,CAP-03,70.23,instagram,1
+117,263,CAP-03,23.76,website order,0
+118,93,HOODIE-02,30.24,website order,1
+119,142,TSHIRT-01,72.39,instagram,0
+120,185,HOODIE-02,105.6,website order,1
+121,82,HOODIE-02,63.26,website order,0
+122,275,CAP-03,20.37,website order,1
+123,3,HOODIE-02,41.23,instagram,0
+124,251,HOODIE-02,96.0,instagram,0
+125,194,HOODIE-02,35.84,instagram,0
+126,76,HOODIE-02,39.96,website order,0
+127,216,TSHIRT-01,48.55,instagram,1
+128,124,HOODIE-02,80.93,instagram,0
+129,250,HOODIE-02,103.64,instagram,1
+130,299,CAP-03,41.89,instagram,1
+131,85,CAP-03,79.95,website order,1
+132,141,HOODIE-02,72.99,instagram,1
+133,65,HOODIE-02,64.49,website order,1
+134,208,TSHIRT-01,78.04,instagram,0
+135,192,HOODIE-02,101.41,website order,1
+136,253,TSHIRT-01,41.75,website order,0
+137,241,TSHIRT-01,69.72,website order,1
+138,293,TSHIRT-01,29.79,website order,0
+139,289,TSHIRT-01,71.32,website order,1
+140,268,CAP-03,99.1,website order,1
+141,46,TSHIRT-01,119.86,instagram,0
+142,13,CAP-03,67.57,instagram,0
+143,145,TSHIRT-01,49.66,website order,0
+144,104,CAP-03,77.95,website order,0
+145,268,CAP-03,57.18,website order,0
+146,239,TSHIRT-01,31.7,instagram,1
+147,127,TSHIRT-01,72.45,website order,0
+148,173,TSHIRT-01,99.91,website order,1
+149,177,HOODIE-02,109.11,website order,0
+150,267,HOODIE-02,117.81,instagram,1
+151,8,TSHIRT-01,56.77,instagram,1
+152,147,TSHIRT-01,45.17,website order,0
+153,202,HOODIE-02,31.08,instagram,1
+154,136,TSHIRT-01,63.62,website order,0
+155,275,TSHIRT-01,100.7,website order,1
+156,285,HOODIE-02,43.46,instagram,1
+157,248,TSHIRT-01,104.96,website order,0
+158,139,TSHIRT-01,91.17,website order,0
+159,265,TSHIRT-01,40.09,website order,0
+160,22,HOODIE-02,83.18,website order,1
+161,198,TSHIRT-01,101.97,instagram,0
+162,81,CAP-03,113.29,website order,0
+163,74,HOODIE-02,36.22,instagram,0
+164,204,TSHIRT-01,102.2,website order,0
+165,230,CAP-03,97.58,instagram,1
+166,266,TSHIRT-01,44.37,instagram,1
+167,64,TSHIRT-01,49.46,instagram,0
+168,261,TSHIRT-01,115.71,website order,0
+169,249,TSHIRT-01,56.2,instagram,1
+170,95,HOODIE-02,48.9,instagram,0
+171,19,CAP-03,92.0,instagram,0
+172,231,HOODIE-02,33.29,instagram,0
+173,247,CAP-03,68.32,website order,0
+174,138,CAP-03,55.81,instagram,0
+175,50,TSHIRT-01,74.4,website order,0
+176,44,CAP-03,80.33,instagram,1
+177,113,CAP-03,84.01,instagram,1
+178,227,HOODIE-02,63.24,instagram,0
+179,95,CAP-03,108.69,instagram,1
+180,10,CAP-03,103.57,website order,1
+181,207,TSHIRT-01,113.34,website order,1
+182,223,TSHIRT-01,64.59,instagram,0
+183,54,HOODIE-02,93.01,instagram,1
+184,168,HOODIE-02,63.07,website order,0
+185,119,TSHIRT-01,47.88,instagram,0
+186,150,CAP-03,85.19,instagram,0
+187,2,TSHIRT-01,114.6,website order,1
+188,190,TSHIRT-01,100.43,website order,1
+189,79,HOODIE-02,48.52,instagram,1
+190,166,HOODIE-02,42.81,instagram,1
+191,126,HOODIE-02,97.16,website order,0
+192,183,TSHIRT-01,90.51,website order,0
+193,32,HOODIE-02,106.36,website order,0
+194,109,HOODIE-02,34.64,website order,0
+195,190,HOODIE-02,106.17,website order,0
+196,230,CAP-03,63.26,website order,1
+197,114,TSHIRT-01,47.33,instagram,1
+198,8,HOODIE-02,54.32,website order,1
+199,217,CAP-03,119.35,instagram,1
+200,151,CAP-03,115.6,website order,1
+201,196,TSHIRT-01,28.37,instagram,1
+202,48,CAP-03,51.52,instagram,0
+203,129,CAP-03,91.96,instagram,1
+204,265,TSHIRT-01,23.53,instagram,1
+205,260,HOODIE-02,23.59,website order,1
+206,95,CAP-03,24.49,website order,1
+207,190,TSHIRT-01,106.84,instagram,0
+208,26,TSHIRT-01,53.37,website order,1
+209,243,TSHIRT-01,51.87,website order,1
+210,81,HOODIE-02,99.33,website order,1
+211,103,HOODIE-02,51.86,website order,0
+212,289,CAP-03,93.84,instagram,0
+213,163,HOODIE-02,56.93,instagram,1
+214,262,HOODIE-02,49.75,instagram,0
+215,59,HOODIE-02,58.72,instagram,0
+216,227,CAP-03,36.8,website order,1
+217,298,HOODIE-02,27.5,instagram,0
+218,24,TSHIRT-01,107.12,instagram,0
+219,73,TSHIRT-01,106.84,instagram,1
+220,44,HOODIE-02,66.08,instagram,0
+221,77,CAP-03,88.84,instagram,1
+222,94,HOODIE-02,106.26,website order,1
+223,22,TSHIRT-01,59.07,instagram,1
+224,269,TSHIRT-01,91.18,instagram,0
+225,78,CAP-03,95.48,instagram,0
+226,276,TSHIRT-01,27.81,website order,0
+227,229,CAP-03,33.82,instagram,0
+228,52,TSHIRT-01,95.03,instagram,0
+229,209,CAP-03,90.56,website order,0
+230,232,TSHIRT-01,38.53,website order,1
+231,39,HOODIE-02,102.67,instagram,0
+232,39,HOODIE-02,100.09,website order,0
+233,113,TSHIRT-01,53.27,website order,0
+234,21,HOODIE-02,54.03,instagram,0
+235,126,HOODIE-02,31.06,instagram,0
+236,144,TSHIRT-01,64.55,instagram,0
+237,199,HOODIE-02,30.98,website order,1
+238,172,TSHIRT-01,74.34,website order,1
+239,137,HOODIE-02,82.46,instagram,0
+240,66,CAP-03,78.19,instagram,0
+241,176,HOODIE-02,27.16,website order,0
+242,137,HOODIE-02,82.17,website order,0
+243,252,CAP-03,95.22,website order,0
+244,209,CAP-03,34.19,website order,0
+245,218,TSHIRT-01,79.51,website order,1
+246,171,TSHIRT-01,101.91,instagram,0
+247,110,HOODIE-02,39.36,website order,1
+248,85,CAP-03,111.34,website order,1
+249,135,HOODIE-02,117.19,website order,1
+250,171,TSHIRT-01,91.16,instagram,0
+251,110,HOODIE-02,107.2,website order,0
+252,44,CAP-03,47.18,website order,1
+253,33,TSHIRT-01,86.5,instagram,0
+254,14,TSHIRT-01,112.61,instagram,1
+255,61,CAP-03,24.47,instagram,1
+256,122,TSHIRT-01,102.08,website order,1
+257,85,CAP-03,43.69,website order,1
+258,53,HOODIE-02,100.11,instagram,0
+259,94,CAP-03,84.24,website order,1
+260,214,CAP-03,100.15,website order,0
+261,94,HOODIE-02,60.1,website order,0
+262,275,TSHIRT-01,65.02,instagram,1
+263,173,CAP-03,112.43,instagram,0
+264,42,HOODIE-02,27.12,instagram,0
+265,291,CAP-03,35.62,instagram,0
+266,264,TSHIRT-01,117.28,website order,0
+267,232,CAP-03,111.33,website order,1
+268,48,HOODIE-02,34.69,website order,0
+269,237,TSHIRT-01,117.35,instagram,0
+270,210,HOODIE-02,46.55,website order,1
+271,228,HOODIE-02,109.21,instagram,1
+272,214,CAP-03,110.48,website order,1
+273,179,HOODIE-02,22.37,website order,0
+274,103,TSHIRT-01,20.97,website order,0
+275,275,HOODIE-02,52.7,instagram,0
+276,294,CAP-03,113.12,website order,0
+277,207,TSHIRT-01,99.13,website order,0
+278,108,HOODIE-02,58.69,instagram,0
+279,150,TSHIRT-01,105.8,instagram,0
+280,168,TSHIRT-01,50.76,website order,0
+281,24,HOODIE-02,54.74,instagram,0
+282,27,TSHIRT-01,39.05,instagram,1
+283,147,HOODIE-02,115.96,website order,1
+284,168,HOODIE-02,100.36,website order,1
+285,64,HOODIE-02,66.24,instagram,0
+286,79,CAP-03,46.43,instagram,0
+287,40,CAP-03,116.6,instagram,0
+288,275,CAP-03,59.68,instagram,1
+289,152,HOODIE-02,41.07,instagram,1
+290,83,HOODIE-02,62.47,instagram,1
+291,235,TSHIRT-01,91.91,website order,1
+292,287,TSHIRT-01,97.07,website order,1
+293,89,CAP-03,30.9,instagram,0
+294,269,HOODIE-02,114.59,instagram,1
+295,230,HOODIE-02,87.46,website order,1
+296,238,HOODIE-02,26.25,website order,1
+297,158,TSHIRT-01,103.74,instagram,1
+298,273,CAP-03,117.19,website order,0
+299,45,TSHIRT-01,103.77,instagram,0
+300,27,TSHIRT-01,20.98,website order,1
+301,289,CAP-03,67.31,website order,0
+302,147,CAP-03,78.92,instagram,0
+303,121,CAP-03,108.8,website order,1
+304,219,CAP-03,70.28,website order,0
+305,89,HOODIE-02,27.73,website order,1
+306,191,CAP-03,113.35,website order,1
+307,254,TSHIRT-01,115.17,instagram,0
+308,241,TSHIRT-01,68.62,instagram,1
+309,38,CAP-03,25.34,website order,1
+310,290,CAP-03,103.89,website order,0
+311,220,TSHIRT-01,94.17,website order,0
+312,209,CAP-03,117.12,website order,1
+313,57,TSHIRT-01,20.73,instagram,1
+314,276,CAP-03,63.55,instagram,0
+315,118,HOODIE-02,48.38,instagram,1
+316,282,TSHIRT-01,30.77,instagram,1
+317,70,HOODIE-02,93.51,website order,0
+318,28,TSHIRT-01,54.12,instagram,1
+319,252,HOODIE-02,23.9,website order,0
+320,175,HOODIE-02,33.36,instagram,1
+321,117,CAP-03,100.6,instagram,0
+322,292,CAP-03,80.59,instagram,1
+323,292,TSHIRT-01,41.51,website order,1
+324,4,CAP-03,89.6,website order,1
+325,187,HOODIE-02,33.04,instagram,0
+326,242,HOODIE-02,87.32,website order,0
+327,208,TSHIRT-01,85.5,instagram,1
+328,180,HOODIE-02,20.55,instagram,1
+329,156,TSHIRT-01,71.15,website order,1
+330,160,CAP-03,92.63,instagram,1
+331,93,TSHIRT-01,95.85,website order,1
+332,43,CAP-03,90.57,website order,1
+333,119,CAP-03,108.5,website order,0
+334,209,HOODIE-02,95.62,website order,0
+335,282,CAP-03,112.2,website order,1
+336,288,HOODIE-02,61.48,instagram,1
+337,61,CAP-03,23.42,instagram,0
+338,9,CAP-03,38.1,website order,0
+339,296,TSHIRT-01,48.78,instagram,0
+340,201,HOODIE-02,24.18,instagram,0
+341,227,CAP-03,30.82,instagram,1
+342,244,HOODIE-02,71.88,instagram,1
+343,108,HOODIE-02,45.25,website order,0
+344,259,HOODIE-02,48.55,instagram,1
+345,192,HOODIE-02,94.15,website order,1
+346,193,HOODIE-02,105.47,website order,0
+347,114,CAP-03,106.2,instagram,0
+348,103,TSHIRT-01,57.06,website order,1
+349,115,TSHIRT-01,90.96,instagram,1
+350,214,HOODIE-02,105.23,instagram,0
+351,151,HOODIE-02,35.1,instagram,1
+352,7,HOODIE-02,40.06,instagram,0
+353,6,TSHIRT-01,84.8,instagram,0
+354,58,CAP-03,46.56,website order,1
+355,148,HOODIE-02,39.27,instagram,0
+356,180,HOODIE-02,56.75,instagram,0
+357,291,HOODIE-02,21.6,instagram,1
+358,233,CAP-03,63.83,instagram,0
+359,86,TSHIRT-01,24.73,website order,1
+360,154,TSHIRT-01,44.47,website order,1
+361,224,TSHIRT-01,41.75,website order,0
+362,265,CAP-03,52.94,website order,0
+363,133,HOODIE-02,32.54,instagram,1
+364,215,TSHIRT-01,67.12,instagram,0
+365,63,HOODIE-02,88.79,instagram,0
+366,138,TSHIRT-01,53.89,instagram,0
+367,271,CAP-03,112.72,website order,0
+368,115,TSHIRT-01,105.98,instagram,1
+369,6,HOODIE-02,50.6,instagram,1
+370,236,TSHIRT-01,23.89,website order,1
+371,91,HOODIE-02,96.82,instagram,0
+372,132,CAP-03,44.0,website order,1
+373,299,CAP-03,53.22,website order,1
+374,116,TSHIRT-01,77.93,instagram,1
+375,79,TSHIRT-01,119.89,website order,0
+376,70,TSHIRT-01,49.97,instagram,0
+377,254,TSHIRT-01,66.85,instagram,1
+378,65,TSHIRT-01,82.75,website order,0
+379,182,HOODIE-02,88.34,instagram,1
+380,71,HOODIE-02,41.22,website order,1
+381,242,TSHIRT-01,79.53,website order,0
+382,215,CAP-03,74.41,instagram,0
+383,189,HOODIE-02,85.86,instagram,1
+384,128,CAP-03,31.5,website order,0
+385,109,HOODIE-02,32.63,instagram,0
+386,284,HOODIE-02,117.55,website order,1
+387,228,TSHIRT-01,102.13,instagram,0
+388,118,HOODIE-02,102.76,website order,0
+389,8,CAP-03,113.41,instagram,0
+390,39,TSHIRT-01,116.06,instagram,0
+391,134,HOODIE-02,59.35,website order,1
+392,138,HOODIE-02,95.41,website order,0
+393,112,HOODIE-02,84.16,website order,0
+394,295,CAP-03,75.99,website order,0
+395,143,CAP-03,87.93,instagram,0
+396,238,HOODIE-02,51.94,instagram,0
+397,39,CAP-03,106.22,instagram,0
+398,113,CAP-03,60.7,instagram,1
+399,67,TSHIRT-01,34.82,instagram,1
+400,43,TSHIRT-01,21.1,website order,0
+401,169,TSHIRT-01,83.92,website order,0
+402,43,TSHIRT-01,43.16,instagram,0
+403,116,CAP-03,115.61,website order,0
+404,206,HOODIE-02,39.5,website order,1
+405,237,TSHIRT-01,51.62,website order,1
+406,168,TSHIRT-01,118.41,instagram,0
+407,181,CAP-03,71.99,instagram,0
+408,89,HOODIE-02,112.2,website order,0
+409,258,TSHIRT-01,98.14,website order,1
+410,56,HOODIE-02,31.9,instagram,0
+411,219,HOODIE-02,41.6,instagram,0
+412,27,HOODIE-02,58.72,website order,1
+413,180,HOODIE-02,108.1,instagram,1
+414,76,HOODIE-02,53.4,website order,1
+415,86,CAP-03,66.31,instagram,0
+416,104,CAP-03,68.08,instagram,1
+417,235,TSHIRT-01,52.48,instagram,0
+418,237,CAP-03,98.65,website order,0
+419,76,TSHIRT-01,25.48,website order,0
+420,162,HOODIE-02,42.59,website order,0
+421,23,CAP-03,102.51,website order,1
+422,267,TSHIRT-01,81.63,website order,0
+423,288,HOODIE-02,71.18,instagram,1
+424,109,CAP-03,56.95,website order,1
+425,162,TSHIRT-01,33.01,website order,1
+426,161,TSHIRT-01,65.68,instagram,0
+427,232,CAP-03,118.71,website order,1
+428,21,HOODIE-02,79.51,instagram,1
+429,159,TSHIRT-01,77.66,website order,0
+430,253,CAP-03,119.01,instagram,0
+431,183,CAP-03,108.54,instagram,1
+432,167,CAP-03,119.92,instagram,0
+433,11,CAP-03,115.36,instagram,0
+434,277,TSHIRT-01,86.75,instagram,1
+435,56,CAP-03,50.53,website order,0
+436,105,HOODIE-02,82.81,instagram,1
+437,202,CAP-03,54.82,website order,0
+438,138,HOODIE-02,101.08,instagram,1
+439,171,CAP-03,33.73,instagram,1
+440,177,CAP-03,66.25,website order,0
+441,48,CAP-03,104.08,website order,0
+442,5,HOODIE-02,65.45,instagram,1
+443,285,TSHIRT-01,80.1,website order,1
+444,243,HOODIE-02,29.83,instagram,1
+445,47,HOODIE-02,48.51,website order,1
+446,201,HOODIE-02,115.45,instagram,0
+447,153,CAP-03,85.69,website order,1
+448,221,CAP-03,56.49,instagram,0
+449,44,CAP-03,71.69,website order,0
+450,210,HOODIE-02,97.49,instagram,1
+451,215,CAP-03,98.75,instagram,1
+452,299,HOODIE-02,102.8,instagram,0
+453,83,CAP-03,48.96,instagram,1
+454,129,CAP-03,43.83,instagram,0
+455,41,TSHIRT-01,83.85,instagram,0
+456,5,TSHIRT-01,72.72,instagram,1
+457,14,HOODIE-02,76.49,instagram,1
+458,135,CAP-03,41.46,instagram,1
+459,53,HOODIE-02,51.86,instagram,1
+460,223,HOODIE-02,95.21,instagram,1
+461,58,CAP-03,55.83,website order,0
+462,188,CAP-03,95.75,website order,1
+463,161,HOODIE-02,24.66,instagram,1
+464,99,TSHIRT-01,115.09,instagram,0
+465,135,TSHIRT-01,40.81,instagram,0
+466,299,TSHIRT-01,67.82,website order,0
+467,287,TSHIRT-01,112.09,website order,0
+468,83,HOODIE-02,45.35,website order,0
+469,286,TSHIRT-01,42.74,instagram,1
+470,66,HOODIE-02,118.56,website order,1
+471,239,CAP-03,110.44,website order,1
+472,104,TSHIRT-01,73.22,instagram,0
+473,201,TSHIRT-01,26.1,instagram,0
+474,195,HOODIE-02,80.47,instagram,0
+475,253,TSHIRT-01,45.16,instagram,0
+476,115,HOODIE-02,41.4,instagram,1
+477,281,TSHIRT-01,113.21,instagram,1
+478,263,CAP-03,81.94,instagram,1
+479,7,HOODIE-02,64.4,instagram,1
+480,30,CAP-03,26.27,instagram,0
+481,36,HOODIE-02,57.16,instagram,0
+482,194,HOODIE-02,106.4,website order,0
+483,108,CAP-03,50.27,instagram,1
+484,46,HOODIE-02,52.28,instagram,0
+485,28,TSHIRT-01,80.69,instagram,1
+486,274,TSHIRT-01,45.21,website order,0
+487,180,HOODIE-02,75.69,instagram,1
+488,11,CAP-03,96.87,instagram,1
+489,78,CAP-03,48.67,instagram,1
+490,197,TSHIRT-01,67.28,instagram,0
+491,80,CAP-03,77.63,website order,1
+492,229,CAP-03,56.33,instagram,1
+493,87,CAP-03,42.36,instagram,1
+494,189,CAP-03,31.44,instagram,1
+495,30,TSHIRT-01,76.55,website order,1
+496,243,TSHIRT-01,113.74,instagram,1
+497,222,CAP-03,21.88,website order,0
+498,162,CAP-03,106.57,instagram,0
+499,195,CAP-03,116.25,website order,1

@@ -1,0 +1,56 @@
+capability:
+  id: financial
+  name: Financial Intelligence
+  description: Tell the financial story and what it means commercially.
+  domain: Finance
+  slash_command: /financial
+  aliases: []
+  audience: all
+  routes_to:
+    skill: financial-intelligence
+    intent: financial_story
+  example_outcomes:
+  - Cited metrics computed in code, missing values named, signals and commercial implications
+  primary_prompts:
+  - text: Show me the financial story[[ for {account}]].
+    category: Discover
+  - text: Analyze the last five years of financials.
+    category: Analyze
+  - text: What financial changes matter?
+    category: Investigate
+  - text: Show me margin and profitability trends.
+    category: Analyze
+  - text: Find financial signals that could create opportunities.
+    category: Discover
+  - text: Explain the financial position[[ of {account}]].
+    category: Analyze
+  additional_prompts:
+  - text: Show me revenue growth.
+    category: Analyze
+  - text: Analyze EBITDA.
+    category: Analyze
+  - text: Show me cash-flow trends.
+    category: Analyze
+  - text: Where is the company investing?
+    category: Discover
+  - text: Where is the company under financial pressure?
+    category: Investigate
+  - text: What do the financials mean commercially?
+    category: Decide
+  - text: Show me business-unit performance.
+    category: Analyze
+  - text: Compare current performance with prior years.
+    category: Analyze
+  - text: Show me capex and technology investment.
+    category: Analyze
+  - text: Which financial figures are missing or estimated?
+    category: Investigate
+  follow_up_prompts:
+  - What do the financials mean commercially?
+  - Find financial signals that could create opportunities.
+  - Show me margin and profitability trends.
+  persona_prompts:
+    investor:
+    - Show me the company's growth, profitability and strategic risks.
+    cfo:
+    - Explain the margin trend and its drivers.

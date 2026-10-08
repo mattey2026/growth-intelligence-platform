@@ -1,0 +1,102 @@
+catalog_version: 8.0.0
+capabilities:
+- account
+- account-plan
+- opportunities
+- deal
+- forecast
+- meeting
+- followup
+- relationships
+- customer-growth
+- renewals
+- competition
+- threads
+- market
+- financial
+- marketing
+- pricing
+- scenario
+- decision
+- executive
+- bi
+- signals
+- briefing
+- actions
+- rfp
+- solution
+- winloss
+- knowledge
+- memory
+- digital-twin
+- data
+- dashboard
+- watch
+- outreach
+- admin
+internal_skills:
+  business-orchestrator: routes every request (not invoked directly by users)
+  artifact-dashboard-intelligence: renders dashboards built by Dashboards
+  business-context-discovery: runs automatically at the start of every analysis
+explore_categories:
+- Growth
+- Sales
+- Accounts
+- Customers
+- Competition
+- Marketing
+- Finance
+- Market
+- Meetings
+- Decisions
+- Dashboards
+- Operations
+prompt_categories:
+- Discover
+- Analyze
+- Investigate
+- Decide
+- Prepare
+- Act
+- Monitor
+hubs:
+  growth:
+    name: Growth Intelligence
+    description: 'Start here: what would you like to do?'
+    capabilities: null
+  sales:
+    name: Sales
+    description: Accounts, opportunities, deals, forecast, meetings and outreach.
+    capabilities:
+    - account
+    - opportunities
+    - deal
+    - forecast
+    - meeting
+    - followup
+    - relationships
+    - outreach
+    - rfp
+    - winloss
+    - pricing
+global_home:
+- capability: account
+  primary_index: 0
+- capability: opportunities
+  primary_index: 0
+- capability: meeting
+  primary_index: 0
+- capability: forecast
+  primary_index: 0
+- capability: account
+  primary_index: 1
+- capability: briefing
+  primary_index: 0
+variables:
+  account: current account
+  opportunity: current opportunity
+  competitor: current competitor
+  meeting: next meeting
+  industry: current industry
+  time_period: selected period
+template_syntax: '[[with-context|without-context]] — the first branch renders only when every {variable} in it is known'

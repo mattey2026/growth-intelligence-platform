@@ -1,0 +1,195 @@
+investor:
+  label: Investor
+  home:
+  - capability: executive
+    primary_index: 0
+  - capability: financial
+    primary_index: 0
+  - capability: market
+    primary_index: 1
+  - capability: competition
+    primary_index: 2
+  - capability: scenario
+    primary_index: 0
+  - capability: executive
+    primary_index: 3
+ceo:
+  label: CEO
+  home:
+  - capability: executive
+    primary_index: 0
+  - capability: signals
+    primary_index: 0
+  - capability: opportunities
+    primary_index: 0
+  - capability: executive
+    primary_index: 3
+  - capability: decision
+    primary_index: 0
+  - capability: briefing
+    primary_index: 0
+cfo:
+  label: CFO
+  home:
+  - capability: financial
+    primary_index: 0
+  - capability: forecast
+    primary_index: 5
+  - capability: scenario
+    primary_index: 0
+  - capability: pricing
+    primary_index: 3
+  - capability: renewals
+    primary_index: 0
+  - capability: decision
+    primary_index: 5
+coo:
+  label: COO
+  home:
+  - capability: executive
+    primary_index: 0
+  - capability: actions
+    primary_index: 0
+  - capability: customer-growth
+    primary_index: 3
+  - capability: scenario
+    primary_index: 4
+  - capability: data
+    primary_index: 2
+  - capability: watch
+    primary_index: 1
+growth_ops:
+  label: Growth Operations Head
+  home:
+  - capability: signals
+    primary_index: 0
+  - capability: marketing
+    primary_index: 3
+  - capability: forecast
+    primary_index: 2
+  - capability: opportunities
+    primary_index: 1
+  - capability: dashboard
+    primary_index: 0
+  - capability: briefing
+    primary_index: 0
+cro:
+  label: CRO
+  home:
+  - capability: forecast
+    primary_index: 1
+  - capability: forecast
+    primary_index: 0
+  - capability: opportunities
+    primary_index: 0
+  - capability: competition
+    primary_index: 2
+  - capability: winloss
+    primary_index: 2
+  - capability: dashboard
+    primary_index: 0
+sales_head:
+  label: Sales Head
+  home:
+  - capability: forecast
+    primary_index: 0
+  - capability: account
+    primary_index: 0
+  - capability: opportunities
+    primary_index: 0
+  - capability: competition
+    primary_index: 1
+  - capability: briefing
+    primary_index: 0
+  - capability: account
+    primary_index: 1
+sales_director:
+  label: Sales Director
+  home:
+  - capability: forecast
+    primary_index: 3
+  - capability: deal
+    primary_index: 1
+  - capability: relationships
+    primary_index: 1
+  - capability: threads
+    primary_index: 1
+  - capability: actions
+    primary_index: 0
+  - capability: meeting
+    primary_index: 0
+ae:
+  label: Account Executive
+  home:
+  - capability: meeting
+    primary_index: 0
+  - capability: account
+    primary_index: 0
+  - capability: opportunities
+    primary_index: 0
+  - capability: deal
+    primary_index: 5
+  - capability: relationships
+    primary_index: 5
+  - capability: briefing
+    primary_index: 2
+marketing_leader:
+  label: Marketing Leader
+  home:
+  - capability: marketing
+    primary_index: 3
+  - capability: marketing
+    primary_index: 1
+  - capability: marketing
+    primary_index: 4
+  - capability: signals
+    primary_index: 0
+  - capability: competition
+    primary_index: 5
+  - capability: opportunities
+    primary_index: 0
+cs_leader:
+  label: Customer Success Leader
+  home:
+  - capability: renewals
+    primary_index: 0
+  - capability: customer-growth
+    primary_index: 0
+  - capability: customer-growth
+    primary_index: 2
+  - capability: relationships
+    primary_index: 1
+  - capability: digital-twin
+    primary_index: 0
+  - capability: actions
+    primary_index: 0
+operations_leader:
+  label: Operations Leader
+  home:
+  - capability: bi
+    primary_index: 3
+  - capability: actions
+    primary_index: 2
+  - capability: data
+    primary_index: 2
+  - capability: scenario
+    primary_index: 0
+  - capability: watch
+    primary_index: 1
+  - capability: executive
+    primary_index: 3
+it_leader:
+  label: IT Leader
+  home:
+  - capability: solution
+    primary_index: 1
+  - capability: solution
+    primary_index: 3
+  - capability: data
+    primary_index: 0
+  - capability: knowledge
+    primary_index: 1
+  - capability: solution
+    primary_index: 4
+  - capability: market
+    primary_index: 4

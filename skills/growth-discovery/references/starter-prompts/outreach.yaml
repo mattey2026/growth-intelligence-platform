@@ -1,0 +1,56 @@
+capability:
+  id: outreach
+  name: Prospect Research & Outreach
+  description: Research a target account and draft first-touch outreach.
+  domain: Sales
+  slash_command: /outreach
+  aliases: []
+  audience: all
+  routes_to:
+    skill: account-intel-outreach
+    intent: research
+  example_outcomes:
+  - A cited point of view and persona-specific first-touch drafts (sent only after approval)
+  primary_prompts:
+  - text: Research [[{account}|this prospect]] for me.
+    category: Discover
+  - text: Why this account, why now, why us?
+    category: Analyze
+  - text: Draft outreach to the CIO.
+    category: Act
+  - text: Find a reason to reach out[[ to {account}]].
+    category: Discover
+  - text: Prioritize my target accounts.
+    category: Decide
+  - text: Personalize my outreach sequence.
+    category: Act
+  additional_prompts:
+  - text: Draft a LinkedIn message to the CFO.
+    category: Act
+  - text: Which customer stories fit this prospect?
+    category: Discover
+  - text: What changed at this prospect recently?
+    category: Monitor
+  - text: Build an account point of view.
+    category: Prepare
+  - text: Who should I contact first?
+    category: Decide
+  - text: Find recent news about this prospect.
+    category: Discover
+  - text: Draft a follow-up after no reply.
+    category: Act
+  - text: Which prospects are showing intent?
+    category: Monitor
+  - text: Map the prospect's buying group.
+    category: Discover
+  - text: Summarize this prospect in five lines.
+    category: Prepare
+  follow_up_prompts:
+  - Draft outreach to the CIO.
+  - Map the prospect's buying group.
+  - Prep me for my next sales call.
+  persona_prompts:
+    ae:
+    - Research [[{account}|this prospect]] for me.
+    marketing_leader:
+    - Which prospects are showing intent?

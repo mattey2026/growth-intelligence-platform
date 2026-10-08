@@ -1,0 +1,52 @@
+capability:
+  id: rfp
+  name: RFP Response
+  description: Respond to RFPs and questionnaires from approved content.
+  domain: Sales
+  slash_command: /rfp
+  aliases: []
+  audience: all
+  routes_to:
+    skill: rfp-response-composer
+    intent: rfp
+  example_outcomes:
+  - A compliance matrix, grounded draft answers and flagged gaps with expert routing
+  primary_prompts:
+  - text: Analyze this RFP.
+    category: Analyze
+  - text: Build an RFP response strategy.
+    category: Prepare
+  - text: Identify the customer's evaluation criteria.
+    category: Discover
+  - text: Identify our gaps in this RFP.
+    category: Investigate
+  - text: Analyze our competitive positioning for this RFP.
+    category: Analyze
+  - text: Draft the RFP response structure.
+    category: Act
+  additional_prompts:
+  - text: Build the compliance matrix.
+    category: Prepare
+  - text: What can't we answer in this RFP?
+    category: Investigate
+  - text: Draft answers from approved content.
+    category: Act
+  - text: Which questions need an expert?
+    category: Act
+  - text: Flag risky requirements in this RFP.
+    category: Investigate
+  - text: Tailor answers to the customer's win themes.
+    category: Prepare
+  - text: Respond to this security questionnaire.
+    category: Act
+  - text: Summarize the RFP for the bid team.
+    category: Prepare
+  - text: Should we bid on this RFP?
+    category: Decide
+  - text: Show me unusual contract terms.
+    category: Investigate
+  follow_up_prompts:
+  - Build the compliance matrix.
+  - Which questions need an expert?
+  - Should we bid on this RFP?
+  persona_prompts: {}

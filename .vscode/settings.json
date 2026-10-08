@@ -1,0 +1,12 @@
+{
+  "terminal.integrated.env.windows": { "PYTHONUTF8": "1" },
+  "terminal.integrated.env.osx": { "PYTHONUTF8": "1" },
+  "terminal.integrated.env.linux": { "PYTHONUTF8": "1" },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.exclude": { "**/__pycache__": true, "tests/last-*.json": true },
+  "search.exclude": { "**/__pycache__": true },
+  "yaml.schemas": {},
+  "[python]": { "editor.tabSize": 4 }
+}

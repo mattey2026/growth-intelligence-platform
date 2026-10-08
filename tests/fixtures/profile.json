@@ -1,0 +1,150 @@
+{
+  "contract": "business_context_profile",
+  "version": "1.0",
+  "business_model": {
+    "value": "B2B",
+    "confidence": 0.98,
+    "evidence": [
+      "account",
+      "cfo",
+      "champion",
+      "cio",
+      "contract",
+      "coo",
+      "cto",
+      "enterprise",
+      "executive sponsor",
+      "mid-market",
+      "negotiation",
+      "opportunit",
+      "12 customers, mean revenue per customer $8,133,333",
+      "high revenue per customer \u2192 organizational buyers",
+      "median deal $2,600,000 across 18 deals",
+      "buyer roles are corporate (11 executive or functional roles)"
+    ],
+    "scores": {
+      "B2B": 25,
+      "B2G": 0,
+      "B2C": 1,
+      "D2C": 0,
+      "B2B2C": 0,
+      "C2C": 0,
+      "B2E": 0,
+      "G2C": 0,
+      "C2B": 0,
+      "G2G": 0
+    }
+  },
+  "industry": {
+    "seller_industry": "Technology & IT Services",
+    "sub_industry": "Enterprise technology \u2014 hybrid software + professional/managed services",
+    "confidence": 0.95,
+    "evidence": {
+      "offerings": [
+        "AI Services",
+        "Analytics",
+        "Automation",
+        "Cloud",
+        "Core Platform",
+        "Data",
+        "Digital",
+        "Service",
+        "Services",
+        "Technology"
+      ]
+    },
+    "customer_industries": {
+      "Manufacturing": 1,
+      "Telecom": 1,
+      "Healthcare": 1,
+      "Retail": 1,
+      "Energy": 1,
+      "Financial Services": 1,
+      "Logistics": 1,
+      "Media": 1,
+      "Pharma": 1,
+      "Consumer Goods": 1,
+      "Travel": 1,
+      "Technology": 1
+    },
+    "note": "Customer industries describe who the business sells to, not what the business is."
+  },
+  "business_scale": {
+    "value": "Enterprise",
+    "confidence": 0.78,
+    "dimensions": {
+      "financial_revenue_in_dataset": 97600000.0,
+      "commercial_median_deal": 2600000.0,
+      "commercial_customer_segments": [
+        "enterprise",
+        "growth",
+        "mid-market",
+        "strategic"
+      ],
+      "organizational_regions": [
+        "APAC",
+        "Europe",
+        "North America"
+      ],
+      "commercial_stakeholder_roles": 11,
+      "operational_entities": {
+        "Accounts": 12,
+        "Contacts": 24,
+        "Opportunities": 18,
+        "Pipeline_Snapshots": 54,
+        "Activities": 65,
+        "Service_Cases": 11,
+        "Finance": 12,
+        "Product_Usage": 36,
+        "Marketing": 10,
+        "Contracts": 12,
+        "Competitors": 8,
+        "Whitespace": 13,
+        "Scenarios": 5,
+        "Pricing_History": 18,
+        "Price_Benchmarks": 12,
+        "Pricing_Requests": 6,
+        "Pricing_Summary": 6
+      },
+      "employee_count": "not in data"
+    },
+    "caveat": "Dataset may be a sample of accounts; revenue is a floor, not the total. No employee count."
+  },
+  "geography": [
+    "APAC",
+    "Europe",
+    "North America"
+  ],
+  "revenue_model": "Contracted / recurring (renewals present) + project revenue",
+  "customer_model": "Organizations (named accounts, tiered)",
+  "sales_motion": "Field / enterprise sales (staged pipeline, proposals, negotiation, executive engagement)",
+  "distribution_model": "Direct",
+  "regulatory_context": [
+    "Customer-side regulation relevant (e.g. Financial Services, Healthcare, Pharma customers)"
+  ],
+  "kpi_framework": {
+    "model": "B2B",
+    "primary": [
+      "Contracted revenue (ARR-like)",
+      "Net / gross revenue retention",
+      "Pipeline and weighted pipeline",
+      "Pipeline coverage",
+      "Win rate",
+      "Average deal size (ACV)",
+      "Gross margin and contribution",
+      "Renewal exposure",
+      "Revenue concentration"
+    ],
+    "secondary": [
+      "Sales cycle",
+      "Slippage",
+      "CAC / payback",
+      "Cost to serve",
+      "Discount leakage",
+      "Customer health"
+    ]
+  },
+  "market_benchmark_framework": "Technology & IT Services \u2014 Enterprise technology \u2014 hybrid software + professional/managed services; peers: enterprise IT services and software vendors",
+  "needs_clarification": false,
+  "questions": []
+}

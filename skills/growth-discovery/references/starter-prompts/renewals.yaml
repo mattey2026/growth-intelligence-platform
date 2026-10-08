@@ -1,0 +1,56 @@
+capability:
+  id: renewals
+  name: Renewals & Expansion
+  description: Protect renewals and find expansion-ready accounts.
+  domain: Customers
+  slash_command: /renewals
+  aliases: []
+  audience: all
+  routes_to:
+    skill: renewal-expansion-radar
+    intent: customer_health
+  example_outcomes:
+  - Renewal risk and expansion upside 6–9 months ahead, with a recommended play
+  primary_prompts:
+  - text: Show me accounts at renewal risk.
+    category: Investigate
+  - text: Identify expansion-ready accounts.
+    category: Discover
+  - text: Find churn signals.
+    category: Investigate
+  - text: Show me renewal drivers.
+    category: Analyze
+  - text: Identify customer health changes.
+    category: Monitor
+  - text: Build my renewal strategy[[ for {account}]].
+    category: Prepare
+  additional_prompts:
+  - text: Which renewals need executive intervention?
+    category: Act
+  - text: What changed since the last renewal review?
+    category: Monitor
+  - text: Which customers have expansion potential?
+    category: Discover
+  - text: Which competitors are involved in renewals?
+    category: Investigate
+  - text: What are the commercial risks in renewals?
+    category: Investigate
+  - text: Predict churn for the next two quarters.
+    category: Analyze
+  - text: Show me renewals due in the next six months.
+    category: Monitor
+  - text: Prepare a renewal review.
+    category: Prepare
+  - text: Model the impact of losing this customer.
+    category: Decide
+  - text: What would save this renewal?
+    category: Decide
+  follow_up_prompts:
+  - Which renewals need executive intervention?
+  - Model the impact of losing this customer.
+  - Prepare a renewal review.
+  persona_prompts:
+    cs_leader:
+    - Show me accounts at renewal risk.
+    cfo:
+    - How much revenue is at renewal risk?

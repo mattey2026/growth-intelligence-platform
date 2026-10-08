@@ -1,0 +1,110 @@
+{
+ "whitespace": [
+  {
+   "account_id": "Sanofi",
+   "offering": "AI Services",
+   "potential": "High",
+   "estimated_value": 4000000,
+   "relationship_access": "Strong",
+   "source": "whitespace model (synthetic)",
+   "driver": "AI automation program"
+  },
+  {
+   "account_id": "Sanofi",
+   "offering": "Finance & Accounting Operations",
+   "potential": "Medium",
+   "estimated_value": null,
+   "relationship_access": "Medium",
+   "source": "whitespace model (synthetic)"
+  }
+ ],
+ "contacts": [
+  {
+   "contact_id": "C-SAN-1",
+   "account_id": "Sanofi",
+   "name": "Contact A",
+   "role": "CIO",
+   "relationship_strength": "Strong",
+   "champion": "Yes",
+   "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+  },
+  {
+   "contact_id": "C-SAN-2",
+   "account_id": "Sanofi",
+   "name": "Contact B",
+   "role": "VP Digital Operations",
+   "relationship_strength": "Medium",
+   "champion": "No",
+   "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+  },
+  {
+   "contact_id": "C-SAN-3",
+   "account_id": "Sanofi",
+   "name": "Contact C",
+   "role": "Head of Procurement",
+   "relationship_strength": "Weak",
+   "champion": "No",
+   "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+  },
+  {
+   "contact_id": "C-SAN-4",
+   "account_id": "Sanofi",
+   "name": "Contact D",
+   "role": "Finance Director",
+   "relationship_strength": "Medium",
+   "champion": "No",
+   "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+  }
+ ],
+ "contracts": [
+  {
+   "account_id": "Sanofi",
+   "scope": "Finance operations managed service",
+   "value": 6000000,
+   "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+  },
+  {
+   "account_id": "Sanofi",
+   "competitor": "Competitor Y",
+   "scope": "Analytics services (incumbent)",
+   "value": 2500000,
+   "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+  }
+ ],
+ "initiatives": [
+  {
+   "initiative_id": "INI-1",
+   "account_id": "Sanofi",
+   "topic": "ai automation",
+   "text": "CIO described an AI automation program for operations in a QBR",
+   "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)",
+   "source_date": "2026-08-05"
+  },
+  {
+   "initiative_id": "INI-2",
+   "account_id": "Sanofi",
+   "topic": "integration",
+   "text": "Acquisition of Dynavax pending; expected to close Q1 2026",
+   "source": "Sanofi press release, 29 Jan 2026",
+   "source_date": "2026-01-29"
+  }
+ ],
+ "public_profile": [
+  {
+   "account_id": "Sanofi",
+   "text": "Global biopharmaceutical company; FY2025 net sales \u20ac43.6bn",
+   "source": "Sanofi press release, 29 Jan 2026"
+  }
+ ],
+ "outcomes": [],
+ "competitors": [
+  {
+   "account_id": "Sanofi",
+   "competitor": "Competitor X"
+  },
+  {
+   "account_id": "Sanofi",
+   "competitor": "Competitor Y"
+  }
+ ]
+}

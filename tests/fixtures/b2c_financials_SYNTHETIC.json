@@ -1,0 +1,122 @@
+[
+ {
+  "entity": "RetailCo",
+  "period": "FY2024",
+  "metric": "revenue",
+  "value": 1200,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2024",
+  "metric": "gross_profit",
+  "value": 480,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2024",
+  "metric": "operating_income",
+  "value": 96,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2024",
+  "metric": "capex",
+  "value": 60,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2024",
+  "metric": "operating_cash_flow",
+  "value": 110,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2024",
+  "metric": "accounts_receivable",
+  "value": 40,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2025",
+  "metric": "revenue",
+  "value": 1116,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2025",
+  "metric": "gross_profit",
+  "value": 424,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2025",
+  "metric": "operating_income",
+  "value": 67,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2025",
+  "metric": "capex",
+  "value": 41,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2025",
+  "metric": "operating_cash_flow",
+  "value": 80,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ },
+ {
+  "entity": "RetailCo",
+  "period": "FY2025",
+  "metric": "accounts_receivable",
+  "value": 45,
+  "unit": "USD m",
+  "source": "SYNTHETIC consumer retailer",
+  "source_date": "2026-03-01",
+  "basis": "reported"
+ }
+]

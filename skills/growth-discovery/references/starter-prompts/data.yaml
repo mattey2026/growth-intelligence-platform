@@ -1,0 +1,55 @@
+capability:
+  id: data
+  name: Data Analysis
+  description: Analyze any dataset and make it decision-ready.
+  domain: Operations
+  slash_command: /data
+  aliases: []
+  audience: all
+  routes_to:
+    skill: data-intelligence
+    intent: data_analysis
+  example_outcomes:
+  - Schema, quality profile, KPIs, trends, drivers and recommendations
+  primary_prompts:
+  - text: Analyze this dataset.
+    category: Analyze
+  - text: What patterns do you see in this data?
+    category: Analyze
+  - text: Find anomalies in this data.
+    category: Investigate
+  - text: Explain the key drivers in this data.
+    category: Investigate
+  - text: Build an analytical summary of this data.
+    category: Prepare
+  - text: Create a decision-ready view of this data.
+    category: Decide
+  additional_prompts:
+  - text: Is this data reliable?
+    category: Investigate
+  - text: Find duplicates in our CRM.
+    category: Investigate
+  - text: Reconcile CRM and ERP data.
+    category: Act
+  - text: What's in this file?
+    category: Discover
+  - text: Clean up our CRM data.
+    category: Act
+  - text: Which fields are missing or stale?
+    category: Investigate
+  - text: Map this data to accounts and opportunities.
+    category: Prepare
+  - text: Profile the data quality.
+    category: Analyze
+  - text: Show me trends in this data.
+    category: Analyze
+  - text: Compare these two datasets.
+    category: Analyze
+  follow_up_prompts:
+  - Is this data reliable?
+  - Explain the key drivers in this data.
+  - Show me the state of the business.
+  persona_prompts:
+    it_leader:
+    - Is our data reliable?
+    - Reconcile CRM and ERP data.

@@ -1,0 +1,25 @@
+{
+ "weights": {
+  "revenue_potential": 0.14,
+  "existing_revenue": 0.08,
+  "growth_potential": 0.1,
+  "expansion_probability": 0.12,
+  "strategic_importance": 0.1,
+  "health": 0.06,
+  "risk": 0.08,
+  "relationship_strength": 0.08,
+  "competitive_position": 0.05,
+  "whitespace": 0.07,
+  "timing": 0.07,
+  "accessibility": 0.05
+ },
+ "higher_is_better": {
+  "risk": true,
+  "timing": false
+ },
+ "notes": {
+  "risk": "higher risk raises priority in PROTECT mode; set to false for GROW-only views",
+  "timing": "days to next decisive event; fewer days = more urgent",
+  "accessibility": "0-1: meeting booked or responsive stakeholder"
+ }
+}

@@ -1,0 +1,54 @@
+capability:
+  id: decision
+  name: Decision Support
+  description: Evaluate options, trade-offs and evidence before deciding.
+  domain: Decisions
+  slash_command: /decision
+  aliases: []
+  audience: all
+  routes_to:
+    skill: decision-intelligence
+    intent: decision
+  example_outcomes:
+  - Options including status quo, evidence, trade-offs, recommendation, confidence and owner
+  primary_prompts:
+  - text: Help me evaluate this decision.
+    category: Decide
+  - text: Show me the options and trade-offs.
+    category: Decide
+  - text: What evidence supports each option?
+    category: Investigate
+  - text: What are the risks of each option?
+    category: Investigate
+  - text: Run a scenario analysis for this decision.
+    category: Decide
+  - text: Prepare an executive decision brief.
+    category: Prepare
+  additional_prompts:
+  - text: What information am I missing for this decision?
+    category: Investigate
+  - text: What assumptions are we making?
+    category: Investigate
+  - text: What could change this decision?
+    category: Analyze
+  - text: Show me the downside of this decision.
+    category: Investigate
+  - text: Show me the expected impact of each option.
+    category: Analyze
+  - text: What should we monitor after the decision?
+    category: Monitor
+  - text: Challenge your recommendation.
+    category: Decide
+  - text: What did we decide previously?
+    category: Discover
+  - text: Record this decision.
+    category: Act
+  - text: Who needs to approve this decision?
+    category: Act
+  follow_up_prompts:
+  - Challenge your recommendation.
+  - Record this decision.
+  - What should we monitor after the decision?
+  persona_prompts:
+    ceo:
+    - What decisions need my attention?

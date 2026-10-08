@@ -1,0 +1,68 @@
+# Persona configurations: one intelligence layer, persona-specific presentation.
+# kpis: KPI strip order (ids from dashboard_builder.KPI_DEFS)
+# tabs: navigation (also filtered by role permissions)
+# overview: Overview-view widget order (widget ids)
+# altitude: level of detail (enterprise / portfolio / account / deal)
+investor:
+  label: Investor
+  altitude: enterprise
+  kpis: [revenue, revenue_growth, margin, growth_potential, risk_exposure, competitive_exposure, opportunity_value, pipeline, forecast]
+  tabs: [overview, growth, financial, market, competition, decisions]
+  overview: [kpis, state, changes, trend, drivers, financial_summary, radar, risk_matrix, scenario_lab, actions]
+  emphasis: [revenue, growth, margin, FCF, market, competitive position, strategic opportunities, risks, scenarios]
+ceo:
+  label: CEO
+  altitude: enterprise
+  kpis: [revenue, revenue_growth, margin, growth_potential, opportunity_value, risk_exposure, competitive_exposure, pipeline, forecast]
+  tabs: [overview, growth, accounts, competition, market, financial, decisions, actions]
+  overview: [kpis, state, changes, trend, drivers, radar, risk_matrix, competitors, actions]
+  emphasis: [enterprise growth, strategic accounts, profitability, market, competition, major risks, capital allocation, strategic opportunities]
+cfo:
+  label: CFO
+  altitude: enterprise
+  kpis: [revenue, revenue_growth, margin, forecast, risk_exposure, pipeline, opportunity_value, growth_potential, competitive_exposure]
+  tabs: [overview, financial, growth, pipeline, decisions, actions]
+  overview: [kpis, state, changes, trend, drivers, financial_summary, radar, risk_matrix, scenario_lab, actions]
+  emphasis: [margin, cash, forecast quality, financial risk, scenarios]
+coo:
+  label: COO
+  altitude: enterprise
+  kpis: [revenue, margin, pipeline, forecast, risk_exposure, revenue_growth, growth_potential, opportunity_value, competitive_exposure]
+  tabs: [overview, operations, customers, pipeline, actions, decisions]
+  overview: [kpis, state, changes, trend, drivers, health, radar, risk_matrix, actions]
+  emphasis: [delivery, operational risk, capacity, customer health]
+cro:
+  label: CRO
+  altitude: portfolio
+  kpis: [pipeline, forecast, revenue, revenue_growth, opportunity_value, competitive_exposure, risk_exposure, growth_potential, margin]
+  tabs: [overview, pipeline, accounts, growth, competition, marketing, actions, decisions]
+  overview: [kpis, state, changes, trend, drivers, radar, risk_matrix, competitors, threads, actions]
+  emphasis: [bookings, forecast, coverage, competitive displacement, expansion]
+growth_ops:
+  label: Growth Operations Head
+  altitude: portfolio
+  kpis: [pipeline, opportunity_value, growth_potential, forecast, revenue, revenue_growth, competitive_exposure, risk_exposure, margin]
+  tabs: [overview, growth, marketing, pipeline, accounts, customers, actions]
+  overview: [kpis, state, changes, marketing_summary, trend, drivers, radar, risk_matrix, actions]
+  emphasis: [growth funnel, marketing → pipeline, pipeline creation, conversion, coverage, engagement, whitespace, velocity]
+sales_head:
+  label: Sales Head
+  altitude: portfolio
+  kpis: [revenue, pipeline, forecast, revenue_growth, opportunity_value, competitive_exposure, risk_exposure, growth_potential, margin]
+  tabs: [overview, pipeline, accounts, growth, competition, customers, actions, decisions]
+  overview: [kpis, state, changes, trend, drivers, radar, risk_matrix, competitors, threads, actions]
+  emphasis: [revenue, pipeline, forecast, coverage, strategic accounts, competitive displacement, expansion, renewal, rep productivity]
+sales_director:
+  label: Sales Director
+  altitude: account
+  kpis: [forecast, pipeline, revenue, competitive_exposure, risk_exposure, opportunity_value, revenue_growth, growth_potential, margin]
+  tabs: [overview, pipeline, accounts, competition, customers, actions]
+  overview: [kpis, changes, state, radar, risk_matrix, threads, actions]
+  emphasis: [team, region, forecast, deal health, stalled deals, account risk, competitive threats, next actions]
+ae:
+  label: Account Executive
+  altitude: deal
+  kpis: [pipeline, opportunity_value, forecast, competitive_exposure, growth_potential, revenue, risk_exposure, revenue_growth, margin]
+  tabs: [overview, pipeline, customers, competition, marketing, actions]
+  overview: [kpis, changes, actions, radar, risk_matrix, relationships, threads, marketing_summary]
+  emphasis: [accounts, opportunities, buying signals, relationships, competitive threads, meetings, next best action]

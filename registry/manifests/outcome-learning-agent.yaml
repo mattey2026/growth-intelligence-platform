@@ -1,0 +1,51 @@
+agent_id: outcome-learning-agent
+name: Outcome & Learning Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Tracks Prediction → Recommendation → Decision → Action → Outcome → Error → Learning candidate → Validation → Memory update, never
+  claiming learning that is not persisted and validated.
+business_objective: Tracks Prediction → Recommendation → Decision → Action → Outcome → Error → Learning candidate → Validation → Memory update,
+  never claiming learning that is not persisted and validated.
+allowed_skills:
+- business-memory
+- win-loss-intelligence
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- memory_graph
+- outcomes
+memory_permissions: read (+ learning-candidate proposals)
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet; learning needs ≥20 comparable outcomes
+  or a passing backtest
+escalation_rules: Rule change affecting predictions → T3 review
+model_routing_policy:
+  default_tier: T2
+  max_tier: T3
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 1
+action_permissions:
+- learning.candidate (proposal)
+approval_requirements: Adopting a learning requires validation + owner approval
+cost_budget:
+  max_relative_units_per_task: 24
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/outcome-learning-agent
+  score: null
+  last_run: null

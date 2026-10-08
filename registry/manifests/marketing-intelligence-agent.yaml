@@ -1,0 +1,58 @@
+version: 7.1.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every conclusion carries confidence + basis; below 0.6 must escalate or be labelled Low
+audit_requirements: Trace spans for every invocation plus V7.1 domain events
+failure_behavior: ESCALATE with partial analysis; missing data is reported, never invented; never act
+agent_id: marketing-intelligence-agent
+name: Marketing Intelligence Agent
+description: Interprets marketing signals for accounts, segments or partners — engagement change, executive engagement, buying intent, campaign-to-account
+  and campaign-to-opportunity influence (correlation unless tested) — and produces evidence-backed commercial hypotheses.
+business_objective: Turn marketing activity into account-level commercial intelligence without overstating attribution.
+allowed_skills:
+- marketing-intelligence
+- business-memory
+- growth-signal-orchestrator
+preload_skills:
+- marketing-intelligence
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- marketing_data
+- crm
+memory_permissions: read
+evidence_requirements: External facts need source, date and confidence; internal signals cite system and signal id; FACT / INFERENCE / CORRELATION
+  / HYPOTHESIS / PREDICTION / RECOMMENDATION labelled; campaign influence is CORRELATION unless a holdout result exists
+escalation_rules: Attribution questions with budget decisions or >$1M → T3; conflicting engagement data → ESCALATE
+model_routing_policy:
+  default_tier: T2
+  max_tier: T3
+  deterministic_steps: marketing_signals.py (T0)
+autonomy_level: 1
+action_permissions:
+- notify.owner_internal
+approval_requirements: No commercial commitments; any outreach is prepared by the action agent and approved
+cost_budget:
+  max_relative_units_per_task: 24
+  max_turns: 12
+serves_intents:
+- marketing_view
+- opportunity_discovery
+- account_strategy
+- account_intelligence
+- account_change
+- customer_health
+- business_health
+- dashboard
+evaluation:
+  suite: tests/run_v71.py::marketing + evals/marketing-agent
+  score: null
+  last_run: null

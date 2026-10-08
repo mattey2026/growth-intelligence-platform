@@ -1,0 +1,41 @@
+[
+ {
+  "signal_id": "CX1",
+  "account_id": "Sanofi",
+  "competitor_id": "Competitor X",
+  "observed_at": "2026-07-15",
+  "kind": "rfp_participation",
+  "source": "RFP distribution list (synthetic)",
+  "text": "Competitor X invited to the finance-ops RFP",
+  "opportunity_id": "OPP-SAN-2"
+ },
+ {
+  "signal_id": "CX2",
+  "account_id": "Sanofi",
+  "competitor_id": "Competitor X",
+  "observed_at": "2026-08-20",
+  "kind": "pricing_undercut",
+  "source": "AE call notes (synthetic)",
+  "text": "Procurement cited a lower Competitor X rate card"
+ },
+ {
+  "signal_id": "CX3",
+  "account_id": "Sanofi",
+  "competitor_id": "Competitor X",
+  "observed_at": "2026-09-12",
+  "kind": "champion_weakening",
+  "source": "relationship review (synthetic)",
+  "text": "VP Digital Operations less engaged with our team",
+  "stakeholder_id": "C-SAN-2",
+  "relationship_signal": "R-1"
+ },
+ {
+  "signal_id": "CY1",
+  "account_id": "Sanofi",
+  "competitor_id": "Competitor Y",
+  "observed_at": "2026-09-01",
+  "kind": "competitor_delivery_issue",
+  "source": "customer QBR (synthetic)",
+  "text": "Customer escalated Competitor Y analytics delivery delays"
+ }
+]

@@ -1,0 +1,56 @@
+agent_id: customer-growth-agent
+name: Customer Growth Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Owns Adoption → Health → Risk → Renewal → Expansion using usage, service, support cases, contracts, finance, relationships and sentiment.
+business_objective: Owns Adoption → Health → Risk → Renewal → Expansion using usage, service, support cases, contracts, finance, relationships
+  and sentiment.
+allowed_skills:
+- renewal-expansion-radar
+- customer-digital-twin
+- growth-opportunity-discovery
+- growth-signal-orchestrator
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- product_usage
+- itsm_read
+- crm
+- erp_read
+- surveys
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet
+escalation_rules: Cross-function pattern on strategic account → T3
+model_routing_policy:
+  default_tier: T2
+  max_tier: T3
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 1
+action_permissions:
+- crm.create_task
+- notify.owner_internal
+approval_requirements: Customer contact needs approval
+cost_budget:
+  max_relative_units_per_task: 24
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/customer-growth-agent
+  score: null
+  last_run: null

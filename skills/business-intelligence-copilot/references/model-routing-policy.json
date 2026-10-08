@@ -1,0 +1,47 @@
+{
+ "tiers": {
+  "T0": "deterministic",
+  "T1": "light",
+  "T2": "standard",
+  "T3": "advanced",
+  "T4": "expert"
+ },
+ "bindings": {
+  "claude-code": {
+   "T1": "subagent:growth-light (model: haiku)",
+   "T2": "subagent:growth-analyst (model: sonnet)",
+   "T3": "subagent:growth-strategist (model: opus)",
+   "T4": "subagent:growth-expert (model: fable)"
+  },
+  "cowork": {
+   "T1": "subagent:growth-light (model: haiku)",
+   "T2": "subagent:growth-analyst (model: sonnet)",
+   "T3": "subagent:growth-strategist (model: opus)",
+   "T4": "subagent:growth-expert (model: fable)"
+  },
+  "api": {
+   "T1": "claude-haiku-4-5-20251001",
+   "T2": "claude-sonnet-5",
+   "T3": "claude-opus-5-5",
+   "T4": "claude-fable-5-1"
+  },
+  "claude-ai": {
+   "T1": "current model (routing not available in chat)",
+   "T2": "current model",
+   "T3": "current model",
+   "T4": "current model; recommend Opus or higher for this task"
+  }
+ },
+ "relative_cost": {
+  "T0": 0,
+  "T1": 1,
+  "T2": 4,
+  "T3": 12,
+  "T4": 20
+ },
+ "escalation": {
+  "confidence_below": 0.6,
+  "value_at_stake_above": 1000000,
+  "rows_for_long_context": 200000
+ }
+}

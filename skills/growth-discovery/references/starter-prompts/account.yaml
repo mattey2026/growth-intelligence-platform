@@ -1,0 +1,61 @@
+capability:
+  id: account
+  name: Account Intelligence
+  description: 'Understand an account end to end: strategy, changes, opportunities, risks and relationships.'
+  domain: Accounts
+  slash_command: /account
+  aliases: []
+  audience: all
+  routes_to:
+    skill: account-intelligence-swot-planning
+    intent: account_strategy
+  example_outcomes:
+  - A 12-section account plan with evidence behind every conclusion
+  - What changed since the last snapshot, by domain
+  primary_prompts:
+  - text: Build my complete [[{account} ]]account strategy.
+    category: Prepare
+  - text: What has changed in [[{account}|this account]]?
+    category: Monitor
+  - text: Show me the biggest growth opportunities[[ in {account}]].
+    category: Discover
+  - text: Identify the major risks in [[{account}|this account]].
+    category: Investigate
+  - text: Map the key stakeholders and relationships[[ at {account}]].
+    category: Discover
+    routes_to_capability: relationships
+  - text: Give me an executive briefing on [[{account}|this account]].
+    category: Prepare
+  additional_prompts:
+  - text: Show me the account's current business priorities.
+    category: Discover
+  - text: Build a SWOT for [[{account}|this account]].
+    category: Analyze
+  - text: Where do we have whitespace[[ in {account}]]?
+    category: Discover
+  - text: What should I focus on this quarter?
+    category: Decide
+  - text: What are we missing in [[{account}|this account]]?
+    category: Investigate
+  - text: Compare our footprint with the customer's priorities.
+    category: Analyze
+  - text: Show me our strategic position[[ in {account}]].
+    category: Analyze
+  - text: What should I discuss with the executive sponsor?
+    category: Prepare
+  - text: Show me the account history[[ for {account}]].
+    category: Discover
+  - text: What changed since my last account review?
+    category: Monitor
+  follow_up_prompts:
+  - Find the biggest opportunity[[ in {account}]].
+  - Show me competitive threads[[ in {account}]].
+  - Map the buying committee.
+  - Create a 90-day action plan.
+  - Prepare me for the next executive meeting.
+  persona_prompts:
+    ceo:
+    - Show me the strategic position of [[{account}|our key accounts]].
+    - Where can [[{account}|this account]] grow fastest?
+    ae:
+    - What should I do next in [[{account}|this account]]?

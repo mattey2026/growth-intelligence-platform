@@ -1,0 +1,1359 @@
+{
+ "plugin": "growth-intelligence-platform",
+ "generated": "2026-09-30T17:47:02",
+ "agents": [
+  {
+   "id": "account-intelligence-agent",
+   "name": "Account Intelligence Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Understands an account or business entity \u2014 account 360, digital twin, priorities, business model, technology landscape, transformation initiatives, existing relationship, risks, whitespace and stakeholder ecosystem.",
+   "skills": [
+    "customer-digital-twin",
+    "account-intelligence-swot-planning",
+    "relationship-intelligence",
+    "knowledge-intelligence",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "erp_read",
+    "itsm_read",
+    "product_usage",
+    "files"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none (analysis only)",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "none (analysis only)",
+   "serves_intents": [
+    "dashboard"
+   ],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "action-workflow-agent",
+   "name": "Action / Workflow Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Turns approved recommendations into precise action specifications \u2014 CRM tasks, approved field updates, email drafts, meetings, proposals, approvals, workflows, notifications, forecast updates, opportunities \u2014 and checks them against the action catalog; the main session executes after the policy gate.",
+   "skills": [
+    "action-center",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "action_catalog",
+    "crm_meta"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 2,
+   "action_permissions": [
+    "prepare any catalog action; execute none"
+   ],
+   "approval_requirements": "Per action catalog; high-risk external actions always human-approved",
+   "model_policy": {
+    "default_tier": "T1",
+    "max_tier": "T2",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 8,
+    "max_turns": 8
+   },
+   "governance": "Per action catalog; high-risk external actions always human-approved",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "business-orchestrator",
+   "name": "Business Orchestrator",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "main-session",
+   "kind": "domain",
+   "purpose": "Primary supervisor.",
+   "skills": [
+    "business-orchestrator",
+    "business-context-discovery",
+    "business-memory",
+    "daily-growth-briefing",
+    "business-watch",
+    "executive-command-center",
+    "business-intelligence-copilot",
+    "action-center",
+    "platform-admin"
+   ],
+   "tools": [
+    "*main-session*"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "all authorized via user connectors"
+   ],
+   "memory_access": "read/write (single writer)",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "all via action-center + policy gate"
+   ],
+   "approval_requirements": "per action catalog",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T4",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 40,
+    "max_turns": 14
+   },
+   "governance": "per action catalog",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "main session"
+  },
+  {
+   "id": "competitive-intelligence-agent",
+   "name": "Competitive Intelligence Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Tracks competitors, activity, positioning, win/loss, pricing where available, competitor relationships, displacement opportunities and threats \u2014 distinguishing facts from inference.",
+   "skills": [
+    "competitive-intelligence",
+    "win-loss-intelligence",
+    "knowledge-intelligence",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill",
+    "WebSearch",
+    "WebFetch"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "transcripts",
+    "rfps",
+    "win_loss",
+    "web"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "competitive-thread-agent",
+   "name": "Competitive Thread Agent",
+   "version": "7.1.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Maintains persistent CompetitiveThreads \u2014 matches each competitor signal to an existing thread or creates one, updates velocity, momentum, counter-evidence and confidence, links opportunities, stakeholders, campaigns and financial or relationship signals, predicts the next event and recommends actions.",
+   "skills": [
+    "competitive-thread-intelligence",
+    "competitive-intelligence",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill",
+    "WebSearch",
+    "WebFetch"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "transcripts",
+    "rfps",
+    "web"
+   ],
+   "memory_access": "read (+ thread proposals)",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "crm.create_task",
+    "notify.owner_internal"
+   ],
+   "approval_requirements": "Customer-facing responses and pricing moves need approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "deterministic_steps": "competitive_threads.py (T0: matching, velocity, momentum, confidence)"
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 12
+   },
+   "governance": "Customer-facing responses and pricing moves need approval",
+   "serves_intents": [
+    "competitive",
+    "competitive_ground",
+    "opportunity_discovery",
+    "account_strategy",
+    "deal_analysis",
+    "account_intelligence",
+    "account_change",
+    "dashboard"
+   ],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "customer-growth-agent",
+   "name": "Customer Growth Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Owns Adoption \u2192 Health \u2192 Risk \u2192 Renewal \u2192 Expansion using usage, service, support cases, contracts, finance, relationships and sentiment.",
+   "skills": [
+    "renewal-expansion-radar",
+    "customer-digital-twin",
+    "growth-opportunity-discovery",
+    "growth-signal-orchestrator",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "product_usage",
+    "itsm_read",
+    "crm",
+    "erp_read",
+    "surveys"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "crm.create_task",
+    "notify.owner_internal"
+   ],
+   "approval_requirements": "Customer contact needs approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "Customer contact needs approval",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "dashboard-intelligence-agent",
+   "name": "Dashboard Intelligence Agent",
+   "version": "7.2.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Determines the dashboard experience a user needs \u2014 persona, entity, objective, required domains, KPI emphasis and visualizations \u2014 and reviews the Dashboard Contract built by the orchestrator (dashboard_builder.py, T0) for evidence and persona fit; may rephrase the narrative at T2 while keeping every evidence id. Computes nothing and runs no scripts (single-writer rule).",
+   "skills": [
+    "dashboard-intelligence",
+    "artifact-dashboard-intelligence",
+    "business-memory",
+    "customer-digital-twin"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "marketing_data",
+    "public_filings",
+    "financial_data"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none (presentation only); recommended actions are executed by the Action Center after approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T4",
+    "deterministic_steps": "dashboard_builder.py and render_dashboard.py run by the orchestrator (T0)"
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 20,
+    "max_turns": 10
+   },
+   "governance": "none (presentation only); recommended actions are executed by the Action Center after approval",
+   "serves_intents": [
+    "dashboard"
+   ],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "data-intelligence-agent",
+   "name": "Data Intelligence Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Validates data before high-impact analysis \u2014 missing, duplicate, stale and conflicting data, schema changes, source reliability, entity resolution, lineage and system-of-record conflicts.",
+   "skills": [
+    "data-intelligence",
+    "business-context-discovery",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "all authorized sources (profiling)",
+    "files"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "default_tier": "T1",
+    "max_tier": "T2",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 8,
+    "max_turns": 10
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "deal-strategy-agent",
+   "name": "Deal Strategy Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Owns active opportunities \u2014 deal health, stakeholders, buying process, competition, pricing, objections, close risk, timeline, mutual action plan, executive strategy and next-best action.",
+   "skills": [
+    "deal-intelligence",
+    "relationship-intelligence",
+    "pricing-intelligence",
+    "competitive-intelligence",
+    "win-loss-intelligence",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "email_calendar_meta",
+    "transcripts",
+    "cpq_read"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "crm.create_task",
+    "crm.update_field(next_step)",
+    "email.draft"
+   ],
+   "approval_requirements": "Field changes and customer comms need approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T4",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 40,
+    "max_turns": 14
+   },
+   "governance": "Field changes and customer comms need approval",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "executive-decision-agent",
+   "name": "Executive Decision Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Turns analysis into decisions \u2014 situation, options, evidence, financial and strategic impact, risks, dependencies, trade-offs, recommendation, confidence, what would change it, owner, deadline and required approval \u2014 stored in Decision Memory.",
+   "skills": [
+    "decision-intelligence",
+    "scenario-planner",
+    "business-intelligence-copilot",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "all analysis outputs via packet"
+   ],
+   "memory_access": "read (+ decision proposals)",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "decision.record (proposal)"
+   ],
+   "approval_requirements": "Decisions are recorded only when the owner approves",
+   "model_policy": {
+    "default_tier": "T3",
+    "max_tier": "T4",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 40,
+    "max_turns": 14
+   },
+   "governance": "Decisions are recorded only when the owner approves",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "financial-intelligence-agent",
+   "name": "Financial Intelligence Agent",
+   "version": "7.1.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Analyzes an account's or business's financials \u2014 revenue, growth, margins, EBITDA, cash flow, capex, debt, working capital, DSO, segments, M&A, restructuring, cost and technology investment \u2014 computing every metric in code, and translates financial signals into commercial implications.",
+   "skills": [
+    "financial-intelligence",
+    "business-memory",
+    "growth-signal-orchestrator",
+    "decision-intelligence"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill",
+    "WebSearch",
+    "WebFetch"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "financial_data",
+    "public_filings",
+    "web"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none (analysis only)",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "deterministic_steps": "financial_intel.py (T0: all calculations)"
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 12
+   },
+   "governance": "none (analysis only)",
+   "serves_intents": [
+    "financial_story",
+    "opportunity_discovery",
+    "account_strategy",
+    "account_intelligence",
+    "account_change",
+    "decision",
+    "cross_functional",
+    "business_health",
+    "dashboard"
+   ],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "governance-risk-agent",
+   "name": "Governance & Risk Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Independently evaluates authorization, privacy, policy, regulatory risk, action permissions, data sensitivity, approval requirements, evidence sufficiency, hallucination risk, conflicting evidence and model risk before material outputs or actions.",
+   "skills": [
+    "platform-admin",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "policy",
+    "registry",
+    "execution_traces"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none (advises the gate)",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "none (advises the gate)",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "growth-analyst",
+   "name": "growth-analyst",
+   "version": "6.1.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "reasoning-tier",
+   "purpose": "T2 reasoning tier \u2014 Standard business analysis, KPI analysis, forecasting interpretation, account analysis, operational intelligence, normal recommendations.",
+   "skills": [
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "handoff packet only"
+   ],
+   "memory_access": "none (packet only)",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "fixed_model": "sonnet",
+    "tier": "T2",
+    "use_when": "Standard business analysis, KPI analysis, forecasting interpretation, account analysis, operational intelligence, normal recommendations"
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 8
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "growth-expert",
+   "name": "growth-expert",
+   "version": "6.1.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "reasoning-tier",
+   "purpose": "T4 reasoning tier \u2014 High-stakes reasoning, conflicting evidence, high-value decisions, independent review and challenge of T3 recommendations \u2014 never used by default.",
+   "skills": [
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "handoff packet only"
+   ],
+   "memory_access": "none (packet only)",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "fixed_model": "fable",
+    "tier": "T4",
+    "use_when": "High-stakes reasoning, conflicting evidence, high-value decisions, independent review and challenge of T3 recommendations \u2014 never used by default",
+    "never_default": true
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 40
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "growth-light",
+   "name": "growth-light",
+   "version": "6.1.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "reasoning-tier",
+   "purpose": "T1 reasoning tier \u2014 Classification, extraction, simple transformation, summarization, memory compression, low-complexity analysis.",
+   "skills": [],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob"
+   ],
+   "data_access": [
+    "handoff packet only"
+   ],
+   "memory_access": "none (packet only)",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "fixed_model": "haiku",
+    "tier": "T1",
+    "use_when": "Classification, extraction, simple transformation, summarization, memory compression, low-complexity analysis"
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 2
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "growth-strategist",
+   "name": "growth-strategist",
+   "version": "6.1.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "reasoning-tier",
+   "purpose": "T3 reasoning tier \u2014 Strategic reasoning, complex opportunity analysis, scenario planning, pricing strategy, cross-functional decisions, executive recommendations.",
+   "skills": [
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "handoff packet only"
+   ],
+   "memory_access": "none (packet only)",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "fixed_model": "opus",
+    "tier": "T3",
+    "use_when": "Strategic reasoning, complex opportunity analysis, scenario planning, pricing strategy, cross-functional decisions, executive recommendations"
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "market-intelligence-agent",
+   "name": "Market Intelligence Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Interprets industry, competitors, macroeconomics, regulation, technology, trends, strategic events and M&A, translating external events into business implications.",
+   "skills": [
+    "market-intelligence",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill",
+    "WebSearch",
+    "WebFetch"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "web",
+    "benchmarks"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "marketing-intelligence-agent",
+   "name": "Marketing Intelligence Agent",
+   "version": "7.1.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Interprets marketing signals for accounts, segments or partners \u2014 engagement change, executive engagement, buying intent, campaign-to-account and campaign-to-opportunity influence (correlation unless tested) \u2014 and produces evidence-backed commercial hypotheses.",
+   "skills": [
+    "marketing-intelligence",
+    "business-memory",
+    "growth-signal-orchestrator"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "marketing_data",
+    "crm"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "notify.owner_internal"
+   ],
+   "approval_requirements": "No commercial commitments; any outreach is prepared by the action agent and approved",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "deterministic_steps": "marketing_signals.py (T0)"
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 12
+   },
+   "governance": "No commercial commitments; any outreach is prepared by the action agent and approved",
+   "serves_intents": [
+    "marketing_view",
+    "opportunity_discovery",
+    "account_strategy",
+    "account_intelligence",
+    "account_change",
+    "customer_health",
+    "business_health",
+    "dashboard"
+   ],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "meeting-intelligence-agent",
+   "name": "Meeting Intelligence Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Owns the meeting lifecycle \u2014 preparation before; after, transcript analysis, requirements, objections, buying signals, commitments, stakeholder, opportunity and risk changes \u2014 then proposes memory and CRM updates and next actions.",
+   "skills": [
+    "meeting-intelligence-brief",
+    "meeting-follow-through",
+    "relationship-intelligence",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "calendar",
+    "transcripts",
+    "crm",
+    "itsm_read",
+    "erp_read"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "crm.update_field (proposal)",
+    "crm.create_task",
+    "email.draft"
+   ],
+   "approval_requirements": "CRM writes and recaps need approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "CRM writes and recaps need approval",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "opportunity-agent",
+   "name": "Opportunity Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Discovers commercial growth \u2014 whitespace, cross-sell, upsell, new business units, geographies and use cases, transformation and AI opportunities, modernization, competitive displacement and contract expansion \u2014 each with problem, evidence, relevance, buyer, value, relationship, competition, timing, confidence and next action.",
+   "skills": [
+    "growth-opportunity-discovery",
+    "account-intelligence-swot-planning",
+    "competitive-intelligence",
+    "market-intelligence",
+    "knowledge-intelligence",
+    "account-intel-outreach",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "erp_read",
+    "product_usage",
+    "install_base",
+    "files"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "opportunity.create (proposal)",
+    "email.draft"
+   ],
+   "approval_requirements": "Opportunity creation and outreach need approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "Opportunity creation and outreach need approval",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "outcome-learning-agent",
+   "name": "Outcome & Learning Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Tracks Prediction \u2192 Recommendation \u2192 Decision \u2192 Action \u2192 Outcome \u2192 Error \u2192 Learning candidate \u2192 Validation \u2192 Memory update, never claiming learning that is not persisted and validated.",
+   "skills": [
+    "business-memory",
+    "win-loss-intelligence"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "memory_graph",
+    "outcomes"
+   ],
+   "memory_access": "read (+ learning-candidate proposals)",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "learning.candidate (proposal)"
+   ],
+   "approval_requirements": "Adopting a learning requires validation + owner approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "Adopting a learning requires validation + owner approval",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "pipeline-forecast-agent",
+   "name": "Pipeline & Forecast Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Pipeline, forecast, slippage, coverage, deal risk, variance, probability, scenario forecasting and team-level performance.",
+   "skills": [
+    "pipeline-forecast-intelligence",
+    "deal-intelligence",
+    "scenario-planner",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "forecast_submissions",
+    "bookings"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "Never submits forecasts",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "Never submits forecasts",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "pricing-commercial-agent",
+   "name": "Pricing & Commercial Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Price optimization, discount analysis, margin, competitive pricing, elasticity (identified or assumed), deal pricing, leakage, commercial scenarios and approval recommendations \u2014 never pricing without evidence.",
+   "skills": [
+    "pricing-intelligence",
+    "scenario-planner",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "cpq_read",
+    "erp_read",
+    "pricing_history",
+    "benchmarks"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "pricing.approval_request (draft)"
+   ],
+   "approval_requirements": "All price commitments and discount approvals are human-only",
+   "model_policy": {
+    "default_tier": "T3",
+    "max_tier": "T4",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 40,
+    "max_turns": 14
+   },
+   "governance": "All price commitments and discount approvals are human-only",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "relationship-agent",
+   "name": "Relationship Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Maintains relationship intelligence \u2014 economic buyer, sponsor, champion, influencer, technical buyer, procurement, blocker, detractor, executive relationships \u2014 with strength, engagement, sentiment (internal), influence, last interaction and changes.",
+   "skills": [
+    "relationship-intelligence",
+    "meeting-follow-through",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "crm",
+    "email_calendar_meta",
+    "transcripts"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "crm.update_contact_role (proposal)"
+   ],
+   "approval_requirements": "Contact changes need approval",
+   "model_policy": {
+    "default_tier": "T2",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "Contact changes need approval",
+   "serves_intents": [
+    "dashboard"
+   ],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "research-agent",
+   "name": "Research Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Acquires evidence \u2014 public, company, industry, regulatory, research, news, documents and internal knowledge \u2014 each fact with source, date, evidence and confidence.",
+   "skills": [
+    "knowledge-intelligence",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill",
+    "WebSearch",
+    "WebFetch"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "web",
+    "document_repositories"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 0,
+   "action_permissions": [],
+   "approval_requirements": "none",
+   "model_policy": {
+    "default_tier": "T1",
+    "max_tier": "T2",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 8,
+    "max_turns": 20
+   },
+   "governance": "none",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  },
+  {
+   "id": "solution-architect-agent",
+   "name": "Solution Architect Agent",
+   "version": "7.0.0",
+   "status": "ACTIVE",
+   "owner": "platform",
+   "runtime": "subagent",
+   "kind": "domain",
+   "purpose": "Translates business problems into solutions \u2014 capability, solution, architecture, technology, delivery model, value, commercial model, risks and roadmap \u2014 for enterprise sales, proposals, RFPs and transformation programs.",
+   "skills": [
+    "solution-architecture",
+    "knowledge-intelligence",
+    "rfp-response-composer",
+    "business-memory"
+   ],
+   "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Skill"
+   ],
+   "data_access": [
+    "memory_graph",
+    "business_context_profile",
+    "document_repositories",
+    "crm",
+    "files"
+   ],
+   "memory_access": "read",
+   "autonomy_level": 1,
+   "action_permissions": [
+    "proposal.draft"
+   ],
+   "approval_requirements": "Customer-facing proposals need approval",
+   "model_policy": {
+    "default_tier": "T3",
+    "max_tier": "T3",
+    "escalate_on": [
+     "confidence<0.6",
+     "evidence conflict",
+     "value_at_stake>1M for decisions",
+     "unresolved after tier"
+    ]
+   },
+   "cost_budget": {
+    "max_relative_units_per_task": 24,
+    "max_turns": 14
+   },
+   "governance": "Customer-facing proposals need approval",
+   "serves_intents": [],
+   "evaluation_score": null,
+   "last_updated": "2026-09-30",
+   "deployment": "deployed as plugin agent"
+  }
+ ]
+}

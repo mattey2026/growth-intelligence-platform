@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: no-delegate-arithmetic
+tags: [delegation]
+context:
+  scaffold_script: fixture.sh

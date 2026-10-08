@@ -1,0 +1,56 @@
+capability:
+  id: account-plan
+  name: Account Planning & SWOT
+  description: Build an evidence-backed account plan, SWOT and plays.
+  domain: Accounts
+  slash_command: /account-plan
+  aliases: []
+  audience: all
+  routes_to:
+    skill: account-intelligence-swot-planning
+    intent: account_strategy
+  example_outcomes:
+  - An account plan with SWOT, whitespace and plays
+  - A 90-day plan with owners
+  primary_prompts:
+  - text: Build my[[ {account}]] account plan.
+    category: Prepare
+  - text: Create an evidence-backed SWOT[[ for {account}]].
+    category: Analyze
+  - text: Identify expansion plays for my account plan.
+    category: Discover
+  - text: Identify account risks[[ in {account}]].
+    category: Investigate
+  - text: Show me whitespace[[ in {account}]].
+    category: Discover
+  - text: Recommend my account plays.
+    category: Decide
+  additional_prompts:
+  - text: What are the customer's strategic priorities?
+    category: Discover
+  - text: Where are we underpenetrated?
+    category: Analyze
+  - text: What should I do next[[ in {account}]]?
+    category: Act
+  - text: Which stakeholders should I engage?
+    category: Act
+  - text: What could prevent expansion?
+    category: Investigate
+  - text: Show me the competitive implications.
+    category: Analyze
+  - text: Build a 90-day account plan.
+    category: Prepare
+  - text: Turn the plan into actions with owners.
+    category: Act
+  - text: Show me the evidence behind the plan.
+    category: Investigate
+  - text: Compare this plan with last quarter's.
+    category: Monitor
+  follow_up_prompts:
+  - Build a 90-day account plan.
+  - Turn the plan into actions with owners.
+  - Map the buying committee.
+  - Show me the evidence behind the plan.
+  persona_prompts:
+    sales_director:
+    - Review the account plans that need my input.

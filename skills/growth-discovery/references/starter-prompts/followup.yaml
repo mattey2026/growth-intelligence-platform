@@ -1,0 +1,52 @@
+capability:
+  id: followup
+  name: Meeting Follow-through
+  description: Turn a meeting into follow-ups, updates and commitments.
+  domain: Meetings
+  slash_command: /followup
+  aliases: []
+  audience: all
+  routes_to:
+    skill: meeting-follow-through
+    intent: meeting_followup
+  example_outcomes:
+  - An approval-ready CRM update, recap draft and commitments list
+  primary_prompts:
+  - text: Process my call notes into follow-ups.
+    category: Act
+  - text: Extract decisions and actions from the meeting.
+    category: Analyze
+  - text: Create follow-up tasks from the meeting.
+    category: Act
+  - text: Identify commitments made in the meeting.
+    category: Investigate
+  - text: Update the account intelligence from the meeting.
+    category: Act
+  - text: Update the opportunity based on this meeting.
+    category: Act
+  additional_prompts:
+  - text: Draft the follow-up email.
+    category: Act
+  - text: Identify unanswered questions from the meeting.
+    category: Investigate
+  - text: Identify new opportunities from the meeting.
+    category: Discover
+  - text: Identify risks raised in the meeting.
+    category: Investigate
+  - text: Update stakeholder relationships from the meeting.
+    category: Act
+  - text: Update competitive intelligence from the meeting.
+    category: Act
+  - text: Summarize the meeting for my manager.
+    category: Prepare
+  - text: Log my meeting.
+    category: Act
+  - text: Compare what was agreed with the opportunity record.
+    category: Analyze
+  - text: Show me open commitments across my meetings.
+    category: Monitor
+  follow_up_prompts:
+  - Draft the follow-up email.
+  - Update the opportunity based on this meeting.
+  - Show me open commitments across my meetings.
+  persona_prompts: {}

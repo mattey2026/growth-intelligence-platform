@@ -1,0 +1,14 @@
+[
+ {
+  "campaign_id": "CMP-AI",
+  "name": "AI in Pharma Operations (synthetic)"
+ },
+ {
+  "campaign_id": "CMP-FIN",
+  "name": "Finance Transformation Summit (synthetic)",
+  "experiment": {
+   "holdout_lift": 0.12,
+   "source": "holdout test Q3 (synthetic)"
+  }
+ }
+]

@@ -1,0 +1,22 @@
+# Action catalog: every action the platform can prepare. Risk and approval are defaults; tenants may tighten them, never loosen below `floor`.
+# autonomy: the minimum agent autonomy level allowed to PREPARE it. auto_max: the highest level at which it may run without per-item approval.
+actions:
+  memory.write_summary:      {risk: low,      external: false, autonomy: 0, auto_max: 3, approval: none,           floor: none}
+  notify.owner_internal:     {risk: low,      external: false, autonomy: 1, auto_max: 3, approval: none,           floor: none}
+  crm.create_task:           {risk: low,      external: false, autonomy: 1, auto_max: 2, approval: user,           floor: none}
+  crm.log_note:              {risk: low,      external: false, autonomy: 1, auto_max: 2, approval: user,           floor: none}
+  email.draft:               {risk: low,      external: false, autonomy: 1, auto_max: 2, approval: none,           floor: none}
+  crm.update_field(next_step): {risk: medium, external: false, autonomy: 1, auto_max: 1, approval: record_owner,   floor: record_owner}
+  crm.update_contact_role:   {risk: medium,   external: false, autonomy: 1, auto_max: 1, approval: record_owner,   floor: record_owner}
+  opportunity.create:        {risk: medium,   external: false, autonomy: 1, auto_max: 1, approval: user,           floor: user}
+  proposal.draft:            {risk: medium,   external: false, autonomy: 1, auto_max: 1, approval: user,           floor: user}
+  decision.record:           {risk: medium,   external: false, autonomy: 1, auto_max: 1, approval: decision_owner, floor: decision_owner}
+  learning.adopt:            {risk: high,     external: false, autonomy: 1, auto_max: 0, approval: model_owner,    floor: model_owner}
+  crm.update_forecast:       {risk: high,     external: false, autonomy: 1, auto_max: 0, approval: manager,        floor: manager}
+  crm.update_field(stage|amount|close_date): {risk: high, external: false, autonomy: 1, auto_max: 0, approval: record_owner, floor: record_owner}
+  workflow.trigger:          {risk: high,     external: false, autonomy: 1, auto_max: 0, approval: workflow_owner, floor: workflow_owner}
+  email.send:                {risk: high,     external: true,  autonomy: 1, auto_max: 0, approval: user,           floor: user}
+  calendar.create_external_meeting: {risk: high, external: true, autonomy: 1, auto_max: 0, approval: user,      floor: user}
+  pricing.approval_request:  {risk: critical, external: false, autonomy: 1, auto_max: 0, approval: deal_desk,      floor: deal_desk}
+  pricing.commit:            {risk: critical, external: true,  autonomy: 9, auto_max: 0, approval: human_only,     floor: human_only}
+  contract.any:              {risk: critical, external: true,  autonomy: 9, auto_max: 0, approval: human_only,     floor: human_only}

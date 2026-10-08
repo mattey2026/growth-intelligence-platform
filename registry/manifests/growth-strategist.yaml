@@ -1,0 +1,39 @@
+agent_id: growth-strategist
+name: growth-strategist
+version: 6.1.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+kind: reasoning-tier
+description: "T3 reasoning tier \u2014 Strategic reasoning, complex opportunity analysis, scenario planning, pricing strategy, cross-functional\
+  \ decisions, executive recommendations."
+business_objective: Strategic reasoning, complex opportunity analysis, scenario planning, pricing strategy, cross-functional decisions, executive
+  recommendations
+allowed_skills:
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- handoff packet only
+memory_permissions: none (packet only)
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: as v6.1
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet
+escalation_rules: ESCALATE to next tier
+model_routing_policy:
+  fixed_model: opus
+  tier: T3
+  use_when: Strategic reasoning, complex opportunity analysis, scenario planning, pricing strategy, cross-functional decisions, executive recommendations
+autonomy_level: 0
+action_permissions: []
+approval_requirements: none
+cost_budget:
+  max_relative_units_per_task: 24
+audit_requirements: trace span
+failure_behavior: ESCALATE
+evaluation:
+  suite: evals (v6.1 delegation)

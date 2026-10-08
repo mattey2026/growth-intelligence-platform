@@ -1,0 +1,55 @@
+version: 7.2.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every conclusion carries confidence + basis; below 0.6 must escalate or be labelled Low
+audit_requirements: Trace spans for every invocation plus V7.1 domain events
+failure_behavior: ESCALATE with partial analysis; missing data is reported, never invented; never act
+agent_id: dashboard-intelligence-agent
+name: Dashboard Intelligence Agent
+description: Determines the dashboard experience a user needs — persona, entity, objective, required domains, KPI emphasis and visualizations
+  — and reviews the Dashboard Contract built by the orchestrator (dashboard_builder.py, T0) for evidence and persona fit; may rephrase the narrative
+  at T2 while keeping every evidence id. Computes nothing and runs no scripts (single-writer rule).
+business_objective: Give each persona a trustworthy, evidence-linked command center without building separate dashboard engines.
+allowed_skills:
+- dashboard-intelligence
+- artifact-dashboard-intelligence
+- business-memory
+- customer-digital-twin
+preload_skills:
+- dashboard-intelligence
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- crm
+- marketing_data
+- public_filings
+- financial_data
+memory_permissions: read
+evidence_requirements: Every widget value traces to the contract's evidence registry; unavailable data is shown as Not available with what it
+  needs; narrative sentences cite evidence ids
+escalation_rules: Strategic synthesis for a CEO/investor view or a ≥$5M decision → T3; high-value executive synthesis only when confidence < 0.6
+  or evidence conflicts → T4
+model_routing_policy:
+  default_tier: T2
+  max_tier: T4
+  deterministic_steps: dashboard_builder.py and render_dashboard.py run by the orchestrator (T0)
+autonomy_level: 0
+action_permissions: []
+approval_requirements: none (presentation only); recommended actions are executed by the Action Center after approval
+cost_budget:
+  max_relative_units_per_task: 20
+  max_turns: 10
+serves_intents:
+- dashboard
+evaluation:
+  suite: tests/run_dashboard.py + evals/dashboard-agent
+  score: null
+  last_run: null

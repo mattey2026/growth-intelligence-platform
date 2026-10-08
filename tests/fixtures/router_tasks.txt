@@ -1,0 +1,9 @@
+recognize dataset against memory|0|0
+compute delta between versions|0|0
+compute KPI deltas|0|0
+compute monte carlo forecast|0|0
+evaluate stateful alerts threshold|0|0
+extract stakeholder roles from activity notes|0|0
+summarize account A002 status from memory|12500000|0
+interpret A012 health change|3900000|0
+recommend O010 pricing response under margin decision|8100000|1

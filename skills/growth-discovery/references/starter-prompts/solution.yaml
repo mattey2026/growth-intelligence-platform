@@ -1,0 +1,56 @@
+capability:
+  id: solution
+  name: Solution Design
+  description: Translate business problems into solutions and architectures.
+  domain: Operations
+  slash_command: /solution
+  aliases:
+  - /architecture
+  audience: all
+  routes_to:
+    skill: solution-architecture
+    intent: solution
+  example_outcomes:
+  - Problem → capability → solution → architecture → delivery → value → risks → roadmap
+  primary_prompts:
+  - text: Design a solution for this opportunity.
+    category: Prepare
+  - text: Create the target architecture.
+    category: Prepare
+  - text: Map business requirements to capabilities.
+    category: Analyze
+  - text: Identify integration requirements.
+    category: Investigate
+  - text: Identify architecture and technical risks.
+    category: Investigate
+  - text: Create an executive solution overview.
+    category: Prepare
+  additional_prompts:
+  - text: Design the target state.
+    category: Prepare
+  - text: Identify integration dependencies.
+    category: Investigate
+  - text: Build an implementation roadmap.
+    category: Prepare
+  - text: What delivery model fits this solution?
+    category: Decide
+  - text: What is the value case for this solution?
+    category: Analyze
+  - text: Map requirements to our approved capabilities.
+    category: Analyze
+  - text: Show me reference solutions we've delivered.
+    category: Discover
+  - text: What would this solution cost to deliver?
+    category: Analyze
+  - text: Compare solution options.
+    category: Decide
+  - text: Create an executive architecture view.
+    category: Prepare
+  follow_up_prompts:
+  - Build an implementation roadmap.
+  - What is the value case for this solution?
+  - Compare solution options.
+  persona_prompts:
+    it_leader:
+    - Identify integration dependencies.
+    - Create the target architecture.

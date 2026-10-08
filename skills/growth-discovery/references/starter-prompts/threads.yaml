@@ -1,0 +1,54 @@
+capability:
+  id: threads
+  name: Competitive Threads
+  description: Follow each competitive situation as one evolving story.
+  domain: Competition
+  slash_command: /threads
+  aliases: []
+  audience: all
+  routes_to:
+    skill: competitive-thread-intelligence
+    intent: competitive_ground
+  example_outcomes:
+  - A thread timeline with velocity, momentum, counter-evidence, predicted next event and actions
+  primary_prompts:
+  - text: Show me active competitive threads.
+    category: Monitor
+  - text: Which competitive threads are accelerating?
+    category: Monitor
+  - text: Explain [[the {competitor} thread|this competitive thread]].
+    category: Investigate
+  - text: Show me the evidence behind [[the {competitor} threat|this threat]].
+    category: Investigate
+  - text: Predict what [[{competitor}|this competitor]] could do next.
+    category: Analyze
+  - text: What should I do about [[the {competitor} threat|this threat]]?
+    category: Decide
+  additional_prompts:
+  - text: When did [[the {competitor} thread|this thread]] start?
+    category: Investigate
+  - text: What signals made [[the {competitor} thread|this thread]] accelerate?
+    category: Investigate
+  - text: Show me counter-evidence for [[the {competitor} threat|this threat]].
+    category: Investigate
+  - text: Which opportunities does [[{competitor}|this thread]] affect?
+    category: Analyze
+  - text: Which stakeholders are involved in [[the {competitor} thread|this thread]]?
+    category: Discover
+  - text: Has this kind of threat happened before?
+    category: Investigate
+  - text: What happened in similar competitive situations?
+    category: Investigate
+  - text: Record the outcome of this competitive thread.
+    category: Act
+  - text: Show me weakening competitive threads.
+    category: Monitor
+  - text: Prepare a competitive response.
+    category: Prepare
+  follow_up_prompts:
+  - Prepare a competitive response.
+  - Which opportunities does [[{competitor}|this thread]] affect?
+  - Show me counter-evidence for [[the {competitor} threat|this threat]].
+  persona_prompts:
+    ae:
+    - Which competitors are active in my deals?

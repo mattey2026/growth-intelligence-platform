@@ -1,0 +1,55 @@
+capability:
+  id: customer-growth
+  name: Customer Growth
+  description: 'Grow existing customers: expansion, adoption and health.'
+  domain: Customers
+  slash_command: /customer-growth
+  aliases: []
+  audience: all
+  routes_to:
+    skill: renewal-expansion-radar
+    intent: customer_health
+  example_outcomes:
+  - Customer health with drivers, expansion propensity and a play per account
+  primary_prompts:
+  - text: Find expansion opportunities with existing customers.
+    category: Discover
+  - text: Identify customer growth signals.
+    category: Discover
+  - text: Show me adoption changes.
+    category: Monitor
+  - text: Identify renewal risks.
+    category: Investigate
+  - text: Find whitespace in our customer base.
+    category: Discover
+  - text: Build a customer growth plan[[ for {account}]].
+    category: Prepare
+  additional_prompts:
+  - text: Which products should we expand?
+    category: Decide
+  - text: Where is adoption increasing?
+    category: Analyze
+  - text: Where is adoption declining?
+    category: Monitor
+  - text: Which customers are ready to expand?
+    category: Discover
+  - text: What is driving customer growth?
+    category: Investigate
+  - text: What should customer success focus on?
+    category: Decide
+  - text: Show me customer health[[ for {account}]].
+    category: Analyze
+  - text: Which customers need attention this month?
+    category: Act
+  - text: Compare health across my customers.
+    category: Analyze
+  - text: What changed in customer health?
+    category: Monitor
+  follow_up_prompts:
+  - Build my renewal strategy.
+  - Which customers need attention this month?
+  - Prioritize my opportunities.
+  persona_prompts:
+    cs_leader:
+    - Which customers need attention this month?
+    - Where is adoption declining?

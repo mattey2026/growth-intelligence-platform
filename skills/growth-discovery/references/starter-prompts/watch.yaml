@@ -1,0 +1,54 @@
+capability:
+  id: watch
+  name: Business Watch
+  description: Get alerted when something that matters changes.
+  domain: Operations
+  slash_command: /watch
+  aliases: []
+  audience: all
+  routes_to:
+    skill: business-watch
+    intent: watch
+  example_outcomes:
+  - Conditions evaluated on each refresh; each firing investigated with a recommended action
+  primary_prompts:
+  - text: Alert me when a big deal slips.
+    category: Monitor
+  - text: Watch my strategic accounts for risk.
+    category: Monitor
+  - text: Tell me if a competitor enters my accounts.
+    category: Monitor
+  - text: Alert me when coverage drops below target.
+    category: Monitor
+  - text: Notify me if an executive sponsor leaves.
+    category: Monitor
+  - text: Show me what my watches found.
+    category: Monitor
+  additional_prompts:
+  - text: Watch [[{account}|this account]] for health changes.
+    category: Monitor
+  - text: Alert me when renewal risk rises.
+    category: Monitor
+  - text: Tell me if expansion probability jumps.
+    category: Monitor
+  - text: Watch revenue at risk.
+    category: Monitor
+  - text: Show me all my active watches.
+    category: Discover
+  - text: Turn off a watch.
+    category: Act
+  - text: Watch customer sentiment.
+    category: Monitor
+  - text: Alert me to forecast changes.
+    category: Monitor
+  - text: Tell me if margin falls below target.
+    category: Monitor
+  - text: Explain why this watch fired.
+    category: Investigate
+  follow_up_prompts:
+  - Explain why this watch fired.
+  - Show me all my active watches.
+  - What needs my attention today?
+  persona_prompts:
+    cro:
+    - Alert me when a big deal slips.

@@ -1,0 +1,64 @@
+version: 7.1.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every conclusion carries confidence + basis; below 0.6 must escalate or be labelled Low
+audit_requirements: Trace spans for every invocation plus V7.1 domain events
+failure_behavior: ESCALATE with partial analysis; missing data is reported, never invented; never act
+agent_id: competitive-thread-agent
+name: Competitive Thread Agent
+description: Maintains persistent CompetitiveThreads — matches each competitor signal to an existing thread or creates one, updates velocity,
+  momentum, counter-evidence and confidence, links opportunities, stakeholders, campaigns and financial or relationship signals, predicts the
+  next event and recommends actions.
+business_objective: Track competitive situations as evolving stories rather than isolated observations.
+allowed_skills:
+- competitive-thread-intelligence
+- competitive-intelligence
+- business-memory
+preload_skills:
+- competitive-thread-intelligence
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+- WebSearch
+- WebFetch
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- crm
+- transcripts
+- rfps
+- web
+memory_permissions: read (+ thread proposals)
+evidence_requirements: External facts need source, date and confidence; internal signals cite system and signal id; FACT / INFERENCE / CORRELATION
+  / HYPOTHESIS / PREDICTION / RECOMMENDATION labelled; competitor claims need a signal source; fact vs inference separated
+escalation_rules: High-risk accelerating thread on a strategic account or ≥$1M deal → T3; contradictory evidence → ESCALATE
+model_routing_policy:
+  default_tier: T2
+  max_tier: T3
+  deterministic_steps: 'competitive_threads.py (T0: matching, velocity, momentum, confidence)'
+autonomy_level: 1
+action_permissions:
+- crm.create_task
+- notify.owner_internal
+approval_requirements: Customer-facing responses and pricing moves need approval
+cost_budget:
+  max_relative_units_per_task: 24
+  max_turns: 12
+serves_intents:
+- competitive
+- competitive_ground
+- opportunity_discovery
+- account_strategy
+- deal_analysis
+- account_intelligence
+- account_change
+- dashboard
+evaluation:
+  suite: tests/run_v71.py::threads + evals/competitive-thread-agent
+  score: null
+  last_run: null

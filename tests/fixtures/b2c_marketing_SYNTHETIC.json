@@ -1,0 +1,74 @@
+[
+ {
+  "signal_id": "B0",
+  "segment": "young-urban",
+  "occurred_at": "2026-05-10",
+  "type": "website_visit",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B1",
+  "segment": "young-urban",
+  "occurred_at": "2026-08-02",
+  "type": "add_to_cart",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B2",
+  "segment": "young-urban",
+  "occurred_at": "2026-08-15",
+  "type": "purchase",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B3",
+  "segment": "young-urban",
+  "occurred_at": "2026-09-01",
+  "type": "add_to_cart",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B4",
+  "segment": "young-urban",
+  "occurred_at": "2026-09-10",
+  "type": "purchase",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B5",
+  "segment": "young-urban",
+  "occurred_at": "2026-09-20",
+  "type": "purchase",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B6",
+  "segment": "families",
+  "occurred_at": "2026-05-01",
+  "type": "purchase",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B7",
+  "segment": "families",
+  "occurred_at": "2026-06-01",
+  "type": "purchase",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ },
+ {
+  "signal_id": "B8",
+  "segment": "families",
+  "occurred_at": "2026-09-01",
+  "type": "website_visit",
+  "source": "web analytics (synthetic)",
+  "topic": "loyalty"
+ }
+]

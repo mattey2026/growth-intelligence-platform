@@ -1,0 +1,52 @@
+capability:
+  id: memory
+  name: Business Memory
+  description: What we already know, decided and learned.
+  domain: Operations
+  slash_command: /memory
+  aliases: []
+  audience: all
+  routes_to:
+    skill: business-memory
+    intent: memory_recall
+  example_outcomes:
+  - Temporal facts, decisions, predictions and outcomes with sources
+  primary_prompts:
+  - text: What do we already know about [[{account}|this account]]?
+    category: Discover
+  - text: Show me the history[[ of {account}]].
+    category: Discover
+  - text: What did we learn previously?
+    category: Discover
+  - text: What decisions have we made?
+    category: Discover
+  - text: Show me previous outcomes.
+    category: Investigate
+  - text: Update the business memory.
+    category: Act
+  additional_prompts:
+  - text: What did we predict, and what happened?
+    category: Investigate
+  - text: What changed since last time?
+    category: Monitor
+  - text: Show me decisions still in force.
+    category: Discover
+  - text: What assumptions did we record?
+    category: Investigate
+  - text: Show me past recommendations and their outcomes.
+    category: Investigate
+  - text: Forget an outdated fact.
+    category: Act
+  - text: Correct a fact in memory.
+    category: Act
+  - text: Show me how sure we are about each fact.
+    category: Investigate
+  - text: When was this information last updated?
+    category: Monitor
+  - text: Show me what we know about this competitor.
+    category: Discover
+  follow_up_prompts:
+  - What did we predict, and what happened?
+  - Show me decisions still in force.
+  - Correct a fact in memory.
+  persona_prompts: {}

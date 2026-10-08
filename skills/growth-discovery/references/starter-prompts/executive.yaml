@@ -1,0 +1,58 @@
+capability:
+  id: executive
+  name: Executive Command Center
+  description: The state of the business at executive altitude.
+  domain: Growth
+  slash_command: /executive
+  aliases: []
+  audience: all
+  routes_to:
+    skill: executive-command-center
+    intent: business_health
+  example_outcomes:
+  - How we are doing, what changed, why, what next and what to do, per KPI with confidence
+  primary_prompts:
+  - text: Give me the state of the business.
+    category: Analyze
+  - text: What changed materially?
+    category: Monitor
+  - text: Show me the biggest opportunities.
+    category: Discover
+  - text: Show me the biggest risks.
+    category: Investigate
+  - text: What should leadership focus on?
+    category: Decide
+  - text: Give me an executive briefing.
+    category: Prepare
+  additional_prompts:
+  - text: What should concern me?
+    category: Investigate
+  - text: Where is growth accelerating?
+    category: Analyze
+  - text: Where is growth weakening?
+    category: Monitor
+  - text: What requires executive intervention?
+    category: Act
+  - text: What are the top strategic signals?
+    category: Monitor
+  - text: How are we doing against plan?
+    category: Analyze
+  - text: Prepare my board update.
+    category: Prepare
+  - text: Show me the investor view.
+    category: Analyze
+  - text: Which KPIs moved most this month?
+    category: Monitor
+  - text: What did we forecast last time, and what happened?
+    category: Investigate
+  follow_up_prompts:
+  - What requires executive intervention?
+  - Prepare my board update.
+  - Help me evaluate this decision.
+  persona_prompts:
+    ceo:
+    - Show me the biggest growth and risk signals.
+    investor:
+    - Show me the company's growth, profitability and strategic risks.
+    coo:
+    - What operational risks need attention?

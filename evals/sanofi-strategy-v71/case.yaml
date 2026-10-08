@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: sanofi-strategy-v71
+tags: [v7.1]
+context:
+  scaffold_script: fixture.sh

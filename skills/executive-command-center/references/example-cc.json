@@ -1,0 +1,368 @@
+{
+ "title": "Growth Command Center",
+ "asof": "13 Oct 2026",
+ "previous_review": "29 Sep 2026",
+ "context": {
+  "business_model": "B2B",
+  "industry": "Technology & IT Services (hybrid software + managed services)",
+  "scale": "Enterprise",
+  "confidence": 0.98
+ },
+ "kpis": [
+  {
+   "name": "Contracted revenue",
+   "value": 97600000.0,
+   "unit": "$",
+   "formula": "SUM(Accounts.Current_Revenue)",
+   "source": "Accounts",
+   "status": "actual",
+   "previous": 97600000.0,
+   "change_pct": 0.0,
+   "confidence": "High"
+  },
+  {
+   "name": "Top-account concentration",
+   "value": 0.1895,
+   "unit": "%",
+   "formula": "max(account revenue) \u00f7 total",
+   "source": "Accounts",
+   "status": "actual",
+   "previous": 0.1895,
+   "change_pct": 0.0,
+   "confidence": "High"
+  },
+  {
+   "name": "Top-3 concentration",
+   "value": 0.4713,
+   "unit": "%",
+   "formula": "top-3 revenue \u00f7 total",
+   "source": "Accounts",
+   "status": "actual",
+   "previous": 0.4713,
+   "change_pct": 0.0,
+   "confidence": "High"
+  },
+  {
+   "name": "Gross margin",
+   "value": 0.3192,
+   "unit": "%",
+   "formula": "\u03a3 gross profit \u00f7 \u03a3 revenue",
+   "source": "Finance",
+   "status": "actual",
+   "previous": 0.3192,
+   "change_pct": 0.0,
+   "confidence": "Medium"
+  },
+  {
+   "name": "Contribution margin",
+   "value": 0.2246,
+   "unit": "%",
+   "formula": "(\u03a3 GP \u2212 \u03a3 cost to serve) \u00f7 \u03a3 revenue",
+   "source": "Finance",
+   "status": "actual",
+   "previous": 0.2246,
+   "change_pct": 0.0,
+   "confidence": "Medium"
+  },
+  {
+   "name": "Cost to serve",
+   "value": 0.0946,
+   "unit": "%",
+   "formula": "\u03a3 cost to serve \u00f7 \u03a3 revenue",
+   "source": "Finance",
+   "status": "actual",
+   "previous": 0.0946,
+   "change_pct": 0.0,
+   "confidence": "Medium"
+  },
+  {
+   "name": "Bookings (closed won, in data)",
+   "value": 1600000.0,
+   "unit": "$",
+   "formula": "\u03a3 amount where stage/status = Won",
+   "source": "Opportunities",
+   "status": "actual",
+   "confidence": "High",
+   "tone": "opp"
+  },
+  {
+   "name": "Open pipeline",
+   "value": 52800000.0,
+   "unit": "$",
+   "formula": "SUM(Opportunities.Amount)",
+   "source": "Opportunities",
+   "status": "actual",
+   "previous": 54800000.0,
+   "change_pct": -3.6,
+   "confidence": "High"
+  },
+  {
+   "name": "Average deal size (ACV proxy)",
+   "value": 3105882.3529,
+   "unit": "$",
+   "formula": "mean open deal amount",
+   "source": "Opportunities",
+   "status": "actual",
+   "previous": 3044444.4444,
+   "change_pct": 2.0,
+   "confidence": "Medium"
+  },
+  {
+   "name": "Weighted pipeline",
+   "value": 34272000.0,
+   "unit": "$",
+   "formula": "\u03a3 amount \u00d7 CRM probability",
+   "source": "Opportunities \u00b7 CRM probabilities overstate by $5.8\u20139.8M (review 1 evidence)",
+   "status": "actual",
+   "previous": 36397000.0,
+   "change_pct": -5.8,
+   "confidence": "Low"
+  },
+  {
+   "name": "Slipped pipeline share",
+   "value": 0.3996,
+   "unit": "%",
+   "formula": "\u03a3 amount of deals whose close date moved later \u00f7 pipeline",
+   "source": "Opportunities",
+   "status": "actual",
+   "previous": 0.3923,
+   "change_pct": 1.9,
+   "confidence": "Medium",
+   "tone": "risk"
+  },
+  {
+   "name": "Renewal exposure (\u226490 days)",
+   "value": 56000000.0,
+   "unit": "$",
+   "formula": "\u03a3 contract value expiring within 90 days",
+   "source": "Contracts",
+   "status": "actual",
+   "previous": 56000000.0,
+   "change_pct": 0.0,
+   "confidence": "High"
+  },
+  {
+   "name": "Renewal exposure (\u2264180 days)",
+   "value": 77700000.0,
+   "unit": "$",
+   "formula": "\u03a3 contract value expiring within 180 days",
+   "source": "Contracts",
+   "status": "actual",
+   "previous": 77700000.0,
+   "change_pct": 0.0,
+   "confidence": "High"
+  },
+  {
+   "name": "Revenue under high renewal risk",
+   "value": 35600000.0,
+   "unit": "$",
+   "formula": "\u03a3 contract value where renewal risk = High",
+   "source": "Contracts",
+   "status": "actual",
+   "previous": 35600000.0,
+   "change_pct": 0.0,
+   "confidence": "Medium",
+   "tone": "risk"
+  },
+  {
+   "name": "Realized discount",
+   "value": 0.1172,
+   "unit": "%",
+   "formula": "1 \u2212 \u03a3 actual price \u00f7 \u03a3 list price",
+   "source": "Pricing_History",
+   "status": "actual",
+   "previous": 0.1172,
+   "change_pct": 0.0,
+   "confidence": "Medium"
+  },
+  {
+   "name": "Revenue in At-Risk accounts",
+   "value": 0.3648,
+   "unit": "%",
+   "formula": "revenue of At Risk accounts \u00f7 total",
+   "source": "Accounts",
+   "status": "actual",
+   "previous": 0.3648,
+   "change_pct": 0.0,
+   "confidence": "Medium",
+   "tone": "risk"
+  },
+  {
+   "name": "Q4-26 bookings outlook (P50)",
+   "value": 17100000,
+   "unit": "$",
+   "previous": 16900000.0,
+   "change_pct": 1.2,
+   "forecast": 17100000,
+   "previous_forecast": 16900000.0,
+   "confidence": "Low",
+   "source": "Monte Carlo, evidence-adjusted; P10 $10.4M \u2013 P90 $23.6M; CRM view P50 $19.8M",
+   "status": "actual"
+  }
+ ],
+ "views": {
+  "CEO": [
+   "Contracted revenue",
+   "Q4-26 bookings outlook (P50)",
+   "Weighted pipeline",
+   "Revenue under high renewal risk",
+   "Renewal exposure (\u226490 days)",
+   "Contribution margin",
+   "Bookings (closed won, in data)",
+   "Revenue in At-Risk accounts"
+  ],
+  "Investor": [
+   "Contracted revenue",
+   "Gross margin",
+   "Contribution margin",
+   "Top-3 concentration",
+   "Revenue in At-Risk accounts",
+   "Renewal exposure (\u2264180 days)",
+   "Realized discount",
+   "Cost to serve"
+  ],
+  "Owner": [
+   "Bookings (closed won, in data)",
+   "Q4-26 bookings outlook (P50)",
+   "Open pipeline",
+   "Contribution margin",
+   "Revenue under high renewal risk",
+   "Realized discount"
+  ]
+ },
+ "changes": [
+  {
+   "when": "13 Oct",
+   "what": "O009 Automation Expansion closed won \u2014 $1.6M",
+   "why": "First outcome against a recorded prediction (0.83). Error +0.17; proposed learning logged, not yet applied.",
+   "severity": "opportunity"
+  },
+  {
+   "when": "13 Oct",
+   "what": "A002 adoption kept falling: Core 44 \u2192 38, AI Services 58 \u2192 51",
+   "why": "Decline continues at about 13\u201315 points per 30 days although the Critical outage S003 was closed. Renewal in 33 days.",
+   "severity": "risk"
+  },
+  {
+   "when": "12 Oct",
+   "what": "A012 moved from Healthy to Watch",
+   "why": "Recorded as a belief change, not an overwrite: Analytics adoption 43 \u2192 36; 2 of 3 products declining. New alert opened.",
+   "severity": "watch"
+  },
+  {
+   "when": "12 Oct",
+   "what": "O010 Core Banking cut from $9.0M to $8.1M; CRM probability 0.65 \u2192 0.60",
+   "why": "Consistent with the CFO's budget-reduction request (22 Sep). The margin decision of 30 Sep caps any discount at 12% without CRO approval.",
+   "severity": "risk"
+  },
+  {
+   "when": "12 Oct",
+   "what": "A004 Retail Analytics advanced to Qualified and grew to $2.3M",
+   "why": "Follows the new retail analytics initiative identified 27 Sep.",
+   "severity": "opportunity"
+  },
+  {
+   "when": "12 Oct",
+   "what": "A011 payment back on time",
+   "why": "One of three at-risk signals improved; service breach and adoption decline persist, so the alert stays open with an update.",
+   "severity": "info"
+  }
+ ],
+ "drivers": [
+  {
+   "text": "Service failure remains the leading driver in A002 and A006: adoption keeps falling after incidents close, so fixing tickets is not the same as restoring value.",
+   "evidence": "Product_Usage A002 \u221212.9 points/30d after S003 closed; Service_Cases"
+  },
+  {
+   "text": "Pipeline fell $2.0M, but $1.6M of it converted to bookings; only the O010 scope cut ($0.9M) is value lost.",
+   "evidence": "Opportunities delta 29 Sep \u2192 13 Oct"
+  },
+  {
+   "text": "$56M (57%) of contracted revenue renews within 90 days, including the healthy A001 ($15M, 15 Dec) \u2014 concentration in time, not just in accounts.",
+   "evidence": "Contracts expiry vs as-of date"
+  }
+ ],
+ "next": [
+  {
+   "text": "Q4-26 bookings most likely around $17.1M (P10 $10.4M \u2013 P90 $23.6M), up $0.2M from the last review's $16.9M because O009 is now booked.",
+   "confidence": "Low",
+   "basis": "Evidence-adjusted Monte Carlo; no win/loss history yet"
+  },
+  {
+   "text": "A002 renewal remains at risk (~0.60), and more likely to worsen than improve while adoption declines.",
+   "confidence": "Low",
+   "basis": "Rules tier; trend from two snapshots only"
+  },
+  {
+   "text": "A012 may become the fourth at-risk account if Analytics adoption continues to fall at the current rate.",
+   "confidence": "Low",
+   "basis": "Two snapshots; health label change"
+  }
+ ],
+ "actions": [
+  {
+   "text": "Confirm what happened in the A002 CIO meeting planned for 8 Oct; record it as an outcome",
+   "owner": "A002 account executive",
+   "due": "15 Oct",
+   "impact": "Closes the loop on the main recommendation",
+   "approval": false
+  },
+  {
+   "text": "Adoption recovery plan for A002 (Core, AI Services) \u2014 not just incident closure",
+   "owner": "CS + Product",
+   "due": "20 Oct",
+   "impact": "Protects $12.5M renewal",
+   "approval": true
+  },
+  {
+   "text": "Check Auto-Renew notice windows for A002 and A006",
+   "owner": "Legal / CS",
+   "due": "15 Oct",
+   "impact": "$31M exposure",
+   "approval": false
+  },
+  {
+   "text": "Investigate A012 Analytics decline with the champion",
+   "owner": "A012 account executive",
+   "due": "20 Oct",
+   "impact": "Early intervention on $3.9M",
+   "approval": false
+  },
+  {
+   "text": "Refresh the Marketing feed (23 days stale) before the next engagement analysis",
+   "owner": "Marketing Ops",
+   "due": "16 Oct",
+   "impact": "Removes staleness warning",
+   "approval": false
+  }
+ ],
+ "unsupported": [
+  "Pipeline coverage (needs a period target or quota)",
+  "Win rate (needs at least 10 closed outcomes including losses (have 1 won, 0 lost))",
+  "Net revenue retention (NRR) (needs prior-period revenue per customer (two revenue snapshots))",
+  "Gross revenue retention (GRR) (needs prior-period revenue per customer)",
+  "CAC / CAC payback (needs sales and marketing cost by period (only campaign spend is present))"
+ ],
+ "sources": [
+  {
+   "name": "CRM & service",
+   "refreshed": "12 Oct",
+   "status": "Healthy"
+  },
+  {
+   "name": "Finance",
+   "refreshed": "12 Oct",
+   "status": "Healthy"
+  },
+  {
+   "name": "Product usage",
+   "refreshed": "6 Oct",
+   "status": "Healthy"
+  },
+  {
+   "name": "Marketing",
+   "refreshed": "20 Sep",
+   "status": "Stale"
+  }
+ ]
+}

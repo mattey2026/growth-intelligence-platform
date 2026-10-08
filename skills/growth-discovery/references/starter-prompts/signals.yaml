@@ -1,0 +1,54 @@
+capability:
+  id: signals
+  name: Growth Signals
+  description: Connect signals across functions into growth and risk patterns.
+  domain: Growth
+  slash_command: /signals
+  aliases: []
+  audience: all
+  routes_to:
+    skill: growth-signal-orchestrator
+    intent: signals
+  example_outcomes:
+  - Cross-domain patterns (detected or emerging) with evidence, confidence and owner
+  primary_prompts:
+  - text: Show me the strongest growth signals.
+    category: Monitor
+  - text: Find emerging opportunities across my accounts.
+    category: Discover
+  - text: Find compound signals across my accounts.
+    category: Investigate
+  - text: Show me accounts becoming more attractive.
+    category: Monitor
+  - text: Show me accounts becoming risky.
+    category: Monitor
+  - text: Explain why this signal matters.
+    category: Investigate
+  additional_prompts:
+  - text: Connect the dots across my accounts.
+    category: Investigate
+  - text: Which customers are at risk, and why?
+    category: Investigate
+  - text: Where are expansion signals aligning?
+    category: Discover
+  - text: Show me signals from three or more domains.
+    category: Investigate
+  - text: Which signals should sales act on?
+    category: Act
+  - text: Which signals are weakening?
+    category: Monitor
+  - text: Show me the evidence chain for this pattern.
+    category: Investigate
+  - text: Show me margin-erosion signals.
+    category: Monitor
+  - text: Show me executive-access loss signals.
+    category: Monitor
+  - text: Route this signal to the right owner.
+    category: Act
+  follow_up_prompts:
+  - Show me the evidence chain for this pattern.
+  - Route this signal to the right owner.
+  - Find my biggest growth opportunities[[ in {account}]].
+  persona_prompts:
+    growth_ops:
+    - Find compound signals across my accounts.

@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+tests/last-*.json
+evals/results/
+*.db-journal
+node_modules/
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Credentials and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Logs
+*.log

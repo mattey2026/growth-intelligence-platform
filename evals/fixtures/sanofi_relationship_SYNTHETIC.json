@@ -1,0 +1,18 @@
+[
+ {
+  "signal_id": "R-1",
+  "account_id": "Sanofi",
+  "kind": "champion_weakening",
+  "stakeholder": "C-SAN-2",
+  "observed_at": "2026-09-12",
+  "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+ },
+ {
+  "signal_id": "R-2",
+  "account_id": "Sanofi",
+  "kind": "exec_access_gained",
+  "stakeholder": "C-SAN-1",
+  "observed_at": "2026-08-03",
+  "source": "SYNTHETIC-TEST-DATA (no real Sanofi internal data exists in this package)"
+ }
+]

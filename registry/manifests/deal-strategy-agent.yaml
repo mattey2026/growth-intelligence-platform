@@ -1,0 +1,58 @@
+agent_id: deal-strategy-agent
+name: Deal Strategy Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Owns active opportunities — deal health, stakeholders, buying process, competition, pricing, objections, close risk, timeline, mutual
+  action plan, executive strategy and next-best action.
+business_objective: Owns active opportunities — deal health, stakeholders, buying process, competition, pricing, objections, close risk, timeline,
+  mutual action plan, executive strategy and next-best action.
+allowed_skills:
+- deal-intelligence
+- relationship-intelligence
+- pricing-intelligence
+- competitive-intelligence
+- win-loss-intelligence
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- crm
+- email_calendar_meta
+- transcripts
+- cpq_read
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet
+escalation_rules: Deals > $1M, conflicts or pricing trade-offs → T3; unresolved → T4
+model_routing_policy:
+  default_tier: T2
+  max_tier: T4
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 1
+action_permissions:
+- crm.create_task
+- crm.update_field(next_step)
+- email.draft
+approval_requirements: Field changes and customer comms need approval
+cost_budget:
+  max_relative_units_per_task: 40
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/deal-strategy-agent
+  score: null
+  last_run: null

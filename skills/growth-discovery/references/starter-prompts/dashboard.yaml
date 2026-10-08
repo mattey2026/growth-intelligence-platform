@@ -1,0 +1,58 @@
+capability:
+  id: dashboard
+  name: Dashboards
+  description: Open the right dashboard for your role and account.
+  domain: Dashboards
+  slash_command: /dashboard
+  aliases: []
+  audience: all
+  routes_to:
+    skill: dashboard-intelligence
+    intent: dashboard
+  example_outcomes:
+  - A persona-adapted, evidence-linked command center artifact
+  primary_prompts:
+  - text: Show me my growth command center[[ for {account}]].
+    category: Discover
+  - text: Show me what changed on the dashboard.
+    category: Monitor
+  - text: Build the dashboard I need for [[{account}|this account]].
+    category: Prepare
+  - text: Show me opportunities and risks on the dashboard.
+    category: Analyze
+  - text: Create an executive dashboard.
+    category: Prepare
+  - text: Analyze this dashboard.
+    category: Analyze
+  additional_prompts:
+  - text: Show me the financial story dashboard.
+    category: Analyze
+  - text: Show me competitive threads on the dashboard.
+    category: Monitor
+  - text: Show me marketing signals on the dashboard.
+    category: Monitor
+  - text: Compare this account with others.
+    category: Analyze
+  - text: Run a scenario from the dashboard.
+    category: Decide
+  - text: Drill into this metric.
+    category: Investigate
+  - text: Open the CFO view.
+    category: Discover
+  - text: Open the account executive view.
+    category: Discover
+  - text: Refresh the dashboard.
+    category: Act
+  - text: Show me the dashboard evidence.
+    category: Investigate
+  follow_up_prompts:
+  - Show me what changed on the dashboard.
+  - Drill into this metric.
+  - Run a scenario from the dashboard.
+  persona_prompts:
+    ceo:
+    - Create an executive dashboard.
+    investor:
+    - Open the investor view.
+    cfo:
+    - Open the CFO view.

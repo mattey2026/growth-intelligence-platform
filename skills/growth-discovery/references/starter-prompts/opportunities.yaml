@@ -1,0 +1,57 @@
+capability:
+  id: opportunities
+  name: Growth Opportunities
+  description: Find, explain and prioritize where to grow.
+  domain: Growth
+  slash_command: /opportunities
+  aliases: []
+  audience: all
+  routes_to:
+    skill: growth-opportunity-discovery
+    intent: opportunity_discovery
+  example_outcomes:
+  - Opportunities with why-now, evidence, value range or 'unsized', and next action
+  primary_prompts:
+  - text: Find my biggest growth opportunities[[ in {account}]].
+    category: Discover
+  - text: Find whitespace[[ in {account}]].
+    category: Discover
+  - text: Identify expansion opportunities[[ in {account}]].
+    category: Discover
+  - text: Find competitive displacement opportunities.
+    category: Discover
+  - text: Show me why these opportunities matter.
+    category: Investigate
+  - text: Prioritize my opportunities.
+    category: Decide
+  additional_prompts:
+  - text: Find opportunities we are currently missing.
+    category: Discover
+  - text: Which opportunities have the strongest buying signals?
+    category: Analyze
+  - text: Which accounts are warming?
+    category: Monitor
+  - text: Where should I focus first?
+    category: Decide
+  - text: Find cross-sell opportunities.
+    category: Discover
+  - text: Find upsell opportunities.
+    category: Discover
+  - text: Find transformation opportunities.
+    category: Discover
+  - text: Find opportunities driven by customer investment.
+    category: Investigate
+  - text: Find opportunities driven by competitive activity.
+    category: Investigate
+  - text: Size the top opportunity with evidence.
+    category: Analyze
+  follow_up_prompts:
+  - Build a plan for the top opportunity.
+  - Map the stakeholders for this opportunity.
+  - Show me the competitive context.
+  - Model the impact of winning this opportunity.
+  persona_prompts:
+    ceo:
+    - Where is our biggest untapped growth?
+    growth_ops:
+    - Where is growth potential concentrated?

@@ -1,0 +1,51 @@
+agent_id: market-intelligence-agent
+name: Market Intelligence Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Interprets industry, competitors, macroeconomics, regulation, technology, trends, strategic events and M&A, translating external
+  events into business implications.
+business_objective: Interprets industry, competitors, macroeconomics, regulation, technology, trends, strategic events and M&A, translating external
+  events into business implications.
+allowed_skills:
+- market-intelligence
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+- WebSearch
+- WebFetch
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- web
+- benchmarks
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: External facts need source URL/publisher, date, and confidence; paraphrased; fact vs inference separated
+escalation_rules: Material implication for forecast/strategy → T3
+model_routing_policy:
+  default_tier: T2
+  max_tier: T3
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 0
+action_permissions: []
+approval_requirements: none
+cost_budget:
+  max_relative_units_per_task: 24
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/market-intelligence-agent
+  score: null
+  last_run: null

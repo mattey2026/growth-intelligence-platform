@@ -1,0 +1,26 @@
+# Agent manifest template (Agent SDK). Copy to <agent_id>.yaml, fill in, then: registry.py <root> validate && registry.py <root> build
+agent_id: example-account-agent        # lowercase-with-hyphens; becomes growth-intelligence-platform:<agent_id>
+name: Example Account Agent
+version: 0.1.0
+status: EXPERIMENTAL                   # ACTIVE | DISABLED | EXPERIMENTAL | DEPRECATED
+owner: your-team
+runtime: subagent
+description: One sentence on when to delegate to this agent.
+business_objective: What business outcome this agent owns.
+allowed_skills: [customer-digital-twin, business-memory]      # existing skills only
+allowed_tools: [Read, Grep, Glob, Skill]                        # add WebSearch/WebFetch only if it researches
+allowed_data_sources: [memory_graph, business_context_profile, crm]
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence + basis
+evidence_requirements: Internal facts cite system/record/date; external facts need source, date, confidence
+escalation_rules: Conflicting evidence or decisions over $1M → T3
+model_routing_policy: {default_tier: T2, max_tier: T3}
+autonomy_level: 0                                               # 0 analyze · 1 recommend · 2 controlled (subagents max 2)
+action_permissions: []                                          # catalog ids it may PREPARE (requires autonomy ≥ 1)
+approval_requirements: none
+cost_budget: {max_relative_units_per_task: 24, max_turns: 12}
+audit_requirements: Execution-trace span for every invocation
+failure_behavior: ESCALATE with partial analysis; never fabricate; never act
+evaluation: {suite: evals/example-account-agent, score: null, last_run: null}

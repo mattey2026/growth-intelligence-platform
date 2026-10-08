@@ -1,0 +1,30 @@
+[
+ {
+  "signal_id": "BB0",
+  "partner_id": "P1",
+  "occurred_at": "2026-08-10",
+  "type": "demo_request",
+  "source": "partner portal (synthetic)"
+ },
+ {
+  "signal_id": "BB1",
+  "partner_id": "P1",
+  "occurred_at": "2026-09-01",
+  "type": "pricing_page_visit",
+  "source": "partner portal (synthetic)"
+ },
+ {
+  "signal_id": "BB2",
+  "partner_id": "P1",
+  "occurred_at": "2026-09-15",
+  "type": "contact_sales",
+  "source": "partner portal (synthetic)"
+ },
+ {
+  "signal_id": "BB3",
+  "partner_id": "P2",
+  "occurred_at": "2026-05-01",
+  "type": "email_open",
+  "source": "partner portal (synthetic)"
+ }
+]

@@ -1,0 +1,65 @@
+capability:
+  id: forecast
+  name: Pipeline & Forecast
+  description: Review pipeline health, build the forecast and stress-test it.
+  domain: Sales
+  slash_command: /forecast
+  aliases:
+  - /pipeline
+  audience: all
+  routes_to:
+    skill: pipeline-forecast-intelligence
+    intent: pipeline_forecast
+  example_outcomes:
+  - A P10/P50/P90 forecast range with the deals that drive it
+  - Coverage and slippage by segment
+  primary_prompts:
+  - text: Review my pipeline for risks and next steps.
+    category: Analyze
+  - text: Build my sales forecast.
+    category: Prepare
+  - text: Show me pipeline coverage.
+    category: Analyze
+  - text: Identify stalled opportunities.
+    category: Investigate
+  - text: Show me forecast risks.
+    category: Investigate
+  - text: Run forecast scenarios.
+    category: Decide
+  additional_prompts:
+  - text: Which deals need intervention?
+    category: Act
+  - text: Where is pipeline weakening?
+    category: Monitor
+  - text: Show me pipeline by region.
+    category: Analyze
+  - text: Show me pipeline by rep.
+    category: Analyze
+  - text: Show me pipeline by stage.
+    category: Analyze
+  - text: What changed since the last forecast?
+    category: Monitor
+  - text: What happens if these three deals slip?
+    category: Decide
+  - text: Build best, base and worst-case scenarios.
+    category: Decide
+  - text: Identify deals likely to slip.
+    category: Investigate
+  - text: Explain the forecast.
+    category: Analyze
+  - text: Show me coverage gaps.
+    category: Analyze
+  - text: Forecast my pipeline.
+    category: Prepare
+  follow_up_prompts:
+  - Which deals need intervention?
+  - What happens if these three deals slip?
+  - Show me coverage gaps.
+  - Prepare the forecast call.
+  persona_prompts:
+    cro:
+    - Will we hit the number this quarter?
+    sales_director:
+    - Show me which deals need intervention.
+    cfo:
+    - How reliable is this quarter's forecast?

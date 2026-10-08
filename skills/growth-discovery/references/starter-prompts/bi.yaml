@@ -1,0 +1,54 @@
+capability:
+  id: bi
+  name: Business Analysis
+  description: Ask why any business number moved.
+  domain: Growth
+  slash_command: /bi
+  aliases: []
+  audience: all
+  routes_to:
+    skill: business-intelligence-copilot
+    intent: cross_functional
+  example_outcomes:
+  - What happened, why, key drivers, what is likely, what to do, with evidence
+  primary_prompts:
+  - text: Analyze my business.
+    category: Analyze
+  - text: What should I know today?
+    category: Monitor
+  - text: What changed in the business?
+    category: Monitor
+  - text: Find unusual patterns in the business.
+    category: Investigate
+  - text: Show me the most important signals.
+    category: Monitor
+  - text: Tell me what needs attention.
+    category: Act
+  additional_prompts:
+  - text: Why is a region behind plan?
+    category: Investigate
+  - text: What is driving the drop in retention?
+    category: Investigate
+  - text: Why did margin fall last quarter?
+    category: Investigate
+  - text: Where is the gap to plan?
+    category: Analyze
+  - text: Explain this number.
+    category: Investigate
+  - text: Which drivers matter most?
+    category: Analyze
+  - text: Compare segments over time.
+    category: Analyze
+  - text: What happened, and why?
+    category: Investigate
+  - text: Break down revenue variance.
+    category: Analyze
+  - text: What is likely to happen next?
+    category: Analyze
+  follow_up_prompts:
+  - Which drivers matter most?
+  - Run a best, base and worst-case scenario.
+  - Tell me what needs attention.
+  persona_prompts:
+    coo:
+    - Where are operations slowing growth?

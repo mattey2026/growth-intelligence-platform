@@ -1,0 +1,993 @@
+{
+ "version": "8.0.0",
+ "generated_from": "skills/*/SKILL.md + registry/manifests + growth-discovery catalog",
+ "skills": [
+  {
+   "skill": "account-intel-outreach",
+   "description": "Researches a target account and produces a cited \"why this account, why now, why us\" point of view, then drafts persona-specific first-touch outreach grounded in that research and in the company's relevant customer outcomes. Use whenever an\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Prospect Research & Outreach",
+     "command": "/outreach",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "opportunity-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "propensity_model.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "account-intelligence-swot-planning",
+   "description": "AI account strategist that builds an evidence-based, continuously updated understanding of a customer account and turns it into a growth strategy \u2014 360-degree account intelligence, evidence-backed SWOT, predictive account intelligence (expa\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Account Planning & SWOT",
+     "command": "/account-plan",
+     "aliases": []
+    },
+    {
+     "capability": "Account Intelligence",
+     "command": "/account",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "account-intelligence-agent",
+    "opportunity-agent"
+   ],
+   "scripts": [
+    "account_change_diff.py",
+    "account_plan_builder.py",
+    "account_prioritizer.py",
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "opportunity_builder.py",
+    "opportunity_scorer.py",
+    "propensity_model.py",
+    "reply_check.py",
+    "scenario_model.py",
+    "ts_forecast.py",
+    "twin_update.py",
+    "whitespace_matrix.py"
+   ]
+  },
+  {
+   "skill": "action-center",
+   "description": "Action framework \u2014 turns approved recommendations into auditable actions \u2014 Recommendation \u2192 Risk check \u2192 Policy check \u2192 Approval check \u2192 Human approval \u2192 Action \u2192 Result \u2192 Outcome \u2192 Memory \u2014 covering CRM tasks and approved field updates, em\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Actions",
+     "command": "/actions",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "action-workflow-agent",
+    "business-orchestrator"
+   ],
+   "scripts": [
+    "action_manager.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "policy_gate.py",
+    "registry.py"
+   ]
+  },
+  {
+   "skill": "artifact-dashboard-intelligence",
+   "description": "Artifact Dashboard renderer \u2014 turns a Dashboard Contract (schemas/dashboard.schema.json) into the Enterprise Growth Command Center, an interactive, self-contained Claude Artifact in the Growth Intelligence Design System (light/dark, 12-colu\u2026",
+   "audience": "internal",
+   "capabilities": [],
+   "used_by_agents": [
+    "dashboard-intelligence-agent"
+   ],
+   "scripts": [
+    "render_dashboard.py"
+   ]
+  },
+  {
+   "skill": "business-context-discovery",
+   "description": "Layer 0 of every analysis \u2014 works out what business a dataset represents before analysing it. Infers business model (B2B, B2G, B2C, D2C, B2B2C, C2C, B2E, C2B, G2C, G2G, hybrid), the seller's industry and sub-industry (separately from its cu\u2026",
+   "audience": "internal",
+   "capabilities": [],
+   "used_by_agents": [
+    "business-orchestrator",
+    "data-intelligence-agent"
+   ],
+   "scripts": [
+    "context_discovery.py",
+    "delta_engine.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "business-intelligence-copilot",
+   "description": "Natural-language business intelligence across all connected systems and files \u2014 answers questions like \"why is APAC behind plan?\", \"what's driving the drop in net retention?\", \"why did margin fall last quarter?\" by automatically investigati\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Business Analysis",
+     "command": "/bi",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "business-orchestrator",
+    "executive-decision-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "driver_tree.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "kpi_engine.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "pipeline_whatif.py",
+    "reply_check.py",
+    "ts_forecast.py",
+    "winloss_analyzer.py"
+   ]
+  },
+  {
+   "skill": "business-memory",
+   "description": "Persistent Business Memory Graph \u2014 remembers what the platform learned about this business across sessions as structured, temporal memory (not chat history) \u2014 entities and relationships, current and previous state of every important fact, p\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Business Memory",
+     "command": "/memory",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "account-intelligence-agent",
+    "action-workflow-agent",
+    "business-orchestrator",
+    "competitive-intelligence-agent",
+    "competitive-thread-agent",
+    "customer-growth-agent",
+    "dashboard-intelligence-agent",
+    "data-intelligence-agent",
+    "deal-strategy-agent",
+    "executive-decision-agent",
+    "financial-intelligence-agent",
+    "governance-risk-agent",
+    "growth-analyst",
+    "growth-expert",
+    "growth-strategist",
+    "market-intelligence-agent",
+    "marketing-intelligence-agent",
+    "meeting-intelligence-agent",
+    "opportunity-agent",
+    "outcome-learning-agent",
+    "pipeline-forecast-agent",
+    "pricing-commercial-agent",
+    "relationship-agent",
+    "research-agent",
+    "solution-architect-agent"
+   ],
+   "scripts": [
+    "competitive_threads.py",
+    "delta_engine.py",
+    "evidence_validator.py",
+    "graph_build.py",
+    "handoff_packet.py",
+    "learning_manager.py",
+    "memory_graph.py",
+    "model_router.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "business-orchestrator",
+   "description": "The Business Operating System entry point \u2014 use for ANY business question or request where the user wants to understand, prepare, investigate, watch, decide or act, especially broad or cross-functional ones (\"what is happening in my busines\u2026",
+   "audience": "internal",
+   "capabilities": [],
+   "used_by_agents": [
+    "business-orchestrator"
+   ],
+   "scripts": [
+    "__pycache__",
+    "account_plan_builder.py",
+    "action_manager.py",
+    "agent_planner.py",
+    "competitive_threads.py",
+    "context_discovery.py",
+    "cross_domain_correlator.py",
+    "decision_record.py",
+    "delta_engine.py",
+    "domain_delta.py",
+    "evidence_validator.py",
+    "financial_intel.py",
+    "handoff_packet.py",
+    "kpi_engine.py",
+    "learning_manager.py",
+    "marketing_signals.py",
+    "memory_graph.py",
+    "model_router.py",
+    "opportunity_builder.py",
+    "policy_gate.py",
+    "registry.py",
+    "trace.py",
+    "twin_state.py"
+   ]
+  },
+  {
+   "skill": "business-watch",
+   "description": "Event-driven Business Watch / Growth Watch \u2014 lets users and executives define conditions such as strategic account health dropping more than 20%, a deal over $5M slipping, forecast or pipeline coverage falling below threshold, a competitor \u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Business Watch",
+     "command": "/watch",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "business-orchestrator"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py",
+    "watch_evaluator.py"
+   ]
+  },
+  {
+   "skill": "competitive-intelligence",
+   "description": "Competitive Intelligence Engine with Competitive Early Warning \u2014 integrates win/loss data, CRM competitor fields, RFPs, proposals, meeting transcripts, customer feedback, external research and market information to analyse competitor presen\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Competitive Intelligence",
+     "command": "/competition",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "competitive-intelligence-agent",
+    "competitive-thread-agent",
+    "deal-strategy-agent",
+    "opportunity-agent"
+   ],
+   "scripts": [
+    "competitive_watch.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py",
+    "winloss_analyzer.py"
+   ]
+  },
+  {
+   "skill": "competitive-thread-intelligence",
+   "description": "Competitive Thread Intelligence \u2014 maintains persistent CompetitiveThreads in Business Memory so competitor signals about the same account and competitor form one evolving story (chronology, velocity, acceleration or weakening, counter-evide\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Competitive Threads",
+     "command": "/threads",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "competitive-thread-agent"
+   ],
+   "scripts": [
+    "competitive_threads.py",
+    "evidence_validator.py",
+    "memory_graph.py"
+   ]
+  },
+  {
+   "skill": "customer-digital-twin",
+   "description": "Maintains and queries a persistent Customer Digital Twin (account state model) that represents a customer across company, business units, stakeholders, products, contracts, opportunities, revenue, margin, usage, service, marketing engagemen\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Customer Digital Twin",
+     "command": "/digital-twin",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "account-intelligence-agent",
+    "customer-growth-agent",
+    "dashboard-intelligence-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "domain_delta.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "graph_build.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "propensity_model.py",
+    "reply_check.py",
+    "ts_forecast.py",
+    "twin_state.py",
+    "twin_update.py"
+   ]
+  },
+  {
+   "skill": "daily-growth-briefing",
+   "description": "Proactive, personalized Daily Growth Briefing for sellers, managers, customer success, RevOps and executives. Scans authorized sources and the plugin's monitors for deals at risk, account changes, new opportunities, health deterioration, pi\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Daily Briefing",
+     "command": "/briefing",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "business-orchestrator"
+   ],
+   "scripts": [
+    "account_prioritizer.py",
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "kpi_engine.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py",
+    "signal_correlator.py",
+    "signal_ranker.py"
+   ]
+  },
+  {
+   "skill": "dashboard-intelligence",
+   "description": "Dashboard Intelligence \u2014 decides what dashboard experience a user needs and produces a renderer-independent Dashboard Contract (schemas/dashboard.schema.json) \u2014 dashboard selection and composition, persona-adapted KPIs and visualizations, i\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Dashboards",
+     "command": "/dashboard",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "dashboard-intelligence-agent"
+   ],
+   "scripts": [
+    "competitive_threads.py",
+    "cross_domain_correlator.py",
+    "dashboard_builder.py",
+    "dashboard_state.py",
+    "demo_provider.py",
+    "domain_delta.py",
+    "evidence_validator.py",
+    "financial_intel.py",
+    "marketing_signals.py",
+    "memory_graph.py",
+    "production_provider.py"
+   ]
+  },
+  {
+   "skill": "data-intelligence",
+   "description": "Universal data intelligence for growth and revenue data \u2014 connects to or reads any source (CRM, ERP, ITSM, warehouse, SQL, APIs, Excel, CSV, Google Sheets, PDFs), discovers schema, infers business meaning, maps fields to canonical entities \u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Data Analysis",
+     "command": "/data",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "data-intelligence-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "context_discovery.py",
+    "data_profiler.py",
+    "delta_engine.py",
+    "domain_delta.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "graph_build.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py",
+    "ts_forecast.py"
+   ]
+  },
+  {
+   "skill": "deal-intelligence",
+   "description": "Complete deal intelligence for a single opportunity or a set of deals \u2014 runs Deal Review, Deal Strategy, Close Plan and Execution Plan end to end. Assesses deal health, win probability and slippage (backtested model), velocity and stage pro\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Deal Strategy",
+     "command": "/deal",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "deal-strategy-agent",
+    "pipeline-forecast-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "deal_risk_model.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "pricing_model.py",
+    "reply_check.py",
+    "winloss_analyzer.py"
+   ]
+  },
+  {
+   "skill": "decision-intelligence",
+   "description": "Turns analysis into decisions \u2014 frames Situation, Options (always including status quo), Evidence, Financial and Strategic impact, Risks, Dependencies, Trade-offs, Recommendation, Confidence, What would change the recommendation, Decision o\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Decision Support",
+     "command": "/decision",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "executive-decision-agent",
+    "financial-intelligence-agent"
+   ],
+   "scripts": [
+    "decision_record.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "scenario_model.py"
+   ]
+  },
+  {
+   "skill": "executive-command-center",
+   "description": "Adaptive Executive Command Center \u2014 one dashboard that adapts to the detected business model and answers five questions immediately \u2014 How are we doing? What changed? Why did it change? What happens next? What should I do? Separate CEO, Inve\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Executive Command Center",
+     "command": "/executive",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "business-orchestrator"
+   ],
+   "scripts": [
+    "command_center.py",
+    "delta_engine.py",
+    "evidence_validator.py",
+    "forecast_sim.py",
+    "handoff_packet.py",
+    "kpi_engine.py",
+    "memory_graph.py",
+    "model_router.py",
+    "reply_check.py",
+    "ts_forecast.py"
+   ]
+  },
+  {
+   "skill": "financial-intelligence",
+   "description": "Financial Intelligence \u2014 analyzes an account's or the business's financials (revenue, growth, margins, EBITDA, cash flow, capex, debt, cash, working capital, DSO, business-unit and geographic performance, investment, M&A, restructuring, cos\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Financial Intelligence",
+     "command": "/financial",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "financial-intelligence-agent"
+   ],
+   "scripts": [
+    "evidence_validator.py",
+    "financial_intel.py",
+    "memory_graph.py"
+   ]
+  },
+  {
+   "skill": "growth-discovery",
+   "description": "Growth Intelligence front door \u2014 shows curated, ready-to-run business prompts so users never need to know which capability exists. Use when the user asks \"what can you do\", \"help me get started\", \"show me prompts\", \"explore capabilities\", \"\u2026",
+   "audience": "users",
+   "capabilities": [],
+   "used_by_agents": [
+    "business-orchestrator"
+   ],
+   "scripts": [
+    "__pycache__",
+    "prompt_engine.py"
+   ]
+  },
+  {
+   "skill": "growth-opportunity-discovery",
+   "description": "Proactive Growth Opportunity Discovery Engine \u2014 continuously finds and sizes cross-sell, upsell, whitespace, new business units and geographies, new use cases, contract and product expansion, competitive displacement, customer strategic ini\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Growth Opportunities",
+     "command": "/opportunities",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "customer-growth-agent",
+    "opportunity-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "opportunity_builder.py",
+    "opportunity_scorer.py",
+    "propensity_model.py",
+    "reply_check.py",
+    "whitespace_matrix.py"
+   ]
+  },
+  {
+   "skill": "growth-signal-orchestrator",
+   "description": "Central Growth Signal Orchestrator \u2014 continuously correlates signals across skills, systems and functions (marketing, sales, customer success, service, product, finance, partners, external) into business patterns such as compounding custome\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Growth Signals",
+     "command": "/signals",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "customer-growth-agent",
+    "financial-intelligence-agent",
+    "marketing-intelligence-agent"
+   ],
+   "scripts": [
+    "competitive_threads.py",
+    "cross_domain_correlator.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py",
+    "signal_correlator.py"
+   ]
+  },
+  {
+   "skill": "knowledge-intelligence",
+   "description": "Shared enterprise knowledge layer across SharePoint, Confluence, Google Drive, knowledge bases, contracts, proposals, presentations, product documentation, policies, pricing and sales collateral \u2014 finds the authoritative, current answer wit\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Knowledge",
+     "command": "/knowledge",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "account-intelligence-agent",
+    "competitive-intelligence-agent",
+    "opportunity-agent",
+    "research-agent",
+    "solution-architect-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "knowledge_catalog.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "market-intelligence",
+   "description": "Real-world market context for the detected business \u2014 compares the business against current, source-attributed, time-bound external intelligence relevant to its specific industry, business model and geography \u2014 industry benchmarks, market g\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Market Intelligence",
+     "command": "/market",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "market-intelligence-agent",
+    "opportunity-agent"
+   ],
+   "scripts": [
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "marketing-intelligence",
+   "description": "Marketing Intelligence \u2014 turns raw marketing signals (email, web, webinars, events, intent data, executive briefings, campaigns) into account-level commercial intelligence \u2014 engagement change, executive engagement, buying-intent surges, cam\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Marketing Intelligence",
+     "command": "/marketing",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "marketing-intelligence-agent"
+   ],
+   "scripts": [
+    "cross_domain_correlator.py",
+    "evidence_validator.py",
+    "marketing_signals.py",
+    "memory_graph.py"
+   ]
+  },
+  {
+   "skill": "meeting-follow-through",
+   "description": "Turns a customer meeting (transcript, notes, or voice memo) into a seller-approved CRM update, a customer-ready recap email draft, and a list of commitments and risks, all reconciled against the current opportunity. Use this whenever a sell\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Meeting Follow-through",
+     "command": "/followup",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "meeting-intelligence-agent",
+    "relationship-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "meeting-intelligence-brief",
+   "description": "Produces a one-page, meeting-specific brief before a customer meeting by synthesizing CRM, service cases, billing, past meeting notes, email history and external news into objectives, attendee context, what changed, risks and landmines, com\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Meeting Preparation",
+     "command": "/meeting",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "meeting-intelligence-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "pipeline-forecast-intelligence",
+   "description": "Pipeline and forecast intelligence beyond CRM reporting \u2014 pipeline coverage, quality, aging, velocity, conversion, stage leakage, concentration, rep and segment exposure, slippage and revenue at risk, plus an evidence-based forecast range (\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Pipeline & Forecast",
+     "command": "/forecast",
+     "aliases": [
+      "/pipeline"
+     ]
+    }
+   ],
+   "used_by_agents": [
+    "pipeline-forecast-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "deal_risk_model.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "forecast_sim.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "pipeline_whatif.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "platform-admin",
+   "description": "Administration of the Business Operating System \u2014 Agent Registry (list, status ACTIVE/DISABLED/EXPERIMENTAL/DEPRECATED, permissions, add customer-specific agents from a manifest), observability (execution traces, admin HTML view, cost per q\u2026",
+   "audience": "administrators",
+   "capabilities": [
+    {
+     "capability": "Platform Administration",
+     "command": "/admin",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "business-orchestrator",
+    "governance-risk-agent"
+   ],
+   "scripts": [
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "policy_gate.py",
+    "registry.py",
+    "trace.py"
+   ]
+  },
+  {
+   "skill": "pricing-intelligence",
+   "description": "AI Pricing Intelligence (expanded from deal-desk-precheck) \u2014 analyses historical pricing, discounts, segment, deal size, geography, product, contract term, margin, competitive environment and win probability to evaluate Price \u2192 Discount \u2192 M\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Pricing",
+     "command": "/pricing",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "deal-strategy-agent",
+    "pricing-commercial-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "pricing_model.py",
+    "propensity_model.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "relationship-intelligence",
+   "description": "Executive Relationship Intelligence (expanded from buying-committee-intelligence) \u2014 maps and scores relationships at deal, account and portfolio level from real interactions \u2014 executive relationships, sponsor and champion strength, influenc\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Relationships",
+     "command": "/relationships",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "account-intelligence-agent",
+    "deal-strategy-agent",
+    "meeting-intelligence-agent",
+    "relationship-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "propensity_model.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "renewal-expansion-radar",
+   "description": "Assesses renewal risk and expansion opportunity across a book of accounts by combining contract dates, product usage, service cases and escalations, billing and payment behaviour, satisfaction scores and stakeholder changes into an explaine\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Renewals & Expansion",
+     "command": "/renewals",
+     "aliases": []
+    },
+    {
+     "capability": "Customer Growth",
+     "command": "/customer-growth",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "customer-growth-agent"
+   ],
+   "scripts": [
+    "anomaly_detect.py",
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "propensity_model.py",
+    "reply_check.py",
+    "twin_update.py"
+   ]
+  },
+  {
+   "skill": "rfp-response-composer",
+   "description": "Parses an RFP, RFI, RFQ or security questionnaire into a compliance matrix, drafts answers grounded only in approved content (answer library, product docs, security artefacts, past winning proposals), tailors them to the customer's context \u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "RFP Response",
+     "command": "/rfp",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "solution-architect-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "propensity_model.py",
+    "reply_check.py"
+   ]
+  },
+  {
+   "skill": "scenario-planner",
+   "description": "Builds driver-based what-if scenarios for revenue, bookings, pipeline, forecast, pricing and sales capacity \u2014 best, base and worst case, with sensitivity analysis showing which assumptions matter most, the gap to target, and the pipeline or\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Scenario Planning",
+     "command": "/scenario",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "executive-decision-agent",
+    "pipeline-forecast-agent",
+    "pricing-commercial-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py",
+    "scenario_model.py"
+   ]
+  },
+  {
+   "skill": "solution-architecture",
+   "description": "Translates business problems into solutions \u2014 Business Problem \u2192 Business Capability \u2192 Solution \u2192 Architecture \u2192 Technology \u2192 Delivery Model \u2192 Value \u2192 Commercial Model \u2192 Risks \u2192 Implementation Roadmap \u2014 grounded in approved capabilities fro\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Solution Design",
+     "command": "/solution",
+     "aliases": [
+      "/architecture"
+     ]
+    }
+   ],
+   "used_by_agents": [
+    "solution-architect-agent"
+   ],
+   "scripts": [
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py"
+   ]
+  },
+  {
+   "skill": "win-loss-intelligence",
+   "description": "Win/loss learning engine \u2014 analyses why deals were won or lost across competitor, pricing and discount, product fit, relationship strength and stakeholder coverage, sales cycle, proposal quality, deal size, industry and geography; finds sta\u2026",
+   "audience": "users",
+   "capabilities": [
+    {
+     "capability": "Win/Loss",
+     "command": "/winloss",
+     "aliases": []
+    }
+   ],
+   "used_by_agents": [
+    "competitive-intelligence-agent",
+    "deal-strategy-agent",
+    "outcome-learning-agent"
+   ],
+   "scripts": [
+    "data_profiler.py",
+    "entity_resolver.py",
+    "evidence_validator.py",
+    "handoff_packet.py",
+    "memory_graph.py",
+    "model_router.py",
+    "normalize.py",
+    "reply_check.py",
+    "winloss_analyzer.py"
+   ]
+  }
+ ]
+}

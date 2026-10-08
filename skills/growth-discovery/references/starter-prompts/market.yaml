@@ -1,0 +1,56 @@
+capability:
+  id: market
+  name: Market Intelligence
+  description: Understand the market, its trends and how they affect us.
+  domain: Market
+  slash_command: /market
+  aliases: []
+  audience: all
+  routes_to:
+    skill: market-intelligence
+    intent: market_view
+  example_outcomes:
+  - Source-attributed market context tied to our KPIs and accounts
+  primary_prompts:
+  - text: What's changing in this market?
+    category: Monitor
+  - text: Show me the major market trends.
+    category: Discover
+  - text: Identify growth opportunities from market changes.
+    category: Discover
+  - text: Show me emerging market threats.
+    category: Investigate
+  - text: Analyze [[the {industry}|this]] industry.
+    category: Analyze
+  - text: Tell me what I should be watching in the market.
+    category: Monitor
+  additional_prompts:
+  - text: What market changes affect [[{account}|this account]]?
+    category: Investigate
+  - text: Which market trends could create demand?
+    category: Discover
+  - text: Which market trends could reduce demand?
+    category: Investigate
+  - text: What are competitors doing in the market?
+    category: Monitor
+  - text: Which technologies are changing the market?
+    category: Discover
+  - text: Show me market investment trends.
+    category: Analyze
+  - text: How do we compare with market benchmarks?
+    category: Analyze
+  - text: Is our growth good for this market?
+    category: Analyze
+  - text: Show me regulatory changes that matter.
+    category: Monitor
+  - text: Summarize the market for my board.
+    category: Prepare
+  follow_up_prompts:
+  - How do we compare with market benchmarks?
+  - Identify growth opportunities from market changes.
+  - Summarize the market for my board.
+  persona_prompts:
+    investor:
+    - How does the company compare with its market?
+    it_leader:
+    - Which technologies are changing our market?

@@ -1,0 +1,56 @@
+capability:
+  id: scenario
+  name: Scenario Planning
+  description: Model what-ifs before committing.
+  domain: Decisions
+  slash_command: /scenario
+  aliases: []
+  audience: all
+  routes_to:
+    skill: scenario-planner
+    intent: scenario
+  example_outcomes:
+  - Best/base/worst cases with sensitivity and the gap to target, labelled as modeled
+  primary_prompts:
+  - text: Run a best, base and worst-case scenario.
+    category: Decide
+  - text: What happens if this deal slips?
+    category: Decide
+  - text: Model the impact of losing this customer.
+    category: Decide
+  - text: Model the impact of winning this opportunity.
+    category: Decide
+  - text: Compare strategic scenarios.
+    category: Decide
+  - text: Show me the financial impact of this scenario.
+    category: Analyze
+  additional_prompts:
+  - text: What happens if win rate drops five points?
+    category: Decide
+  - text: How many reps do we need to hit the number?
+    category: Decide
+  - text: Model a price increase.
+    category: Decide
+  - text: Which assumptions matter most?
+    category: Investigate
+  - text: What is the gap to target?
+    category: Analyze
+  - text: Build a capacity plan.
+    category: Prepare
+  - text: What if pipeline creation slows?
+    category: Decide
+  - text: Stress-test next year's plan.
+    category: Decide
+  - text: Show me the assumptions behind this scenario.
+    category: Investigate
+  - text: What would close the gap to target?
+    category: Decide
+  follow_up_prompts:
+  - Which assumptions matter most?
+  - Prepare an executive decision brief.
+  - What would close the gap to target?
+  persona_prompts:
+    cfo:
+    - Stress-test next year's plan.
+    coo:
+    - Build a capacity plan.

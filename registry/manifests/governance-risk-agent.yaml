@@ -1,0 +1,50 @@
+agent_id: governance-risk-agent
+name: Governance & Risk Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Independently evaluates authorization, privacy, policy, regulatory risk, action permissions, data sensitivity, approval requirements,
+  evidence sufficiency, hallucination risk, conflicting evidence and model risk before material outputs or actions.
+business_objective: Independently evaluates authorization, privacy, policy, regulatory risk, action permissions, data sensitivity, approval requirements,
+  evidence sufficiency, hallucination risk, conflicting evidence and model risk before material outputs or actions.
+allowed_skills:
+- platform-admin
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- policy
+- registry
+- execution_traces
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: Internal facts cite system/record/date; inferences labelled; numbers only from packet; cites the policy rule applied
+escalation_rules: Unclear policy → deny and escalate to a human
+model_routing_policy:
+  default_tier: T2
+  max_tier: T3
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 0
+action_permissions: []
+approval_requirements: none (advises the gate)
+cost_budget:
+  max_relative_units_per_task: 24
+  max_turns: 14
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/governance-risk-agent
+  score: null
+  last_run: null

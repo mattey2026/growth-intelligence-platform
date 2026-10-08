@@ -1,0 +1,52 @@
+capability:
+  id: knowledge
+  name: Knowledge
+  description: Find the authoritative answer in company knowledge.
+  domain: Operations
+  slash_command: /knowledge
+  aliases: []
+  audience: all
+  routes_to:
+    skill: knowledge-intelligence
+    intent: knowledge
+  example_outcomes:
+  - The current, authoritative answer with source and version, conflicts flagged
+  primary_prompts:
+  - text: Find the relevant knowledge for [[{account}|this account]].
+    category: Discover
+  - text: Search our previous work.
+    category: Discover
+  - text: Find similar situations we've handled.
+    category: Investigate
+  - text: Find lessons from similar past work.
+    category: Discover
+  - text: Find supporting evidence for this claim.
+    category: Investigate
+  - text: Summarize the relevant knowledge.
+    category: Prepare
+  additional_prompts:
+  - text: What's our current policy on this?
+    category: Discover
+  - text: Find the latest version of this document.
+    category: Discover
+  - text: Which document is authoritative?
+    category: Investigate
+  - text: Do our documents contradict each other?
+    category: Investigate
+  - text: What did we commit in the contract?
+    category: Investigate
+  - text: Find proposals for similar opportunities.
+    category: Discover
+  - text: Find case studies for this industry.
+    category: Discover
+  - text: Show me stale content to review.
+    category: Monitor
+  - text: What is our approved position on this topic?
+    category: Discover
+  - text: Find our current pricing guidance.
+    category: Discover
+  follow_up_prompts:
+  - Which document is authoritative?
+  - Find case studies for this industry.
+  - Do our documents contradict each other?
+  persona_prompts: {}

@@ -1,0 +1,51 @@
+agent_id: research-agent
+name: Research Agent
+version: 7.0.0
+status: ACTIVE
+owner: platform
+runtime: subagent
+description: Acquires evidence — public, company, industry, regulatory, research, news, documents and internal knowledge — each fact with source,
+  date, evidence and confidence.
+business_objective: Acquires evidence — public, company, industry, regulatory, research, news, documents and internal knowledge — each fact with
+  source, date, evidence and confidence. Finds evidence; does not interpret strategy.
+allowed_skills:
+- knowledge-intelligence
+- business-memory
+allowed_tools:
+- Read
+- Grep
+- Glob
+- Skill
+- WebSearch
+- WebFetch
+allowed_data_sources:
+- memory_graph
+- business_context_profile
+- web
+- document_repositories
+memory_permissions: read
+input_schema: handoff_packet_v2
+output_schema: agent_result_v1
+confidence_standard: Every prediction carries confidence (Low/Medium/High) + basis; conclusions below 0.6 must escalate or be labelled Low
+evidence_requirements: External facts need source URL/publisher, date, and confidence; paraphrased; fact vs inference separated
+escalation_rules: Conflicting sources → report both; ambiguity → T2
+model_routing_policy:
+  default_tier: T1
+  max_tier: T2
+  escalate_on:
+  - confidence<0.6
+  - evidence conflict
+  - value_at_stake>1M for decisions
+  - unresolved after tier
+autonomy_level: 0
+action_permissions: []
+approval_requirements: none
+cost_budget:
+  max_relative_units_per_task: 8
+  max_turns: 20
+audit_requirements: Every invocation writes an execution-trace span (agent, skills, data, tier, tokens est., cost est., latency, confidence, escalation)
+failure_behavior: Return ESCALATE with partial analysis, or CONTRACT result with issues; never fabricate; never act
+evaluation:
+  suite: evals/research-agent
+  score: null
+  last_run: null

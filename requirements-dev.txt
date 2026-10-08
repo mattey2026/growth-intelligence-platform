@@ -1,0 +1,8 @@
+# Python 3.11+ recommended. Install: python -m pip install -r requirements-dev.txt
+# Then, for the dashboard tests: python -m playwright install chromium
+PyYAML>=6.0
+jsonschema>=4.20
+pandas>=2.2
+numpy>=1.26
+openpyxl>=3.1
+playwright>=1.45

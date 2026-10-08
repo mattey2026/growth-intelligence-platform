@@ -1,0 +1,121 @@
+partner_id,distributor,sell_in_units,sell_through_units,end_consumer_region,reseller_margin
+P0,Metro Distributors,334,311,North,0.203
+P1,Coastal Wholesale,79,101,South,0.132
+P2,North Retail Partners,112,54,North,0.189
+P3,Metro Distributors,132,293,South,0.275
+P4,Coastal Wholesale,113,101,South,0.213
+P5,North Retail Partners,330,295,South,0.293
+P0,Metro Distributors,354,152,North,0.1
+P1,Coastal Wholesale,253,232,South,0.168
+P2,North Retail Partners,63,359,South,0.254
+P3,Metro Distributors,82,353,South,0.237
+P4,Coastal Wholesale,166,201,South,0.212
+P5,North Retail Partners,201,109,North,0.233
+P0,Metro Distributors,267,125,South,0.275
+P1,Coastal Wholesale,217,329,North,0.237
+P2,North Retail Partners,142,240,South,0.209
+P3,Metro Distributors,105,97,North,0.212
+P4,Coastal Wholesale,291,341,North,0.233
+P5,North Retail Partners,307,367,North,0.165
+P0,Metro Distributors,61,369,North,0.234
+P1,Coastal Wholesale,89,252,South,0.223
+P2,North Retail Partners,208,371,North,0.257
+P3,Metro Distributors,186,246,North,0.196
+P4,Coastal Wholesale,360,210,South,0.105
+P5,North Retail Partners,230,369,South,0.207
+P0,Metro Distributors,197,245,North,0.272
+P1,Coastal Wholesale,200,307,South,0.228
+P2,North Retail Partners,283,155,South,0.229
+P3,Metro Distributors,255,308,North,0.178
+P4,Coastal Wholesale,110,371,South,0.171
+P5,North Retail Partners,308,58,North,0.244
+P0,Metro Distributors,314,222,South,0.116
+P1,Coastal Wholesale,384,165,North,0.273
+P2,North Retail Partners,325,57,North,0.275
+P3,Metro Distributors,149,68,South,0.292
+P4,Coastal Wholesale,161,131,South,0.127
+P5,North Retail Partners,276,105,North,0.123
+P0,Metro Distributors,277,283,North,0.279
+P1,Coastal Wholesale,293,112,North,0.18
+P2,North Retail Partners,354,253,North,0.154
+P3,Metro Distributors,152,331,South,0.176
+P4,Coastal Wholesale,378,208,South,0.232
+P5,North Retail Partners,50,83,North,0.132
+P0,Metro Distributors,76,62,South,0.197
+P1,Coastal Wholesale,390,140,South,0.232
+P2,North Retail Partners,380,180,North,0.244
+P3,Metro Distributors,154,207,North,0.102
+P4,Coastal Wholesale,98,143,North,0.262
+P5,North Retail Partners,159,328,North,0.187
+P0,Metro Distributors,65,233,South,0.187
+P1,Coastal Wholesale,362,368,South,0.212
+P2,North Retail Partners,281,357,North,0.156
+P3,Metro Distributors,254,280,North,0.277
+P4,Coastal Wholesale,135,49,South,0.142
+P5,North Retail Partners,214,112,North,0.209
+P0,Metro Distributors,116,294,North,0.134
+P1,Coastal Wholesale,320,225,North,0.223
+P2,North Retail Partners,216,361,North,0.28
+P3,Metro Distributors,60,280,North,0.277
+P4,Coastal Wholesale,139,318,North,0.127
+P5,North Retail Partners,297,57,North,0.225
+P0,Metro Distributors,231,140,South,0.279
+P1,Coastal Wholesale,180,271,South,0.14
+P2,North Retail Partners,138,255,South,0.183
+P3,Metro Distributors,81,165,South,0.243
+P4,Coastal Wholesale,263,93,South,0.248
+P5,North Retail Partners,281,240,North,0.19
+P0,Metro Distributors,232,69,South,0.228
+P1,Coastal Wholesale,376,267,North,0.234
+P2,North Retail Partners,374,312,South,0.171
+P3,Metro Distributors,122,267,South,0.23
+P4,Coastal Wholesale,262,61,North,0.215
+P5,North Retail Partners,270,217,South,0.239
+P0,Metro Distributors,136,143,South,0.202
+P1,Coastal Wholesale,154,228,South,0.167
+P2,North Retail Partners,220,271,North,0.187
+P3,Metro Distributors,309,107,North,0.284
+P4,Coastal Wholesale,152,52,South,0.138
+P5,North Retail Partners,302,208,South,0.13
+P0,Metro Distributors,278,250,North,0.102
+P1,Coastal Wholesale,126,82,South,0.27
+P2,North Retail Partners,185,353,North,0.298
+P3,Metro Distributors,340,203,North,0.147
+P4,Coastal Wholesale,344,369,South,0.153
+P5,North Retail Partners,280,222,South,0.14
+P0,Metro Distributors,51,287,North,0.22
+P1,Coastal Wholesale,288,303,North,0.197
+P2,North Retail Partners,128,208,South,0.264
+P3,Metro Distributors,337,173,South,0.142
+P4,Coastal Wholesale,369,266,South,0.276
+P5,North Retail Partners,200,46,South,0.193
+P0,Metro Distributors,384,250,North,0.262
+P1,Coastal Wholesale,315,219,South,0.26
+P2,North Retail Partners,163,90,North,0.282
+P3,Metro Distributors,357,109,North,0.2
+P4,Coastal Wholesale,184,51,North,0.222
+P5,North Retail Partners,85,292,North,0.212
+P0,Metro Distributors,257,273,North,0.138
+P1,Coastal Wholesale,347,172,North,0.2
+P2,North Retail Partners,279,365,South,0.285
+P3,Metro Distributors,187,169,South,0.282
+P4,Coastal Wholesale,365,144,South,0.104
+P5,North Retail Partners,217,349,North,0.233
+P0,Metro Distributors,184,67,North,0.165
+P1,Coastal Wholesale,101,173,South,0.127
+P2,North Retail Partners,124,48,South,0.128
+P3,Metro Distributors,294,158,North,0.259
+P4,Coastal Wholesale,329,286,North,0.292
+P5,North Retail Partners,152,158,North,0.204
+P0,Metro Distributors,270,207,South,0.177
+P1,Coastal Wholesale,354,203,South,0.202
+P2,North Retail Partners,101,61,South,0.266
+P3,Metro Distributors,146,71,North,0.249
+P4,Coastal Wholesale,233,141,South,0.113
+P5,North Retail Partners,246,225,North,0.143
+P0,Metro Distributors,189,64,North,0.274
+P1,Coastal Wholesale,189,353,South,0.199
+P2,North Retail Partners,95,330,North,0.232
+P3,Metro Distributors,264,231,North,0.256
+P4,Coastal Wholesale,376,288,North,0.227
+P5,North Retail Partners,118,292,South,0.247
