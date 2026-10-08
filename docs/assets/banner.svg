@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-label="Growth Intelligence Platform: AI-native Enterprise Growth and Decision Intelligence">
+  <rect width="1280" height="300" fill="#151A20"/>
+  <g opacity="0.07" stroke="#4FA3C2" stroke-width="1">
+    <path d="M0 60H1280M0 120H1280M0 180H1280M0 240H1280"/>
+    <path d="M160 0V300M320 0V300M480 0V300M640 0V300M800 0V300M960 0V300M1120 0V300"/>
+  </g>
+  <!-- rising bars in the six categorical colours -->
+  <g transform="translate(900,62)">
+    <rect x="0"   y="128" width="34" height="48"  rx="3" fill="#4FA3C2"/>
+    <rect x="48"  y="104" width="34" height="72"  rx="3" fill="#4DB3A7"/>
+    <rect x="96"  y="84"  width="34" height="92"  rx="3" fill="#9A8CC7"/>
+    <rect x="144" y="58"  width="34" height="118" rx="3" fill="#D2A34A"/>
+    <rect x="192" y="34"  width="34" height="142" rx="3" fill="#78B38A"/>
+    <rect x="240" y="8"   width="34" height="168" rx="3" fill="#DB8A57"/>
+    <path d="M17 120 L65 96 L113 76 L161 50 L209 26 L257 0" fill="none" stroke="#E4E8EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="257" cy="0" r="5" fill="#E4E8EC"/>
+  </g>
+  <g font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+    <rect x="72" y="74" width="22" height="22" rx="2" fill="none" stroke="#4FA3C2" stroke-width="3"/>
+    <rect x="77" y="87" width="12" height="5" fill="#4FA3C2"/>
+    <text x="106" y="92" fill="#A3AFBB" font-size="16" font-weight="600" letter-spacing="3">GROWTH INTELLIGENCE</text>
+    <text x="72" y="152" fill="#E4E8EC" font-size="46" font-weight="700">Growth Intelligence Platform</text>
+    <text x="72" y="194" fill="#4FA3C2" font-size="22" font-weight="500">AI-native Enterprise Growth &amp; Decision Intelligence</text>
+    <text x="72" y="236" fill="#8793A0" font-size="16">Claude plugin · 34 capabilities · 21 agents · evidence on every number · governed actions</text>
+  </g>
+</svg>
