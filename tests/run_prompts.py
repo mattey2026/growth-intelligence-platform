@@ -9,6 +9,7 @@ Typed routing of ADDITIONAL prompts is measured and reported, not asserted (they
 import pathlib
 import glob, json, os, re, subprocess, sys, tempfile
 import yaml
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")); import build_fixtures; build_fixtures.ensure()   # rebuild binary fixtures from readable SQL/JSON sources
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")); SK = f"{ROOT}/skills"
 CAT = f"{SK}/growth-discovery/references/starter-prompts"; ENG = f"{SK}/growth-discovery/scripts/prompt_engine.py"; PLN = f"{SK}/business-orchestrator/scripts/agent_planner.py"
 R = []

@@ -23,3 +23,10 @@ credentials/
 
 # Logs
 *.log
+
+# Generated test fixtures (rebuilt from *.sql and *.workbook.json by tests/fixtures/build_fixtures.py)
+tests/fixtures/*.db
+tests/fixtures/*.xlsx
+evals/fixtures/*.db
+*.tmp.xlsx
+*.db.tmp

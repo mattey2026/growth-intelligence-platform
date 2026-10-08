@@ -9,6 +9,7 @@ EVD evidence · SCN scenario · RSP responsive/design.
 import pathlib
 import subprocess, json, os, sys, tempfile, shutil, glob, re, sqlite3
 import yaml, jsonschema
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")); import build_fixtures; build_fixtures.ensure()   # rebuild binary fixtures from readable SQL/JSON sources
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")); SK = f"{ROOT}/skills"; FX = f"{ROOT}/tests/fixtures"
 DS, AR = f"{SK}/dashboard-intelligence/scripts", f"{SK}/artifact-dashboard-intelligence/scripts"
 TMP = tempfile.mkdtemp(); R = []

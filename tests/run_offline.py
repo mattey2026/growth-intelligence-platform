@@ -5,6 +5,7 @@ No model calls, no network. Scenarios whose core is LLM reasoning are also cover
 cases in evals/ (see EVAL column). Run from the plugin root:  python3 tests/run_offline.py
 """
 import subprocess, json, shutil, os, sys, tempfile, sqlite3
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")); import build_fixtures; build_fixtures.ensure()   # rebuild binary fixtures from readable SQL/JSON sources
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 OS = f"{ROOT}/skills/business-orchestrator/scripts"; FX = f"{ROOT}/tests/fixtures"
 TMP = tempfile.mkdtemp(); MEM = f"{TMP}/mem.db"; shutil.copy(f"{FX}/growth_memory_v7.db", MEM)

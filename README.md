@@ -225,15 +225,7 @@ sequenceDiagram
 
 ## 💻 Quick start
 
-### Windows: one step
-1. Download this repository (green **Code** button → **Download ZIP**), or use the packaged release.
-2. In the folder, right-click → **Open in Terminal**, then run:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\setup-windows.ps1
-   ```
-   This sets up Python, runs a test, and opens the project in VS Code.
-
-### Any platform
+### Set up for development
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate     macOS/Linux: source .venv/bin/activate

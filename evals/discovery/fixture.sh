@@ -1,3 +1,4 @@
 #!/bin/bash
 F="$(dirname "$0")/../fixtures"
-cp "$F/growth_memory_v7.db" ./growth_memory.db
+PY=$(command -v python3 || command -v python)
+"$PY" -c "import sqlite3,sys; c=sqlite3.connect('growth_memory.db'); c.executescript(open(sys.argv[1],encoding='utf-8').read()); c.commit()" "$F/growth_memory_v7.sql"

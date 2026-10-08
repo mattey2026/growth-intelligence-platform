@@ -9,7 +9,11 @@ Version 7.0 · New in V7 · Used by the **governance-risk-agent** (read-only) an
 
 ## Registry
 ```
-python scripts/registry.py <root> validate | list [--status S] | can <agent> --skill|--tool|--data|--action <x> | set-status <agent> <STATUS> | build
+python scripts/registry.py <root> validate
+python scripts/registry.py <root> list [--status S]
+python scripts/registry.py <root> can <agent> --skill <x>      (or --tool, --data, --action)
+python scripts/registry.py <root> set-status <agent> <STATUS>
+python scripts/registry.py <root> build
 ```
 - `build` regenerates `agents/*.md` from `registry/manifests/*.yaml`, so the manifest is the only source of truth.
 - Only ACTIVE and EXPERIMENTAL agents are deployed.

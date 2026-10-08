@@ -1,0 +1,4476 @@
+{
+ "source": "workbook_v2.xlsx",
+ "sheets": [
+  {
+   "name": "README",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Item",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Details",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Item": "Workbook",
+      "Details": "AI-Native Growth Skills Test Database"
+     },
+     {
+      "Item": "Purpose",
+      "Details": "Synthetic relational test dataset designed to exercise the existing v4.0 Skills plus the proposed Growth Intelligence extensions."
+     },
+     {
+      "Item": "Data nature",
+      "Details": "Synthetic; no real customer or personal data."
+     },
+     {
+      "Item": "How to test",
+      "Details": "Upload this workbook to Claude with the plugin/Skills enabled. Start with Test_Cases or ask Claude to run all tests and populate Test_Results."
+     },
+     {
+      "Item": "Core entities",
+      "Details": "Accounts, Contacts, Opportunities, Pipeline Snapshots, Activities, Service Cases, Finance, Product Usage, Marketing, Contracts, Competitors, Whitespace."
+     },
+     {
+      "Item": "Existing v4 Skills",
+      "Details": "16 Skills are represented in Test_Cases T01-T16."
+     },
+     {
+      "Item": "Growth extensions",
+      "Details": "T17-T22 exercise Growth Signal Orchestrator, Growth Opportunity Discovery, Account Economics, Competitive Intelligence, Business Intelligence Copilot, Continuous Business Watch."
+     },
+     {
+      "Item": "Important",
+      "Details": "Expected outputs are intentionally explicit so you can compare Claude's actual output against known signals."
+     },
+     {
+      "Item": "Recommended next step",
+      "Details": "Run T01-T22 individually first, then ask Claude for an end-to-end Growth Command Center analysis across the entire workbook."
+     },
+     {
+      "Item": "Pricing Capability",
+      "Details": "Added Pricing Intelligence, Price Optimization, Price Elasticity, Competitive Pricing, Margin Optimization, Discount Governance, Pricing Leakage, Portfolio Pricing and Scenario Pricing."
+     },
+     {
+      "Item": "Pricing Test Cases",
+      "Details": "P01-P10 in Pricing_Test_Cases exercise the pricing capability across deal, portfolio and executive use cases."
+     }
+    ]
+   }
+  },
+  {
+   "name": "Accounts",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_Name",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Industry",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Region",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Segment",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Current_Revenue",
+       "type": "integer"
+      },
+      {
+       "name": "Health",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Tier",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Account_ID": "A001",
+      "Account_Name": "Apex Manufacturing",
+      "Industry": "Manufacturing",
+      "Region": "North America",
+      "Segment": "Enterprise",
+      "Current_Revenue": 15000000,
+      "Health": "Healthy",
+      "Tier": "Strategic"
+     },
+     {
+      "Account_ID": "A002",
+      "Account_Name": "BlueWave Telecom",
+      "Industry": "Telecom",
+      "Region": "North America",
+      "Segment": "Enterprise",
+      "Current_Revenue": 12500000,
+      "Health": "At Risk",
+      "Tier": "Strategic"
+     },
+     {
+      "Account_ID": "A003",
+      "Account_Name": "Crest Healthcare",
+      "Industry": "Healthcare",
+      "Region": "Europe",
+      "Segment": "Enterprise",
+      "Current_Revenue": 9800000,
+      "Health": "Healthy",
+      "Tier": "Strategic"
+     },
+     {
+      "Account_ID": "A004",
+      "Account_Name": "Delta Retail Group",
+      "Industry": "Retail",
+      "Region": "APAC",
+      "Segment": "Enterprise",
+      "Current_Revenue": 7200000,
+      "Health": "Watch",
+      "Tier": "Strategic"
+     },
+     {
+      "Account_ID": "A005",
+      "Account_Name": "Evergreen Energy",
+      "Industry": "Energy",
+      "Region": "North America",
+      "Segment": "Enterprise",
+      "Current_Revenue": 6100000,
+      "Health": "Healthy",
+      "Tier": "Growth"
+     },
+     {
+      "Account_ID": "A006",
+      "Account_Name": "FinEdge Bank",
+      "Industry": "Financial Services",
+      "Region": "Europe",
+      "Segment": "Enterprise",
+      "Current_Revenue": 18500000,
+      "Health": "At Risk",
+      "Tier": "Strategic"
+     },
+     {
+      "Account_ID": "A007",
+      "Account_Name": "GlobalLogix",
+      "Industry": "Logistics",
+      "Region": "APAC",
+      "Segment": "Enterprise",
+      "Current_Revenue": 5400000,
+      "Health": "Healthy",
+      "Tier": "Growth"
+     },
+     {
+      "Account_ID": "A008",
+      "Account_Name": "Horizon Media",
+      "Industry": "Media",
+      "Region": "North America",
+      "Segment": "Mid-Market",
+      "Current_Revenue": 3100000,
+      "Health": "Watch",
+      "Tier": "Growth"
+     },
+     {
+      "Account_ID": "A009",
+      "Account_Name": "Indigo Pharma",
+      "Industry": "Pharma",
+      "Region": "Europe",
+      "Segment": "Enterprise",
+      "Current_Revenue": 8800000,
+      "Health": "Healthy",
+      "Tier": "Strategic"
+     },
+     {
+      "Account_ID": "A010",
+      "Account_Name": "Jupiter Foods",
+      "Industry": "Consumer Goods",
+      "Region": "APAC",
+      "Segment": "Mid-Market",
+      "Current_Revenue": 2700000,
+      "Health": "Healthy",
+      "Tier": "Growth"
+     },
+     {
+      "Account_ID": "A011",
+      "Account_Name": "Kinetic Airlines",
+      "Industry": "Travel",
+      "Region": "North America",
+      "Segment": "Enterprise",
+      "Current_Revenue": 4600000,
+      "Health": "At Risk",
+      "Tier": "Growth"
+     },
+     {
+      "Account_ID": "A012",
+      "Account_Name": "Lumen Software",
+      "Industry": "Technology",
+      "Region": "Europe",
+      "Segment": "Mid-Market",
+      "Current_Revenue": 3900000,
+      "Health": "Watch",
+      "Tier": "Growth"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Contacts",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Contact_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Contact_Name",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Role",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Relationship_Strength",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Champion",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Influence",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Contact_ID": "C001",
+      "Account_ID": "A001",
+      "Contact_Name": "Executive 1",
+      "Role": "CIO",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C001B",
+      "Account_ID": "A001",
+      "Contact_Name": "Business Lead 1",
+      "Role": "VP Sales",
+      "Relationship_Strength": "Moderate",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C002",
+      "Account_ID": "A002",
+      "Contact_Name": "Executive 2",
+      "Role": "COO",
+      "Relationship_Strength": "Weak",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C002B",
+      "Account_ID": "A002",
+      "Contact_Name": "Business Lead 2",
+      "Role": "VP IT",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C003",
+      "Account_ID": "A003",
+      "Contact_Name": "Executive 3",
+      "Role": "Executive Sponsor",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "High"
+     },
+     {
+      "Contact_ID": "C003B",
+      "Account_ID": "A003",
+      "Contact_Name": "Business Lead 3",
+      "Role": "Procurement Director",
+      "Relationship_Strength": "Moderate",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C004",
+      "Account_ID": "A004",
+      "Contact_Name": "Executive 4",
+      "Role": "VP Sales",
+      "Relationship_Strength": "Moderate",
+      "Champion": "Yes",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C004B",
+      "Account_ID": "A004",
+      "Contact_Name": "Business Lead 4",
+      "Role": "Business Unit Head",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C005",
+      "Account_ID": "A005",
+      "Contact_Name": "Executive 5",
+      "Role": "VP IT",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C005B",
+      "Account_ID": "A005",
+      "Contact_Name": "Business Lead 5",
+      "Role": "CTO",
+      "Relationship_Strength": "Moderate",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C006",
+      "Account_ID": "A006",
+      "Contact_Name": "Executive 6",
+      "Role": "Executive Sponsor",
+      "Relationship_Strength": "Weak",
+      "Champion": "No",
+      "Influence": "High"
+     },
+     {
+      "Contact_ID": "C006B",
+      "Account_ID": "A006",
+      "Contact_Name": "Business Lead 6",
+      "Role": "Customer Success Director",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C007",
+      "Account_ID": "A007",
+      "Contact_Name": "Executive 7",
+      "Role": "Business Unit Head",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C007B",
+      "Account_ID": "A007",
+      "Contact_Name": "Business Lead 7",
+      "Role": "CFO",
+      "Relationship_Strength": "Moderate",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C008",
+      "Account_ID": "A008",
+      "Contact_Name": "Executive 8",
+      "Role": "CTO",
+      "Relationship_Strength": "Moderate",
+      "Champion": "Yes",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C008B",
+      "Account_ID": "A008",
+      "Contact_Name": "Business Lead 8",
+      "Role": "CIO",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C009",
+      "Account_ID": "A009",
+      "Contact_Name": "Executive 9",
+      "Role": "Executive Sponsor",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "High"
+     },
+     {
+      "Contact_ID": "C009B",
+      "Account_ID": "A009",
+      "Contact_Name": "Business Lead 9",
+      "Role": "COO",
+      "Relationship_Strength": "Moderate",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C010",
+      "Account_ID": "A010",
+      "Contact_Name": "Executive 10",
+      "Role": "CFO",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C010B",
+      "Account_ID": "A010",
+      "Contact_Name": "Business Lead 10",
+      "Role": "Chief Revenue Officer",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C011",
+      "Account_ID": "A011",
+      "Contact_Name": "Executive 11",
+      "Role": "CIO",
+      "Relationship_Strength": "Weak",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C011B",
+      "Account_ID": "A011",
+      "Contact_Name": "Business Lead 11",
+      "Role": "VP Sales",
+      "Relationship_Strength": "Moderate",
+      "Champion": "No",
+      "Influence": "Medium"
+     },
+     {
+      "Contact_ID": "C012",
+      "Account_ID": "A012",
+      "Contact_Name": "Executive 12",
+      "Role": "Executive Sponsor",
+      "Relationship_Strength": "Strong",
+      "Champion": "Yes",
+      "Influence": "High"
+     },
+     {
+      "Contact_ID": "C012B",
+      "Account_ID": "A012",
+      "Contact_Name": "Business Lead 12",
+      "Role": "VP IT",
+      "Relationship_Strength": "Strong",
+      "Champion": "No",
+      "Influence": "Medium"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Opportunities",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Opportunity_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Opportunity_Name",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Offering",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Stage",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Amount",
+       "type": "integer"
+      },
+      {
+       "name": "Win_Probability",
+       "type": "number"
+      },
+      {
+       "name": "Original_Close_Date",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Current_Close_Date",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Risk",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Primary_Competitor",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Status",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Opportunity_ID": "O001",
+      "Account_ID": "A001",
+      "Opportunity_Name": "Global ERP Modernization",
+      "Offering": "Technology",
+      "Stage": "Qualified",
+      "Amount": 5000000,
+      "Win_Probability": 0.75,
+      "Original_Close_Date": "2026-11-30",
+      "Current_Close_Date": "2026-11-30",
+      "Risk": "Low",
+      "Primary_Competitor": "Competitor A",
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O002",
+      "Account_ID": "A001",
+      "Opportunity_Name": "AI Operations Expansion",
+      "Offering": "AI Services",
+      "Stage": "Proposal",
+      "Amount": 2800000,
+      "Win_Probability": 0.65,
+      "Original_Close_Date": "2026-12-20",
+      "Current_Close_Date": "2026-12-20",
+      "Risk": "Medium",
+      "Primary_Competitor": null,
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O003",
+      "Account_ID": "A002",
+      "Opportunity_Name": "Customer Experience Transformation",
+      "Offering": "Services",
+      "Stage": "Negotiation",
+      "Amount": 4500000,
+      "Win_Probability": 0.7,
+      "Original_Close_Date": "2026-10-30",
+      "Current_Close_Date": "2026-12-15",
+      "Risk": "High",
+      "Primary_Competitor": "Competitor B",
+      "Status": "Slipping"
+     },
+     {
+      "Opportunity_ID": "O004",
+      "Account_ID": "A002",
+      "Opportunity_Name": "Cloud Managed Services",
+      "Offering": "Cloud",
+      "Stage": "Proposal",
+      "Amount": 3200000,
+      "Win_Probability": 0.55,
+      "Original_Close_Date": "2026-11-15",
+      "Current_Close_Date": "2027-01-30",
+      "Risk": "High",
+      "Primary_Competitor": "Competitor B",
+      "Status": "Slipping"
+     },
+     {
+      "Opportunity_ID": "O005",
+      "Account_ID": "A003",
+      "Opportunity_Name": "Digital Patient Platform",
+      "Offering": "Digital",
+      "Stage": "Proposal",
+      "Amount": 3800000,
+      "Win_Probability": 0.8,
+      "Original_Close_Date": "2026-12-15",
+      "Current_Close_Date": "2026-12-15",
+      "Risk": "Low",
+      "Primary_Competitor": "Competitor C",
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O006",
+      "Account_ID": "A003",
+      "Opportunity_Name": "Data & AI Expansion",
+      "Offering": "AI Services",
+      "Stage": "Qualified",
+      "Amount": 2100000,
+      "Win_Probability": 0.7,
+      "Original_Close_Date": "2027-01-31",
+      "Current_Close_Date": "2027-01-31",
+      "Risk": "Low",
+      "Primary_Competitor": null,
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O007",
+      "Account_ID": "A004",
+      "Opportunity_Name": "Retail Analytics",
+      "Offering": "Analytics",
+      "Stage": "Qualified",
+      "Amount": 2300000,
+      "Win_Probability": 0.45,
+      "Original_Close_Date": "2027-02-15",
+      "Current_Close_Date": "2027-03-15",
+      "Risk": "Medium",
+      "Primary_Competitor": "Competitor A",
+      "Status": "Slipping"
+     },
+     {
+      "Opportunity_ID": "O008",
+      "Account_ID": "A004",
+      "Opportunity_Name": "Customer Service Platform",
+      "Offering": "Service",
+      "Stage": "Qualified",
+      "Amount": 2400000,
+      "Win_Probability": 0.6,
+      "Original_Close_Date": "2027-01-15",
+      "Current_Close_Date": "2027-01-15",
+      "Risk": "Medium",
+      "Primary_Competitor": null,
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O009",
+      "Account_ID": "A005",
+      "Opportunity_Name": "Automation Expansion",
+      "Offering": "Automation",
+      "Stage": "Closed Won",
+      "Amount": 1600000,
+      "Win_Probability": 0.85,
+      "Original_Close_Date": "2026-11-10",
+      "Current_Close_Date": "2026-11-10",
+      "Risk": "Low",
+      "Primary_Competitor": null,
+      "Status": "Won"
+     },
+     {
+      "Opportunity_ID": "O010",
+      "Account_ID": "A006",
+      "Opportunity_Name": "Core Banking Transformation",
+      "Offering": "Technology",
+      "Stage": "Negotiation",
+      "Amount": 8100000,
+      "Win_Probability": 0.6,
+      "Original_Close_Date": "2026-10-20",
+      "Current_Close_Date": "2027-02-28",
+      "Risk": "High",
+      "Primary_Competitor": "Competitor D",
+      "Status": "Slipping"
+     },
+     {
+      "Opportunity_ID": "O011",
+      "Account_ID": "A006",
+      "Opportunity_Name": "AI Fraud Analytics",
+      "Offering": "AI Services",
+      "Stage": "Proposal",
+      "Amount": 3500000,
+      "Win_Probability": 0.55,
+      "Original_Close_Date": "2026-12-01",
+      "Current_Close_Date": "2026-12-01",
+      "Risk": "High",
+      "Primary_Competitor": "Competitor D",
+      "Status": "At Risk"
+     },
+     {
+      "Opportunity_ID": "O012",
+      "Account_ID": "A007",
+      "Opportunity_Name": "Supply Chain Visibility",
+      "Offering": "Digital",
+      "Stage": "Qualified",
+      "Amount": 2200000,
+      "Win_Probability": 0.72,
+      "Original_Close_Date": "2027-01-10",
+      "Current_Close_Date": "2027-01-10",
+      "Risk": "Low",
+      "Primary_Competitor": "Competitor A",
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O013",
+      "Account_ID": "A008",
+      "Opportunity_Name": "Media Data Platform",
+      "Offering": "Data",
+      "Stage": "Discovery",
+      "Amount": 1200000,
+      "Win_Probability": 0.4,
+      "Original_Close_Date": "2027-02-01",
+      "Current_Close_Date": "2027-02-01",
+      "Risk": "Medium",
+      "Primary_Competitor": null,
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O014",
+      "Account_ID": "A009",
+      "Opportunity_Name": "Clinical Analytics",
+      "Offering": "Analytics",
+      "Stage": "Proposal",
+      "Amount": 4200000,
+      "Win_Probability": 0.78,
+      "Original_Close_Date": "2026-12-10",
+      "Current_Close_Date": "2026-12-10",
+      "Risk": "Low",
+      "Primary_Competitor": "Competitor C",
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O015",
+      "Account_ID": "A009",
+      "Opportunity_Name": "Cloud Optimization",
+      "Offering": "Cloud",
+      "Stage": "Qualified",
+      "Amount": 1900000,
+      "Win_Probability": 0.68,
+      "Original_Close_Date": "2027-01-20",
+      "Current_Close_Date": "2027-01-20",
+      "Risk": "Medium",
+      "Primary_Competitor": null,
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O016",
+      "Account_ID": "A010",
+      "Opportunity_Name": "Customer Data Platform",
+      "Offering": "Data",
+      "Stage": "Discovery",
+      "Amount": 900000,
+      "Win_Probability": 0.35,
+      "Original_Close_Date": "2027-02-28",
+      "Current_Close_Date": "2027-02-28",
+      "Risk": "Medium",
+      "Primary_Competitor": "Competitor A",
+      "Status": "On Track"
+     },
+     {
+      "Opportunity_ID": "O017",
+      "Account_ID": "A011",
+      "Opportunity_Name": "Airline Operations AI",
+      "Offering": "AI Services",
+      "Stage": "Negotiation",
+      "Amount": 3000000,
+      "Win_Probability": 0.6,
+      "Original_Close_Date": "2026-11-05",
+      "Current_Close_Date": "2027-01-15",
+      "Risk": "High",
+      "Primary_Competitor": "Competitor B",
+      "Status": "Slipping"
+     },
+     {
+      "Opportunity_ID": "O018",
+      "Account_ID": "A012",
+      "Opportunity_Name": "DevOps Modernization",
+      "Offering": "Technology",
+      "Stage": "Proposal",
+      "Amount": 1700000,
+      "Win_Probability": 0.75,
+      "Original_Close_Date": "2026-12-05",
+      "Current_Close_Date": "2026-12-05",
+      "Risk": "Low",
+      "Primary_Competitor": null,
+      "Status": "On Track"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Pipeline_Snapshots",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Opportunity_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Snapshot_Date",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Amount",
+       "type": "integer"
+      },
+      {
+       "name": "Win_Probability",
+       "type": "number"
+      },
+      {
+       "name": "Expected_Close_Date",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Opportunity_ID": "O001",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 4750000,
+      "Win_Probability": 0.7,
+      "Expected_Close_Date": "2026-11-30"
+     },
+     {
+      "Opportunity_ID": "O001",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 4900000,
+      "Win_Probability": 0.73,
+      "Expected_Close_Date": "2026-11-30"
+     },
+     {
+      "Opportunity_ID": "O001",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 5000000,
+      "Win_Probability": 0.75,
+      "Expected_Close_Date": "2026-11-30"
+     },
+     {
+      "Opportunity_ID": "O002",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 2660000,
+      "Win_Probability": 0.6,
+      "Expected_Close_Date": "2026-12-20"
+     },
+     {
+      "Opportunity_ID": "O002",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 2744000,
+      "Win_Probability": 0.63,
+      "Expected_Close_Date": "2026-12-20"
+     },
+     {
+      "Opportunity_ID": "O002",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 2800000,
+      "Win_Probability": 0.65,
+      "Expected_Close_Date": "2026-12-20"
+     },
+     {
+      "Opportunity_ID": "O003",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 4275000,
+      "Win_Probability": 0.65,
+      "Expected_Close_Date": "2026-12-15"
+     },
+     {
+      "Opportunity_ID": "O003",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 4410000,
+      "Win_Probability": 0.68,
+      "Expected_Close_Date": "2026-12-15"
+     },
+     {
+      "Opportunity_ID": "O003",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 4500000,
+      "Win_Probability": 0.7,
+      "Expected_Close_Date": "2026-12-15"
+     },
+     {
+      "Opportunity_ID": "O004",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 3040000,
+      "Win_Probability": 0.5,
+      "Expected_Close_Date": "2027-01-30"
+     },
+     {
+      "Opportunity_ID": "O004",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 3136000,
+      "Win_Probability": 0.53,
+      "Expected_Close_Date": "2027-01-30"
+     },
+     {
+      "Opportunity_ID": "O004",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 3200000,
+      "Win_Probability": 0.55,
+      "Expected_Close_Date": "2027-01-30"
+     },
+     {
+      "Opportunity_ID": "O005",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 3610000,
+      "Win_Probability": 0.75,
+      "Expected_Close_Date": "2026-12-15"
+     },
+     {
+      "Opportunity_ID": "O005",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 3724000,
+      "Win_Probability": 0.78,
+      "Expected_Close_Date": "2026-12-15"
+     },
+     {
+      "Opportunity_ID": "O005",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 3800000,
+      "Win_Probability": 0.8,
+      "Expected_Close_Date": "2026-12-15"
+     },
+     {
+      "Opportunity_ID": "O006",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 1995000,
+      "Win_Probability": 0.65,
+      "Expected_Close_Date": "2027-01-31"
+     },
+     {
+      "Opportunity_ID": "O006",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 2058000,
+      "Win_Probability": 0.68,
+      "Expected_Close_Date": "2027-01-31"
+     },
+     {
+      "Opportunity_ID": "O006",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 2100000,
+      "Win_Probability": 0.7,
+      "Expected_Close_Date": "2027-01-31"
+     },
+     {
+      "Opportunity_ID": "O007",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 1710000,
+      "Win_Probability": 0.4,
+      "Expected_Close_Date": "2027-03-15"
+     },
+     {
+      "Opportunity_ID": "O007",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 1764000,
+      "Win_Probability": 0.43,
+      "Expected_Close_Date": "2027-03-15"
+     },
+     {
+      "Opportunity_ID": "O007",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 1800000,
+      "Win_Probability": 0.45,
+      "Expected_Close_Date": "2027-03-15"
+     },
+     {
+      "Opportunity_ID": "O008",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 2280000,
+      "Win_Probability": 0.55,
+      "Expected_Close_Date": "2027-01-15"
+     },
+     {
+      "Opportunity_ID": "O008",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 2352000,
+      "Win_Probability": 0.58,
+      "Expected_Close_Date": "2027-01-15"
+     },
+     {
+      "Opportunity_ID": "O008",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 2400000,
+      "Win_Probability": 0.6,
+      "Expected_Close_Date": "2027-01-15"
+     },
+     {
+      "Opportunity_ID": "O009",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 1520000,
+      "Win_Probability": 0.8,
+      "Expected_Close_Date": "2026-11-10"
+     },
+     {
+      "Opportunity_ID": "O009",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 1568000,
+      "Win_Probability": 0.83,
+      "Expected_Close_Date": "2026-11-10"
+     },
+     {
+      "Opportunity_ID": "O009",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 1600000,
+      "Win_Probability": 0.85,
+      "Expected_Close_Date": "2026-11-10"
+     },
+     {
+      "Opportunity_ID": "O010",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 8550000,
+      "Win_Probability": 0.6,
+      "Expected_Close_Date": "2027-02-28"
+     },
+     {
+      "Opportunity_ID": "O010",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 8820000,
+      "Win_Probability": 0.63,
+      "Expected_Close_Date": "2027-02-28"
+     },
+     {
+      "Opportunity_ID": "O010",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 9000000,
+      "Win_Probability": 0.65,
+      "Expected_Close_Date": "2027-02-28"
+     },
+     {
+      "Opportunity_ID": "O011",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 3325000,
+      "Win_Probability": 0.5,
+      "Expected_Close_Date": "2026-12-01"
+     },
+     {
+      "Opportunity_ID": "O011",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 3430000,
+      "Win_Probability": 0.53,
+      "Expected_Close_Date": "2026-12-01"
+     },
+     {
+      "Opportunity_ID": "O011",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 3500000,
+      "Win_Probability": 0.55,
+      "Expected_Close_Date": "2026-12-01"
+     },
+     {
+      "Opportunity_ID": "O012",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 2090000,
+      "Win_Probability": 0.67,
+      "Expected_Close_Date": "2027-01-10"
+     },
+     {
+      "Opportunity_ID": "O012",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 2156000,
+      "Win_Probability": 0.7,
+      "Expected_Close_Date": "2027-01-10"
+     },
+     {
+      "Opportunity_ID": "O012",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 2200000,
+      "Win_Probability": 0.72,
+      "Expected_Close_Date": "2027-01-10"
+     },
+     {
+      "Opportunity_ID": "O013",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 1140000,
+      "Win_Probability": 0.35,
+      "Expected_Close_Date": "2027-02-01"
+     },
+     {
+      "Opportunity_ID": "O013",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 1176000,
+      "Win_Probability": 0.38,
+      "Expected_Close_Date": "2027-02-01"
+     },
+     {
+      "Opportunity_ID": "O013",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 1200000,
+      "Win_Probability": 0.4,
+      "Expected_Close_Date": "2027-02-01"
+     },
+     {
+      "Opportunity_ID": "O014",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 3990000,
+      "Win_Probability": 0.73,
+      "Expected_Close_Date": "2026-12-10"
+     },
+     {
+      "Opportunity_ID": "O014",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 4116000,
+      "Win_Probability": 0.76,
+      "Expected_Close_Date": "2026-12-10"
+     },
+     {
+      "Opportunity_ID": "O014",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 4200000,
+      "Win_Probability": 0.78,
+      "Expected_Close_Date": "2026-12-10"
+     },
+     {
+      "Opportunity_ID": "O015",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 1805000,
+      "Win_Probability": 0.63,
+      "Expected_Close_Date": "2027-01-20"
+     },
+     {
+      "Opportunity_ID": "O015",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 1862000,
+      "Win_Probability": 0.66,
+      "Expected_Close_Date": "2027-01-20"
+     },
+     {
+      "Opportunity_ID": "O015",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 1900000,
+      "Win_Probability": 0.68,
+      "Expected_Close_Date": "2027-01-20"
+     },
+     {
+      "Opportunity_ID": "O016",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 855000,
+      "Win_Probability": 0.3,
+      "Expected_Close_Date": "2027-02-28"
+     },
+     {
+      "Opportunity_ID": "O016",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 882000,
+      "Win_Probability": 0.33,
+      "Expected_Close_Date": "2027-02-28"
+     },
+     {
+      "Opportunity_ID": "O016",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 900000,
+      "Win_Probability": 0.35,
+      "Expected_Close_Date": "2027-02-28"
+     },
+     {
+      "Opportunity_ID": "O017",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 2850000,
+      "Win_Probability": 0.55,
+      "Expected_Close_Date": "2027-01-15"
+     },
+     {
+      "Opportunity_ID": "O017",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 2940000,
+      "Win_Probability": 0.58,
+      "Expected_Close_Date": "2027-01-15"
+     },
+     {
+      "Opportunity_ID": "O017",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 3000000,
+      "Win_Probability": 0.6,
+      "Expected_Close_Date": "2027-01-15"
+     },
+     {
+      "Opportunity_ID": "O018",
+      "Snapshot_Date": "2026-07-31",
+      "Amount": 1615000,
+      "Win_Probability": 0.7,
+      "Expected_Close_Date": "2026-12-05"
+     },
+     {
+      "Opportunity_ID": "O018",
+      "Snapshot_Date": "2026-08-31",
+      "Amount": 1666000,
+      "Win_Probability": 0.73,
+      "Expected_Close_Date": "2026-12-05"
+     },
+     {
+      "Opportunity_ID": "O018",
+      "Snapshot_Date": "2026-09-15",
+      "Amount": 1700000,
+      "Win_Probability": 0.75,
+      "Expected_Close_Date": "2026-12-05"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Activities",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Activity_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Activity_Date",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Activity_Type",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Sentiment",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Actor",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Summary",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Activity_ID": "ACT001",
+      "Account_ID": "A001",
+      "Activity_Date": "2026-08-19",
+      "Activity_Type": "Email",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Executive sponsor engaged"
+     },
+     {
+      "Activity_ID": "ACT002",
+      "Account_ID": "A001",
+      "Activity_Date": "2026-09-13",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT003",
+      "Account_ID": "A001",
+      "Activity_Date": "2026-08-16",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT004",
+      "Account_ID": "A001",
+      "Activity_Date": "2026-08-22",
+      "Activity_Type": "Proposal",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT005",
+      "Account_ID": "A001",
+      "Activity_Date": "2026-09-23",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT006",
+      "Account_ID": "A002",
+      "Activity_Date": "2026-08-24",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT007",
+      "Account_ID": "A002",
+      "Activity_Date": "2026-09-14",
+      "Activity_Type": "Proposal",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT008",
+      "Account_ID": "A002",
+      "Activity_Date": "2026-08-08",
+      "Activity_Type": "Email",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT009",
+      "Account_ID": "A002",
+      "Activity_Date": "2026-09-07",
+      "Activity_Type": "Call",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT010",
+      "Account_ID": "A002",
+      "Activity_Date": "2026-08-11",
+      "Activity_Type": "Call",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT011",
+      "Account_ID": "A003",
+      "Activity_Date": "2026-09-04",
+      "Activity_Type": "Email",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Executive sponsor engaged"
+     },
+     {
+      "Activity_ID": "ACT012",
+      "Account_ID": "A003",
+      "Activity_Date": "2026-08-21",
+      "Activity_Type": "Call",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT013",
+      "Account_ID": "A003",
+      "Activity_Date": "2026-08-25",
+      "Activity_Type": "Email",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT014",
+      "Account_ID": "A003",
+      "Activity_Date": "2026-08-24",
+      "Activity_Type": "Call",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT015",
+      "Account_ID": "A003",
+      "Activity_Date": "2026-08-23",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT016",
+      "Account_ID": "A004",
+      "Activity_Date": "2026-09-26",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT017",
+      "Account_ID": "A004",
+      "Activity_Date": "2026-09-23",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT018",
+      "Account_ID": "A004",
+      "Activity_Date": "2026-09-11",
+      "Activity_Type": "Proposal",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT019",
+      "Account_ID": "A004",
+      "Activity_Date": "2026-09-18",
+      "Activity_Type": "Call",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT020",
+      "Account_ID": "A004",
+      "Activity_Date": "2026-08-17",
+      "Activity_Type": "Call",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT021",
+      "Account_ID": "A005",
+      "Activity_Date": "2026-08-21",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT022",
+      "Account_ID": "A005",
+      "Activity_Date": "2026-09-18",
+      "Activity_Type": "Proposal",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT023",
+      "Account_ID": "A005",
+      "Activity_Date": "2026-07-31",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT024",
+      "Account_ID": "A005",
+      "Activity_Date": "2026-08-16",
+      "Activity_Type": "Call",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT025",
+      "Account_ID": "A005",
+      "Activity_Date": "2026-08-07",
+      "Activity_Type": "Email",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT026",
+      "Account_ID": "A006",
+      "Activity_Date": "2026-09-11",
+      "Activity_Type": "Email",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT027",
+      "Account_ID": "A006",
+      "Activity_Date": "2026-09-15",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT028",
+      "Account_ID": "A006",
+      "Activity_Date": "2026-08-03",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT029",
+      "Account_ID": "A006",
+      "Activity_Date": "2026-09-12",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT030",
+      "Account_ID": "A006",
+      "Activity_Date": "2026-08-12",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT031",
+      "Account_ID": "A007",
+      "Activity_Date": "2026-09-05",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT032",
+      "Account_ID": "A007",
+      "Activity_Date": "2026-09-23",
+      "Activity_Type": "Email",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT033",
+      "Account_ID": "A007",
+      "Activity_Date": "2026-08-19",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT034",
+      "Account_ID": "A007",
+      "Activity_Date": "2026-08-21",
+      "Activity_Type": "Email",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT035",
+      "Account_ID": "A007",
+      "Activity_Date": "2026-08-21",
+      "Activity_Type": "Proposal",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT036",
+      "Account_ID": "A008",
+      "Activity_Date": "2026-08-24",
+      "Activity_Type": "Email",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT037",
+      "Account_ID": "A008",
+      "Activity_Date": "2026-08-16",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT038",
+      "Account_ID": "A008",
+      "Activity_Date": "2026-09-21",
+      "Activity_Type": "Call",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT039",
+      "Account_ID": "A008",
+      "Activity_Date": "2026-08-30",
+      "Activity_Type": "Email",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT040",
+      "Account_ID": "A008",
+      "Activity_Date": "2026-08-27",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT041",
+      "Account_ID": "A009",
+      "Activity_Date": "2026-08-04",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Executive sponsor engaged"
+     },
+     {
+      "Activity_ID": "ACT042",
+      "Account_ID": "A009",
+      "Activity_Date": "2026-09-19",
+      "Activity_Type": "Call",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT043",
+      "Account_ID": "A009",
+      "Activity_Date": "2026-08-21",
+      "Activity_Type": "Call",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT044",
+      "Account_ID": "A009",
+      "Activity_Date": "2026-09-21",
+      "Activity_Type": "Call",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT045",
+      "Account_ID": "A009",
+      "Activity_Date": "2026-09-25",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT046",
+      "Account_ID": "A010",
+      "Activity_Date": "2026-09-23",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT047",
+      "Account_ID": "A010",
+      "Activity_Date": "2026-08-11",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT048",
+      "Account_ID": "A010",
+      "Activity_Date": "2026-08-17",
+      "Activity_Type": "Proposal",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT049",
+      "Account_ID": "A010",
+      "Activity_Date": "2026-09-12",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT050",
+      "Account_ID": "A010",
+      "Activity_Date": "2026-09-15",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT051",
+      "Account_ID": "A011",
+      "Activity_Date": "2026-08-14",
+      "Activity_Type": "Call",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT052",
+      "Account_ID": "A011",
+      "Activity_Date": "2026-08-31",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT053",
+      "Account_ID": "A011",
+      "Activity_Date": "2026-09-13",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT054",
+      "Account_ID": "A011",
+      "Activity_Date": "2026-09-27",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT055",
+      "Account_ID": "A011",
+      "Activity_Date": "2026-08-22",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT056",
+      "Account_ID": "A012",
+      "Activity_Date": "2026-08-14",
+      "Activity_Type": "Workshop",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT057",
+      "Account_ID": "A012",
+      "Activity_Date": "2026-09-24",
+      "Activity_Type": "Email",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT058",
+      "Account_ID": "A012",
+      "Activity_Date": "2026-08-27",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Neutral",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT059",
+      "Account_ID": "A012",
+      "Activity_Date": "2026-09-15",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Internal",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT060",
+      "Account_ID": "A012",
+      "Activity_Date": "2026-09-13",
+      "Activity_Type": "Proposal",
+      "Sentiment": "Neutral",
+      "Actor": "Customer",
+      "Summary": "Routine interaction"
+     },
+     {
+      "Activity_ID": "ACT061",
+      "Account_ID": "A002",
+      "Activity_Date": "2026-09-24",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "CIO sponsor expressed concern about service quality"
+     },
+     {
+      "Activity_ID": "ACT062",
+      "Account_ID": "A002",
+      "Activity_Date": "2026-09-26",
+      "Activity_Type": "Email",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Procurement requested cost reduction"
+     },
+     {
+      "Activity_ID": "ACT063",
+      "Account_ID": "A006",
+      "Activity_Date": "2026-09-22",
+      "Activity_Type": "Executive Meeting",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "CFO requested transformation budget reduction"
+     },
+     {
+      "Activity_ID": "ACT064",
+      "Account_ID": "A011",
+      "Activity_Date": "2026-09-25",
+      "Activity_Type": "Call",
+      "Sentiment": "Negative",
+      "Actor": "Customer",
+      "Summary": "Operations leader questioned delivery timeline"
+     },
+     {
+      "Activity_ID": "ACT065",
+      "Account_ID": "A004",
+      "Activity_Date": "2026-09-27",
+      "Activity_Type": "Meeting",
+      "Sentiment": "Positive",
+      "Actor": "Customer",
+      "Summary": "New retail analytics initiative identified"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Service_Cases",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Case_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Severity",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Status",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Open_Days",
+       "type": "integer"
+      },
+      {
+       "name": "SLA_Status",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Opened_Date",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Last_Update",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Issue",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Case_ID": "S001",
+      "Account_ID": "A001",
+      "Severity": "Low",
+      "Status": "Closed",
+      "Open_Days": 1,
+      "SLA_Status": "On Time",
+      "Opened_Date": "2026-09-02",
+      "Last_Update": "2026-09-03",
+      "Issue": "Routine support"
+     },
+     {
+      "Case_ID": "S002",
+      "Account_ID": "A002",
+      "Severity": "High",
+      "Status": "Open",
+      "Open_Days": 3,
+      "SLA_Status": "Breached",
+      "Opened_Date": "2026-09-18",
+      "Last_Update": "2026-09-21",
+      "Issue": "Repeated integration failure"
+     },
+     {
+      "Case_ID": "S003",
+      "Account_ID": "A002",
+      "Severity": "Critical",
+      "Status": "Closed",
+      "Open_Days": 5,
+      "SLA_Status": "Breached",
+      "Opened_Date": "2026-09-24",
+      "Last_Update": "2026-09-26",
+      "Issue": "Production outage"
+     },
+     {
+      "Case_ID": "S004",
+      "Account_ID": "A003",
+      "Severity": "Medium",
+      "Status": "Closed",
+      "Open_Days": 1,
+      "SLA_Status": "On Time",
+      "Opened_Date": "2026-09-10",
+      "Last_Update": "2026-09-11",
+      "Issue": "Data refresh issue"
+     },
+     {
+      "Case_ID": "S005",
+      "Account_ID": "A004",
+      "Severity": "High",
+      "Status": "Open",
+      "Open_Days": 2,
+      "SLA_Status": "At Risk",
+      "Opened_Date": "2026-09-20",
+      "Last_Update": "2026-09-25",
+      "Issue": "Store analytics latency"
+     },
+     {
+      "Case_ID": "S006",
+      "Account_ID": "A006",
+      "Severity": "High",
+      "Status": "Open",
+      "Open_Days": 4,
+      "SLA_Status": "Breached",
+      "Opened_Date": "2026-09-12",
+      "Last_Update": "2026-09-18",
+      "Issue": "Payment interface errors"
+     },
+     {
+      "Case_ID": "S007",
+      "Account_ID": "A006",
+      "Severity": "Critical",
+      "Status": "Open",
+      "Open_Days": 5,
+      "SLA_Status": "Breached",
+      "Opened_Date": "2026-09-23",
+      "Last_Update": "2026-09-28",
+      "Issue": "Core banking incident"
+     },
+     {
+      "Case_ID": "S008",
+      "Account_ID": "A011",
+      "Severity": "High",
+      "Status": "Open",
+      "Open_Days": 3,
+      "SLA_Status": "Breached",
+      "Opened_Date": "2026-09-15",
+      "Last_Update": "2026-09-20",
+      "Issue": "Flight operations dashboard unavailable"
+     },
+     {
+      "Case_ID": "S009",
+      "Account_ID": "A009",
+      "Severity": "Low",
+      "Status": "Closed",
+      "Open_Days": 1,
+      "SLA_Status": "On Time",
+      "Opened_Date": "2026-09-05",
+      "Last_Update": "2026-09-06",
+      "Issue": "Access request"
+     },
+     {
+      "Case_ID": "S010",
+      "Account_ID": "A007",
+      "Severity": "Medium",
+      "Status": "Closed",
+      "Open_Days": 1,
+      "SLA_Status": "On Time",
+      "Opened_Date": "2026-09-08",
+      "Last_Update": "2026-09-09",
+      "Issue": "API timeout"
+     },
+     {
+      "Case_ID": "S011",
+      "Account_ID": "A002",
+      "Severity": "Medium",
+      "Status": "Open",
+      "Open_Days": 2,
+      "SLA_Status": "On Time",
+      "Opened_Date": "2026-10-10",
+      "Last_Update": "2026-10-12",
+      "Issue": "Integration latency"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Finance",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Annual_Revenue",
+       "type": "integer"
+      },
+      {
+       "name": "Gross_Profit",
+       "type": "number"
+      },
+      {
+       "name": "Cost_to_Serve",
+       "type": "integer"
+      },
+      {
+       "name": "Revenue_Risk",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Payment_Status",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Account_ID": "A001",
+      "Annual_Revenue": 15000000,
+      "Gross_Profit": 5400000.0,
+      "Cost_to_Serve": 1200000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A002",
+      "Annual_Revenue": 12500000,
+      "Gross_Profit": 3500000.0,
+      "Cost_to_Serve": 1500000,
+      "Revenue_Risk": "High",
+      "Payment_Status": "Late"
+     },
+     {
+      "Account_ID": "A003",
+      "Annual_Revenue": 9800000,
+      "Gross_Profit": 3528000.0,
+      "Cost_to_Serve": 784000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A004",
+      "Annual_Revenue": 7200000,
+      "Gross_Profit": 2304000.0,
+      "Cost_to_Serve": 576000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A005",
+      "Annual_Revenue": 6100000,
+      "Gross_Profit": 1952000.0,
+      "Cost_to_Serve": 488000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A006",
+      "Annual_Revenue": 18500000,
+      "Gross_Profit": 5180000.000000001,
+      "Cost_to_Serve": 2220000,
+      "Revenue_Risk": "High",
+      "Payment_Status": "Late"
+     },
+     {
+      "Account_ID": "A007",
+      "Annual_Revenue": 5400000,
+      "Gross_Profit": 1728000.0,
+      "Cost_to_Serve": 432000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A008",
+      "Annual_Revenue": 3100000,
+      "Gross_Profit": 992000.0,
+      "Cost_to_Serve": 248000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A009",
+      "Annual_Revenue": 8800000,
+      "Gross_Profit": 3168000.0,
+      "Cost_to_Serve": 704000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A010",
+      "Annual_Revenue": 2700000,
+      "Gross_Profit": 864000.0,
+      "Cost_to_Serve": 216000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A011",
+      "Annual_Revenue": 4600000,
+      "Gross_Profit": 1288000.0,
+      "Cost_to_Serve": 552000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     },
+     {
+      "Account_ID": "A012",
+      "Annual_Revenue": 3900000,
+      "Gross_Profit": 1248000.0,
+      "Cost_to_Serve": 312000,
+      "Revenue_Risk": "Low",
+      "Payment_Status": "On Time"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Product_Usage",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Product",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Adoption_Index",
+       "type": "integer"
+      },
+      {
+       "name": "Trend",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Account_ID": "A001",
+      "Product": "Core Platform",
+      "Adoption_Index": 46,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A001",
+      "Product": "Analytics",
+      "Adoption_Index": 82,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A001",
+      "Product": "AI Services",
+      "Adoption_Index": 62,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A002",
+      "Product": "Core Platform",
+      "Adoption_Index": 38,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A002",
+      "Product": "Analytics",
+      "Adoption_Index": 80,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A002",
+      "Product": "AI Services",
+      "Adoption_Index": 51,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A003",
+      "Product": "Core Platform",
+      "Adoption_Index": 81,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A003",
+      "Product": "Analytics",
+      "Adoption_Index": 43,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A003",
+      "Product": "AI Services",
+      "Adoption_Index": 86,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A004",
+      "Product": "Core Platform",
+      "Adoption_Index": 91,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A004",
+      "Product": "Analytics",
+      "Adoption_Index": 55,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A004",
+      "Product": "AI Services",
+      "Adoption_Index": 52,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A005",
+      "Product": "Core Platform",
+      "Adoption_Index": 68,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A005",
+      "Product": "Analytics",
+      "Adoption_Index": 67,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A005",
+      "Product": "AI Services",
+      "Adoption_Index": 57,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A006",
+      "Product": "Core Platform",
+      "Adoption_Index": 39,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A006",
+      "Product": "Analytics",
+      "Adoption_Index": 45,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A006",
+      "Product": "AI Services",
+      "Adoption_Index": 31,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A007",
+      "Product": "Core Platform",
+      "Adoption_Index": 81,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A007",
+      "Product": "Analytics",
+      "Adoption_Index": 93,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A007",
+      "Product": "AI Services",
+      "Adoption_Index": 45,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A008",
+      "Product": "Core Platform",
+      "Adoption_Index": 50,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A008",
+      "Product": "Analytics",
+      "Adoption_Index": 71,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A008",
+      "Product": "AI Services",
+      "Adoption_Index": 53,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A009",
+      "Product": "Core Platform",
+      "Adoption_Index": 43,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A009",
+      "Product": "Analytics",
+      "Adoption_Index": 64,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A009",
+      "Product": "AI Services",
+      "Adoption_Index": 64,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A010",
+      "Product": "Core Platform",
+      "Adoption_Index": 90,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A010",
+      "Product": "Analytics",
+      "Adoption_Index": 58,
+      "Trend": "Stable"
+     },
+     {
+      "Account_ID": "A010",
+      "Product": "AI Services",
+      "Adoption_Index": 84,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A011",
+      "Product": "Core Platform",
+      "Adoption_Index": 67,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A011",
+      "Product": "Analytics",
+      "Adoption_Index": 60,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A011",
+      "Product": "AI Services",
+      "Adoption_Index": 31,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A012",
+      "Product": "Core Platform",
+      "Adoption_Index": 58,
+      "Trend": "Growing"
+     },
+     {
+      "Account_ID": "A012",
+      "Product": "Analytics",
+      "Adoption_Index": 36,
+      "Trend": "Declining"
+     },
+     {
+      "Account_ID": "A012",
+      "Product": "AI Services",
+      "Adoption_Index": 87,
+      "Trend": "Declining"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Marketing",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Campaign_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Campaign",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Engagement",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Leads",
+       "type": "integer"
+      },
+      {
+       "name": "Opportunities",
+       "type": "integer"
+      },
+      {
+       "name": "Won",
+       "type": "integer"
+      },
+      {
+       "name": "Spend",
+       "type": "integer"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Campaign_ID": "M001",
+      "Account_ID": "A001",
+      "Campaign": "AI Transformation Webinar",
+      "Engagement": "High",
+      "Leads": 18,
+      "Opportunities": 6,
+      "Won": 2,
+      "Spend": 45000
+     },
+     {
+      "Campaign_ID": "M002",
+      "Account_ID": "A002",
+      "Campaign": "CX Campaign",
+      "Engagement": "Low",
+      "Leads": 10,
+      "Opportunities": 1,
+      "Won": 0,
+      "Spend": 12000
+     },
+     {
+      "Campaign_ID": "M003",
+      "Account_ID": "A003",
+      "Campaign": "Healthcare AI Campaign",
+      "Engagement": "High",
+      "Leads": 22,
+      "Opportunities": 8,
+      "Won": 3,
+      "Spend": 60000
+     },
+     {
+      "Campaign_ID": "M004",
+      "Account_ID": "A004",
+      "Campaign": "Retail Analytics Campaign",
+      "Engagement": "High",
+      "Leads": 30,
+      "Opportunities": 10,
+      "Won": 4,
+      "Spend": 50000
+     },
+     {
+      "Campaign_ID": "M005",
+      "Account_ID": "A005",
+      "Campaign": "Automation Campaign",
+      "Engagement": "Medium",
+      "Leads": 15,
+      "Opportunities": 5,
+      "Won": 2,
+      "Spend": 30000
+     },
+     {
+      "Campaign_ID": "M006",
+      "Account_ID": "A006",
+      "Campaign": "Banking AI Campaign",
+      "Engagement": "Low",
+      "Leads": 8,
+      "Opportunities": 1,
+      "Won": 0,
+      "Spend": 25000
+     },
+     {
+      "Campaign_ID": "M007",
+      "Account_ID": "A007",
+      "Campaign": "Supply Chain Campaign",
+      "Engagement": "High",
+      "Leads": 20,
+      "Opportunities": 7,
+      "Won": 2,
+      "Spend": 35000
+     },
+     {
+      "Campaign_ID": "M008",
+      "Account_ID": "A009",
+      "Campaign": "Clinical Analytics Campaign",
+      "Engagement": "High",
+      "Leads": 24,
+      "Opportunities": 9,
+      "Won": 3,
+      "Spend": 55000
+     },
+     {
+      "Campaign_ID": "M009",
+      "Account_ID": "A011",
+      "Campaign": "Operations AI Campaign",
+      "Engagement": "Low",
+      "Leads": 9,
+      "Opportunities": 1,
+      "Won": 0,
+      "Spend": 20000
+     },
+     {
+      "Campaign_ID": "M010",
+      "Account_ID": "A012",
+      "Campaign": "DevOps Campaign",
+      "Engagement": "Medium",
+      "Leads": 12,
+      "Opportunities": 4,
+      "Won": 2,
+      "Spend": 18000
+     }
+    ]
+   }
+  },
+  {
+   "name": "Contracts",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Contract_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Contract_Value",
+       "type": "integer"
+      },
+      {
+       "name": "Expiry_Date",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Renewal_Type",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Renewal_Risk",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Contract_ID": "CT001",
+      "Account_ID": "A001",
+      "Contract_Value": 15000000,
+      "Expiry_Date": "2026-12-15",
+      "Renewal_Type": "Negotiation",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT002",
+      "Account_ID": "A002",
+      "Contract_Value": 12500000,
+      "Expiry_Date": "2026-11-15",
+      "Renewal_Type": "Auto-Renew",
+      "Renewal_Risk": "High"
+     },
+     {
+      "Contract_ID": "CT003",
+      "Account_ID": "A003",
+      "Contract_Value": 9800000,
+      "Expiry_Date": "2027-03-15",
+      "Renewal_Type": "Negotiation",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT004",
+      "Account_ID": "A004",
+      "Contract_Value": 7200000,
+      "Expiry_Date": "2027-04-29",
+      "Renewal_Type": "Auto-Renew",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT005",
+      "Account_ID": "A005",
+      "Contract_Value": 6100000,
+      "Expiry_Date": "2027-06-13",
+      "Renewal_Type": "Negotiation",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT006",
+      "Account_ID": "A006",
+      "Contract_Value": 18500000,
+      "Expiry_Date": "2026-11-15",
+      "Renewal_Type": "Auto-Renew",
+      "Renewal_Risk": "High"
+     },
+     {
+      "Contract_ID": "CT007",
+      "Account_ID": "A007",
+      "Contract_Value": 5400000,
+      "Expiry_Date": "2026-12-15",
+      "Renewal_Type": "Negotiation",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT008",
+      "Account_ID": "A008",
+      "Contract_Value": 3100000,
+      "Expiry_Date": "2027-01-29",
+      "Renewal_Type": "Auto-Renew",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT009",
+      "Account_ID": "A009",
+      "Contract_Value": 8800000,
+      "Expiry_Date": "2027-03-15",
+      "Renewal_Type": "Negotiation",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT010",
+      "Account_ID": "A010",
+      "Contract_Value": 2700000,
+      "Expiry_Date": "2027-04-29",
+      "Renewal_Type": "Auto-Renew",
+      "Renewal_Risk": "Low"
+     },
+     {
+      "Contract_ID": "CT011",
+      "Account_ID": "A011",
+      "Contract_Value": 4600000,
+      "Expiry_Date": "2026-11-15",
+      "Renewal_Type": "Negotiation",
+      "Renewal_Risk": "High"
+     },
+     {
+      "Contract_ID": "CT012",
+      "Account_ID": "A012",
+      "Contract_Value": 3900000,
+      "Expiry_Date": "2027-07-28",
+      "Renewal_Type": "Auto-Renew",
+      "Renewal_Risk": "Low"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Competitors",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Competitor",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Threat_Level",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Active_In_Deal",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Account_ID": "A001",
+      "Competitor": "Competitor A",
+      "Threat_Level": "Low",
+      "Active_In_Deal": "No"
+     },
+     {
+      "Account_ID": "A002",
+      "Competitor": "Competitor B",
+      "Threat_Level": "High",
+      "Active_In_Deal": "Yes"
+     },
+     {
+      "Account_ID": "A003",
+      "Competitor": "Competitor C",
+      "Threat_Level": "Medium",
+      "Active_In_Deal": "Yes"
+     },
+     {
+      "Account_ID": "A004",
+      "Competitor": "Competitor A",
+      "Threat_Level": "Medium",
+      "Active_In_Deal": "Yes"
+     },
+     {
+      "Account_ID": "A006",
+      "Competitor": "Competitor D",
+      "Threat_Level": "High",
+      "Active_In_Deal": "Yes"
+     },
+     {
+      "Account_ID": "A009",
+      "Competitor": "Competitor C",
+      "Threat_Level": "Medium",
+      "Active_In_Deal": "Yes"
+     },
+     {
+      "Account_ID": "A011",
+      "Competitor": "Competitor B",
+      "Threat_Level": "High",
+      "Active_In_Deal": "Yes"
+     },
+     {
+      "Account_ID": "A012",
+      "Competitor": null,
+      "Threat_Level": "Low",
+      "Active_In_Deal": "No"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Whitespace",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Offering",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Potential",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Estimated_Value",
+       "type": "integer"
+      },
+      {
+       "name": "Relationship_Access",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Account_ID": "A001",
+      "Offering": "AI Services",
+      "Potential": "High",
+      "Estimated_Value": 2500000,
+      "Relationship_Access": "Strong"
+     },
+     {
+      "Account_ID": "A001",
+      "Offering": "Cloud",
+      "Potential": "Medium",
+      "Estimated_Value": 1500000,
+      "Relationship_Access": "Moderate"
+     },
+     {
+      "Account_ID": "A002",
+      "Offering": "Analytics",
+      "Potential": "High",
+      "Estimated_Value": 1800000,
+      "Relationship_Access": "Weak"
+     },
+     {
+      "Account_ID": "A003",
+      "Offering": "Automation",
+      "Potential": "Medium",
+      "Estimated_Value": 1200000,
+      "Relationship_Access": "Strong"
+     },
+     {
+      "Account_ID": "A004",
+      "Offering": "AI Services",
+      "Potential": "High",
+      "Estimated_Value": 2200000,
+      "Relationship_Access": "Moderate"
+     },
+     {
+      "Account_ID": "A005",
+      "Offering": "Analytics",
+      "Potential": "High",
+      "Estimated_Value": 1600000,
+      "Relationship_Access": "Strong"
+     },
+     {
+      "Account_ID": "A006",
+      "Offering": "Automation",
+      "Potential": "High",
+      "Estimated_Value": 2500000,
+      "Relationship_Access": "Weak"
+     },
+     {
+      "Account_ID": "A007",
+      "Offering": "AI Services",
+      "Potential": "Medium",
+      "Estimated_Value": 1400000,
+      "Relationship_Access": "Strong"
+     },
+     {
+      "Account_ID": "A008",
+      "Offering": "Automation",
+      "Potential": "Medium",
+      "Estimated_Value": 900000,
+      "Relationship_Access": "Moderate"
+     },
+     {
+      "Account_ID": "A009",
+      "Offering": "Automation",
+      "Potential": "High",
+      "Estimated_Value": 1700000,
+      "Relationship_Access": "Strong"
+     },
+     {
+      "Account_ID": "A010",
+      "Offering": "AI Services",
+      "Potential": "Medium",
+      "Estimated_Value": 800000,
+      "Relationship_Access": "Moderate"
+     },
+     {
+      "Account_ID": "A011",
+      "Offering": "Analytics",
+      "Potential": "High",
+      "Estimated_Value": 1300000,
+      "Relationship_Access": "Weak"
+     },
+     {
+      "Account_ID": "A012",
+      "Offering": "AI Services",
+      "Potential": "High",
+      "Estimated_Value": 1100000,
+      "Relationship_Access": "Strong"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Scenarios",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Scenario_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Scenario",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Assumption",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Analysis_Request",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Scenario_ID": "S01",
+      "Scenario": "Base",
+      "Assumption": "No changes",
+      "Analysis_Request": "Use current amount × probability; current close dates."
+     },
+     {
+      "Scenario_ID": "S02",
+      "Scenario": "Downside",
+      "Assumption": "O003, O010 and O017 slip 90 days",
+      "Analysis_Request": "Recalculate weighted forecast and revenue timing."
+     },
+     {
+      "Scenario_ID": "S03",
+      "Scenario": "Upside",
+      "Assumption": "O005, O009 and O014 probability +10 points",
+      "Analysis_Request": "Recalculate weighted forecast and incremental expected value."
+     },
+     {
+      "Scenario_ID": "S04",
+      "Scenario": "Renewal Risk",
+      "Assumption": "A002, A006, A011 renewals fail",
+      "Analysis_Request": "Calculate revenue-at-risk using current revenue/contract values."
+     },
+     {
+      "Scenario_ID": "S05",
+      "Scenario": "Expansion",
+      "Assumption": "A004, A005, A009 whitespace converts at 50% probability",
+      "Analysis_Request": "Calculate potential expected expansion value."
+     }
+    ]
+   }
+  },
+  {
+   "name": "Test_Cases",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Test_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Skill",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Input",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Prompt",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Expected_Result",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Test_ID": "T01",
+      "Skill": "deal-desk-precheck",
+      "Input": "O003",
+      "Prompt": "Assess deal desk readiness, discount/commercial risk, approval requirements and missing information.",
+      "Expected_Result": "A002 opportunity is high risk, slipping, competitor B; validate commercial and approval concerns."
+     },
+     {
+      "Test_ID": "T02",
+      "Skill": "account-intel-outreach",
+      "Input": "A004",
+      "Prompt": "Create account intelligence and recommended outreach.",
+      "Expected_Result": "New retail analytics initiative + positive recent signal; identify outreach angle and stakeholders."
+     },
+     {
+      "Test_ID": "T03",
+      "Skill": "pipeline-forecast-intelligence",
+      "Input": "ALL",
+      "Prompt": "Analyze pipeline coverage, weighted forecast, slippage and forecast risks.",
+      "Expected_Result": "A002/A006/A011 have major slippage and risk; flag concentration and forecast downside."
+     },
+     {
+      "Test_ID": "T04",
+      "Skill": "deal-risk-intelligence",
+      "Input": "O010",
+      "Prompt": "Identify deal risks, leading indicators and intervention priorities.",
+      "Expected_Result": "O010 is $9M, 65%, high risk, competitor D, slipped to Feb 2027."
+     },
+     {
+      "Test_ID": "T05",
+      "Skill": "scenario-planner",
+      "Input": "ALL",
+      "Prompt": "Run base/upside/downside pipeline scenarios.",
+      "Expected_Result": "Calculate impact of slipping O003/O010/O017 and compare recovery scenarios."
+     },
+     {
+      "Test_ID": "T06",
+      "Skill": "renewal-expansion-radar",
+      "Input": "ALL",
+      "Prompt": "Identify renewal risks and expansion opportunities.",
+      "Expected_Result": "A002/A006/A011 have near-term renewal risk; A004/A005/A009 show expansion signals."
+     },
+     {
+      "Test_ID": "T07",
+      "Skill": "data-intelligence",
+      "Input": "ALL",
+      "Prompt": "Profile the workbook, identify data quality, entity relationships, anomalies and semantic mappings.",
+      "Expected_Result": "Map Account/Customer, Opportunity/Deal, Contract/Renewal and detect inconsistent/stale data."
+     },
+     {
+      "Test_ID": "T08",
+      "Skill": "account-intelligence-swot-planning",
+      "Input": "A002",
+      "Prompt": "Produce evidence-backed SWOT and strategic account plan.",
+      "Expected_Result": "Service breaches + payment risk + competitor + pipeline + weak relationship signals."
+     },
+     {
+      "Test_ID": "T09",
+      "Skill": "meeting-follow-through",
+      "Input": "A002",
+      "Prompt": "Generate follow-up actions from recent interactions.",
+      "Expected_Result": "Use negative executive meeting/email signals and open service cases."
+     },
+     {
+      "Test_ID": "T10",
+      "Skill": "buying-committee-intelligence",
+      "Input": "A006",
+      "Prompt": "Map stakeholders, relationship strength and coverage gaps.",
+      "Expected_Result": "Identify weak/absent champion coverage and executive risk."
+     },
+     {
+      "Test_ID": "T11",
+      "Skill": "account-360-intelligence",
+      "Input": "A006",
+      "Prompt": "Create full account 360 and explain current state.",
+      "Expected_Result": "Combine revenue, finance, service, usage, activities, pipeline, contract and competition."
+     },
+     {
+      "Test_ID": "T12",
+      "Skill": "daily-growth-briefing",
+      "Input": "ALL",
+      "Prompt": "Produce daily growth briefing with top changes, risks and actions.",
+      "Expected_Result": "Prioritize A002/A006/A011 risks and A004/A005/A009 opportunities."
+     },
+     {
+      "Test_ID": "T13",
+      "Skill": "deal-strategy-win-plan",
+      "Input": "O003",
+      "Prompt": "Create win strategy and close plan.",
+      "Expected_Result": "Competitor B, customer service concerns, slipped close date; identify actions and gaps."
+     },
+     {
+      "Test_ID": "T14",
+      "Skill": "deal-intelligence",
+      "Input": "O017",
+      "Prompt": "Provide comprehensive deal intelligence and next best actions.",
+      "Expected_Result": "Slipping airline AI deal with high risk and operations concern."
+     },
+     {
+      "Test_ID": "T15",
+      "Skill": "meeting-intelligence-brief",
+      "Input": "A009",
+      "Prompt": "Prepare meeting brief using account, stakeholder, pipeline, service and growth data.",
+      "Expected_Result": "A009 is healthy, high whitespace and active clinical analytics opportunity."
+     },
+     {
+      "Test_ID": "T16",
+      "Skill": "rfp-response-composer",
+      "Input": "A003",
+      "Prompt": "Create RFP response inputs using account context and enterprise evidence.",
+      "Expected_Result": "Use healthcare account context, digital patient platform, clinical analytics and knowledge assumptions."
+     },
+     {
+      "Test_ID": "T17",
+      "Skill": "growth-signal-orchestrator",
+      "Input": "ALL",
+      "Prompt": "Detect cross-system growth/risk signals and explain correlations.",
+      "Expected_Result": "Correlate service, finance, usage, stakeholder and pipeline signals."
+     },
+     {
+      "Test_ID": "T18",
+      "Skill": "growth-opportunity-discovery",
+      "Input": "ALL",
+      "Prompt": "Identify highest-value whitespace and emerging growth opportunities.",
+      "Expected_Result": "Use whitespace + health + usage + pipeline + marketing to identify targets."
+     },
+     {
+      "Test_ID": "T19",
+      "Skill": "account-economics",
+      "Input": "ALL",
+      "Prompt": "Rank accounts by revenue, margin, cost-to-serve and growth economics.",
+      "Expected_Result": "Identify high-revenue/high-risk/high-cost accounts and attractive growth accounts."
+     },
+     {
+      "Test_ID": "T20",
+      "Skill": "competitive-intelligence",
+      "Input": "ALL",
+      "Prompt": "Analyze competitor penetration and early-warning signals.",
+      "Expected_Result": "Competitor B/D appear in multiple strategic/high-risk accounts."
+     },
+     {
+      "Test_ID": "T21",
+      "Skill": "business-intelligence-copilot",
+      "Input": "ALL",
+      "Prompt": "Answer why performance is changing and identify drivers.",
+      "Expected_Result": "Explain revenue/pipeline risk using all connected sheets."
+     },
+     {
+      "Test_ID": "T22",
+      "Skill": "continuous-business-watch",
+      "Input": "ALL",
+      "Prompt": "Define alerts for strategic risk and opportunity thresholds.",
+      "Expected_Result": "Alert on >20% health deterioration, high-risk deals, renewal risk and high expansion potential."
+     },
+     {
+      "Test_ID": "T23",
+      "Skill": "pricing-intelligence",
+      "Input": "PR001",
+      "Prompt": "Recommend price/discount using historical pricing, benchmarks, margin, competition and win probability.",
+      "Expected_Result": "Evaluate O003 pricing and quantify price/discount trade-offs."
+     },
+     {
+      "Test_ID": "T24",
+      "Skill": "pricing-optimization",
+      "Input": "PR002",
+      "Prompt": "Optimize price across discount scenarios and expected value.",
+      "Expected_Result": "Evaluate O010's 20% discount and identify commercially defensible alternatives."
+     },
+     {
+      "Test_ID": "T25",
+      "Skill": "pricing-leakage",
+      "Input": "ALL",
+      "Prompt": "Identify pricing leakage, unusual discounts and margin erosion.",
+      "Expected_Result": "Find high-discount/high-risk opportunities and quantify potential leakage."
+     },
+     {
+      "Test_ID": "T26",
+      "Skill": "pricing-portfolio",
+      "Input": "ALL",
+      "Prompt": "Analyze pricing by offering, segment and region.",
+      "Expected_Result": "Identify systematic underpricing and margin recovery opportunities."
+     }
+    ]
+   }
+  },
+  {
+   "name": "Expected_Results",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Test_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Expected_Output",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Test_ID": "T01",
+      "Expected_Output": "Flag high-risk/slipping deal; identify approval and commercial review; missing mitigation/evidence; competitor B exposure."
+     },
+     {
+      "Test_ID": "T02",
+      "Expected_Output": "Recommend executive/customer outreach around retail analytics; reference positive initiative and stakeholder access."
+     },
+     {
+      "Test_ID": "T03",
+      "Expected_Output": "Forecast downside from O003/O010/O017; show weighted pipeline, concentration and close-date slippage."
+     },
+     {
+      "Test_ID": "T04",
+      "Expected_Output": "Flag close-date slippage, competitor D, high risk and executive/budget signals; recommend intervention."
+     },
+     {
+      "Test_ID": "T05",
+      "Expected_Output": "Quantify downside if O003/O010/O017 slip; show base/upside/downside and required recovery pipeline."
+     },
+     {
+      "Test_ID": "T06",
+      "Expected_Output": "Flag A002/A006/A011 renewal risk; identify expansion candidates A004/A005/A009 and supporting signals."
+     },
+     {
+      "Test_ID": "T07",
+      "Expected_Output": "Profile all sheets; map Account_ID relationships; flag missing/stale/inconsistent fields and source lineage."
+     },
+     {
+      "Test_ID": "T08",
+      "Expected_Output": "Strengths: revenue/footprint; weaknesses: service/payment/relationship; opportunities: whitespace; threats: competitor/renewal; create 30/60/90 plan."
+     },
+     {
+      "Test_ID": "T09",
+      "Expected_Output": "Create executive follow-up, service escalation and commercial response actions for A002."
+     },
+     {
+      "Test_ID": "T10",
+      "Expected_Output": "Identify executive sponsor/decision-maker coverage gaps and weak relationships at A006; recommend multi-threading."
+     },
+     {
+      "Test_ID": "T11",
+      "Expected_Output": "Combine $18.5M revenue, high cost/risk, open critical cases, declining usage, $12.5M pipeline, near renewal and competitor D."
+     },
+     {
+      "Test_ID": "T12",
+      "Expected_Output": "Top risks: A006/A002/A011; top growth signals: A004/A005/A009; include reasons and actions."
+     },
+     {
+      "Test_ID": "T13",
+      "Expected_Output": "Build competitor-B win plan, service recovery, stakeholder strategy, close-date recovery and executive engagement."
+     },
+     {
+      "Test_ID": "T14",
+      "Expected_Output": "Deal health, slippage, operations concern, competitor B, probability; create action plan and evidence gaps."
+     },
+     {
+      "Test_ID": "T15",
+      "Expected_Output": "Prepare A009 briefing: healthy account, $8.8M revenue, clinical analytics, whitespace, stakeholder and competitive context."
+     },
+     {
+      "Test_ID": "T16",
+      "Expected_Output": "Generate evidence-grounded RFP response structure; explicitly mark missing information and assumptions rather than inventing facts."
+     },
+     {
+      "Test_ID": "T17",
+      "Expected_Output": "Correlate service + finance + usage + stakeholder + pipeline signals; surface A002/A006/A011 risk clusters and growth clusters."
+     },
+     {
+      "Test_ID": "T18",
+      "Expected_Output": "Prioritize whitespace by potential × propensity × timing × relationship; likely candidates A004/A005/A009/A012."
+     },
+     {
+      "Test_ID": "T19",
+      "Expected_Output": "Show A006/A002/A011 as high-revenue but economically/risk pressured; identify healthy growth candidates and margin implications."
+     },
+     {
+      "Test_ID": "T20",
+      "Expected_Output": "Highlight Competitor B in A002/A011 and Competitor D in A006; assess threat concentration and early-warning patterns."
+     },
+     {
+      "Test_ID": "T21",
+      "Expected_Output": "Explain growth/risk drivers across revenue, pipeline, service, usage, finance and marketing; cite evidence."
+     },
+     {
+      "Test_ID": "T22",
+      "Expected_Output": "Define actionable alerts for health deterioration, critical SLA breaches, renewal risk, large deal slippage and high expansion potential."
+     }
+    ]
+   }
+  },
+  {
+   "name": "Test_Results",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Test_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Skill",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Input",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Execution_Status",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Actual_Output",
+       "type": "number"
+      },
+      {
+       "name": "Pass_Fail",
+       "type": "number"
+      },
+      {
+       "name": "Evidence_Used",
+       "type": "number"
+      },
+      {
+       "name": "Notes",
+       "type": "number"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Test_ID": "T01",
+      "Skill": "deal-desk-precheck",
+      "Input": "O003",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T02",
+      "Skill": "account-intel-outreach",
+      "Input": "A004",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T03",
+      "Skill": "pipeline-forecast-intelligence",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T04",
+      "Skill": "deal-risk-intelligence",
+      "Input": "O010",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T05",
+      "Skill": "scenario-planner",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T06",
+      "Skill": "renewal-expansion-radar",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T07",
+      "Skill": "data-intelligence",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T08",
+      "Skill": "account-intelligence-swot-planning",
+      "Input": "A002",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T09",
+      "Skill": "meeting-follow-through",
+      "Input": "A002",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T10",
+      "Skill": "buying-committee-intelligence",
+      "Input": "A006",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T11",
+      "Skill": "account-360-intelligence",
+      "Input": "A006",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T12",
+      "Skill": "daily-growth-briefing",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T13",
+      "Skill": "deal-strategy-win-plan",
+      "Input": "O003",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T14",
+      "Skill": "deal-intelligence",
+      "Input": "O017",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T15",
+      "Skill": "meeting-intelligence-brief",
+      "Input": "A009",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T16",
+      "Skill": "rfp-response-composer",
+      "Input": "A003",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T17",
+      "Skill": "growth-signal-orchestrator",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T18",
+      "Skill": "growth-opportunity-discovery",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T19",
+      "Skill": "account-economics",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T20",
+      "Skill": "competitive-intelligence",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T21",
+      "Skill": "business-intelligence-copilot",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T22",
+      "Skill": "continuous-business-watch",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T23",
+      "Skill": "pricing-intelligence",
+      "Input": "PR001",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T24",
+      "Skill": "pricing-optimization",
+      "Input": "PR002",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T25",
+      "Skill": "pricing-leakage",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     },
+     {
+      "Test_ID": "T26",
+      "Skill": "pricing-portfolio",
+      "Input": "ALL",
+      "Execution_Status": "Not Run",
+      "Actual_Output": null,
+      "Pass_Fail": null,
+      "Evidence_Used": null,
+      "Notes": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "Pricing_History",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Pricing_History_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Opportunity_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Offering",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "List_Price",
+       "type": "integer"
+      },
+      {
+       "name": "Actual_Price",
+       "type": "integer"
+      },
+      {
+       "name": "Discount_Pct",
+       "type": "integer"
+      },
+      {
+       "name": "Volume_Index",
+       "type": "integer"
+      },
+      {
+       "name": "Contract_Term_Months",
+       "type": "integer"
+      },
+      {
+       "name": "Region",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Industry",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Gross_Margin_Pct",
+       "type": "number"
+      },
+      {
+       "name": "Outcome",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Competitor",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Pricing_History_ID": "PH001",
+      "Account_ID": "A001",
+      "Opportunity_ID": "O001",
+      "Offering": "Core Platform",
+      "List_Price": 5000000,
+      "Actual_Price": 4750000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "North America",
+      "Industry": "Manufacturing",
+      "Gross_Margin_Pct": 0.32,
+      "Outcome": "Won",
+      "Competitor": "Competitor A"
+     },
+     {
+      "Pricing_History_ID": "PH002",
+      "Account_ID": "A001",
+      "Opportunity_ID": "O002",
+      "Offering": "AI Services",
+      "List_Price": 2800000,
+      "Actual_Price": 2520000,
+      "Discount_Pct": 10,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "North America",
+      "Industry": "Manufacturing",
+      "Gross_Margin_Pct": 0.3,
+      "Outcome": "Won",
+      "Competitor": null
+     },
+     {
+      "Pricing_History_ID": "PH003",
+      "Account_ID": "A002",
+      "Opportunity_ID": "O003",
+      "Offering": "Services",
+      "List_Price": 4500000,
+      "Actual_Price": 3825000,
+      "Discount_Pct": 15,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "North America",
+      "Industry": "Telecom",
+      "Gross_Margin_Pct": 0.24,
+      "Outcome": "Open",
+      "Competitor": "Competitor B"
+     },
+     {
+      "Pricing_History_ID": "PH004",
+      "Account_ID": "A002",
+      "Opportunity_ID": "O004",
+      "Offering": "Cloud",
+      "List_Price": 3200000,
+      "Actual_Price": 2720000,
+      "Discount_Pct": 15,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 36,
+      "Region": "North America",
+      "Industry": "Telecom",
+      "Gross_Margin_Pct": 0.22,
+      "Outcome": "Open",
+      "Competitor": "Competitor B"
+     },
+     {
+      "Pricing_History_ID": "PH005",
+      "Account_ID": "A003",
+      "Opportunity_ID": "O005",
+      "Offering": "Digital",
+      "List_Price": 3800000,
+      "Actual_Price": 3610000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 36,
+      "Region": "Europe",
+      "Industry": "Healthcare",
+      "Gross_Margin_Pct": 0.35,
+      "Outcome": "Won",
+      "Competitor": "Competitor C"
+     },
+     {
+      "Pricing_History_ID": "PH006",
+      "Account_ID": "A003",
+      "Opportunity_ID": "O006",
+      "Offering": "AI Services",
+      "List_Price": 2100000,
+      "Actual_Price": 1995000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "Europe",
+      "Industry": "Healthcare",
+      "Gross_Margin_Pct": 0.34,
+      "Outcome": "Open",
+      "Competitor": null
+     },
+     {
+      "Pricing_History_ID": "PH007",
+      "Account_ID": "A004",
+      "Opportunity_ID": "O007",
+      "Offering": "Analytics",
+      "List_Price": 1800000,
+      "Actual_Price": 1530000,
+      "Discount_Pct": 15,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "APAC",
+      "Industry": "Retail",
+      "Gross_Margin_Pct": 0.25,
+      "Outcome": "Open",
+      "Competitor": "Competitor A"
+     },
+     {
+      "Pricing_History_ID": "PH008",
+      "Account_ID": "A004",
+      "Opportunity_ID": "O008",
+      "Offering": "Service",
+      "List_Price": 2400000,
+      "Actual_Price": 2160000,
+      "Discount_Pct": 10,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "APAC",
+      "Industry": "Retail",
+      "Gross_Margin_Pct": 0.27,
+      "Outcome": "Open",
+      "Competitor": null
+     },
+     {
+      "Pricing_History_ID": "PH009",
+      "Account_ID": "A005",
+      "Opportunity_ID": "O009",
+      "Offering": "Automation",
+      "List_Price": 1600000,
+      "Actual_Price": 1520000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 36,
+      "Region": "North America",
+      "Industry": "Energy",
+      "Gross_Margin_Pct": 0.38,
+      "Outcome": "Won",
+      "Competitor": null
+     },
+     {
+      "Pricing_History_ID": "PH010",
+      "Account_ID": "A006",
+      "Opportunity_ID": "O010",
+      "Offering": "Technology",
+      "List_Price": 9000000,
+      "Actual_Price": 7200000,
+      "Discount_Pct": 20,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 48,
+      "Region": "Europe",
+      "Industry": "Financial Services",
+      "Gross_Margin_Pct": 0.18,
+      "Outcome": "Open",
+      "Competitor": "Competitor D"
+     },
+     {
+      "Pricing_History_ID": "PH011",
+      "Account_ID": "A006",
+      "Opportunity_ID": "O011",
+      "Offering": "AI Services",
+      "List_Price": 3500000,
+      "Actual_Price": 2800000,
+      "Discount_Pct": 20,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 36,
+      "Region": "Europe",
+      "Industry": "Financial Services",
+      "Gross_Margin_Pct": 0.16,
+      "Outcome": "Open",
+      "Competitor": "Competitor D"
+     },
+     {
+      "Pricing_History_ID": "PH012",
+      "Account_ID": "A007",
+      "Opportunity_ID": "O012",
+      "Offering": "Digital",
+      "List_Price": 2200000,
+      "Actual_Price": 2090000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "APAC",
+      "Industry": "Logistics",
+      "Gross_Margin_Pct": 0.31,
+      "Outcome": "Open",
+      "Competitor": "Competitor A"
+     },
+     {
+      "Pricing_History_ID": "PH013",
+      "Account_ID": "A008",
+      "Opportunity_ID": "O013",
+      "Offering": "Data",
+      "List_Price": 1200000,
+      "Actual_Price": 1080000,
+      "Discount_Pct": 10,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "North America",
+      "Industry": "Media",
+      "Gross_Margin_Pct": 0.26,
+      "Outcome": "Open",
+      "Competitor": null
+     },
+     {
+      "Pricing_History_ID": "PH014",
+      "Account_ID": "A009",
+      "Opportunity_ID": "O014",
+      "Offering": "Analytics",
+      "List_Price": 4200000,
+      "Actual_Price": 3990000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 36,
+      "Region": "Europe",
+      "Industry": "Pharma",
+      "Gross_Margin_Pct": 0.37,
+      "Outcome": "Open",
+      "Competitor": "Competitor C"
+     },
+     {
+      "Pricing_History_ID": "PH015",
+      "Account_ID": "A009",
+      "Opportunity_ID": "O015",
+      "Offering": "Cloud",
+      "List_Price": 1900000,
+      "Actual_Price": 1805000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "Europe",
+      "Industry": "Pharma",
+      "Gross_Margin_Pct": 0.36,
+      "Outcome": "Open",
+      "Competitor": null
+     },
+     {
+      "Pricing_History_ID": "PH016",
+      "Account_ID": "A010",
+      "Opportunity_ID": "O016",
+      "Offering": "Data",
+      "List_Price": 900000,
+      "Actual_Price": 765000,
+      "Discount_Pct": 15,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "APAC",
+      "Industry": "Consumer Goods",
+      "Gross_Margin_Pct": 0.23,
+      "Outcome": "Open",
+      "Competitor": "Competitor A"
+     },
+     {
+      "Pricing_History_ID": "PH017",
+      "Account_ID": "A011",
+      "Opportunity_ID": "O017",
+      "Offering": "AI Services",
+      "List_Price": 3000000,
+      "Actual_Price": 2400000,
+      "Discount_Pct": 20,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 36,
+      "Region": "North America",
+      "Industry": "Travel",
+      "Gross_Margin_Pct": 0.17,
+      "Outcome": "Open",
+      "Competitor": "Competitor B"
+     },
+     {
+      "Pricing_History_ID": "PH018",
+      "Account_ID": "A012",
+      "Opportunity_ID": "O018",
+      "Offering": "Technology",
+      "List_Price": 1700000,
+      "Actual_Price": 1615000,
+      "Discount_Pct": 5,
+      "Volume_Index": 100,
+      "Contract_Term_Months": 24,
+      "Region": "Europe",
+      "Industry": "Technology",
+      "Gross_Margin_Pct": 0.39,
+      "Outcome": "Open",
+      "Competitor": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "Price_Benchmarks",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Offering",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Segment",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Region",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Min_Price_Index",
+       "type": "number"
+      },
+      {
+       "name": "Median_Price_Index",
+       "type": "number"
+      },
+      {
+       "name": "Max_Price_Index",
+       "type": "number"
+      },
+      {
+       "name": "Typical_Discount_Pct",
+       "type": "integer"
+      },
+      {
+       "name": "Target_Gross_Margin_Pct",
+       "type": "number"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Offering": "Core Platform",
+      "Segment": "Enterprise",
+      "Region": "North America",
+      "Min_Price_Index": 0.95,
+      "Median_Price_Index": 0.97,
+      "Max_Price_Index": 1.0,
+      "Typical_Discount_Pct": 5,
+      "Target_Gross_Margin_Pct": 0.3
+     },
+     {
+      "Offering": "AI Services",
+      "Segment": "Enterprise",
+      "Region": "North America",
+      "Min_Price_Index": 0.85,
+      "Median_Price_Index": 0.92,
+      "Max_Price_Index": 0.98,
+      "Typical_Discount_Pct": 10,
+      "Target_Gross_Margin_Pct": 0.28
+     },
+     {
+      "Offering": "AI Services",
+      "Segment": "Enterprise",
+      "Region": "Europe",
+      "Min_Price_Index": 0.88,
+      "Median_Price_Index": 0.94,
+      "Max_Price_Index": 1.0,
+      "Typical_Discount_Pct": 8,
+      "Target_Gross_Margin_Pct": 0.3
+     },
+     {
+      "Offering": "Services",
+      "Segment": "Enterprise",
+      "Region": "North America",
+      "Min_Price_Index": 0.82,
+      "Median_Price_Index": 0.9,
+      "Max_Price_Index": 0.98,
+      "Typical_Discount_Pct": 10,
+      "Target_Gross_Margin_Pct": 0.25
+     },
+     {
+      "Offering": "Cloud",
+      "Segment": "Enterprise",
+      "Region": "North America",
+      "Min_Price_Index": 0.85,
+      "Median_Price_Index": 0.92,
+      "Max_Price_Index": 1.0,
+      "Typical_Discount_Pct": 8,
+      "Target_Gross_Margin_Pct": 0.25
+     },
+     {
+      "Offering": "Analytics",
+      "Segment": "Enterprise",
+      "Region": "APAC",
+      "Min_Price_Index": 0.8,
+      "Median_Price_Index": 0.88,
+      "Max_Price_Index": 0.97,
+      "Typical_Discount_Pct": 10,
+      "Target_Gross_Margin_Pct": 0.24
+     },
+     {
+      "Offering": "Analytics",
+      "Segment": "Enterprise",
+      "Region": "Europe",
+      "Min_Price_Index": 0.9,
+      "Median_Price_Index": 0.95,
+      "Max_Price_Index": 1.0,
+      "Typical_Discount_Pct": 5,
+      "Target_Gross_Margin_Pct": 0.32
+     },
+     {
+      "Offering": "Technology",
+      "Segment": "Enterprise",
+      "Region": "Europe",
+      "Min_Price_Index": 0.88,
+      "Median_Price_Index": 0.94,
+      "Max_Price_Index": 1.0,
+      "Typical_Discount_Pct": 8,
+      "Target_Gross_Margin_Pct": 0.25
+     },
+     {
+      "Offering": "Automation",
+      "Segment": "Enterprise",
+      "Region": "North America",
+      "Min_Price_Index": 0.92,
+      "Median_Price_Index": 0.96,
+      "Max_Price_Index": 1.0,
+      "Typical_Discount_Pct": 5,
+      "Target_Gross_Margin_Pct": 0.32
+     },
+     {
+      "Offering": "Digital",
+      "Segment": "Enterprise",
+      "Region": "Europe",
+      "Min_Price_Index": 0.9,
+      "Median_Price_Index": 0.95,
+      "Max_Price_Index": 1.0,
+      "Typical_Discount_Pct": 5,
+      "Target_Gross_Margin_Pct": 0.3
+     },
+     {
+      "Offering": "Data",
+      "Segment": "Mid-Market",
+      "Region": "APAC",
+      "Min_Price_Index": 0.8,
+      "Median_Price_Index": 0.88,
+      "Max_Price_Index": 0.96,
+      "Typical_Discount_Pct": 12,
+      "Target_Gross_Margin_Pct": 0.22
+     },
+     {
+      "Offering": "Data",
+      "Segment": "Mid-Market",
+      "Region": "North America",
+      "Min_Price_Index": 0.85,
+      "Median_Price_Index": 0.91,
+      "Max_Price_Index": 0.98,
+      "Typical_Discount_Pct": 10,
+      "Target_Gross_Margin_Pct": 0.24
+     }
+    ]
+   }
+  },
+  {
+   "name": "Pricing_Requests",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Pricing_Request_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Opportunity_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Account_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Offering",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "List_Price",
+       "type": "integer"
+      },
+      {
+       "name": "Proposed_Price",
+       "type": "integer"
+      },
+      {
+       "name": "Proposed_Discount_Pct",
+       "type": "integer"
+      },
+      {
+       "name": "Estimated_Cost",
+       "type": "integer"
+      },
+      {
+       "name": "Current_Win_Probability",
+       "type": "number"
+      },
+      {
+       "name": "Competitor_Price",
+       "type": "integer"
+      },
+      {
+       "name": "Contract_Term_Months",
+       "type": "integer"
+      },
+      {
+       "name": "Competitor",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Request",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Pricing_Request_ID": "PR001",
+      "Opportunity_ID": "O003",
+      "Account_ID": "A002",
+      "Offering": "Services",
+      "List_Price": 4500000,
+      "Proposed_Price": 3825000,
+      "Proposed_Discount_Pct": 15,
+      "Estimated_Cost": 1100000,
+      "Current_Win_Probability": 0.7,
+      "Competitor_Price": 120000,
+      "Contract_Term_Months": 24,
+      "Competitor": "Competitor B",
+      "Request": "Evaluate pricing and margin; recommend price/discount."
+     },
+     {
+      "Pricing_Request_ID": "PR002",
+      "Opportunity_ID": "O010",
+      "Account_ID": "A006",
+      "Offering": "Technology",
+      "List_Price": 9000000,
+      "Proposed_Price": 7200000,
+      "Proposed_Discount_Pct": 20,
+      "Estimated_Cost": 1640000,
+      "Current_Win_Probability": 0.65,
+      "Competitor_Price": 7000000,
+      "Contract_Term_Months": 48,
+      "Competitor": "Competitor D",
+      "Request": "Determine whether discount is justified and model alternatives."
+     },
+     {
+      "Pricing_Request_ID": "PR003",
+      "Opportunity_ID": "O014",
+      "Account_ID": "A009",
+      "Offering": "Analytics",
+      "List_Price": 4200000,
+      "Proposed_Price": 3990000,
+      "Proposed_Discount_Pct": 5,
+      "Estimated_Cost": 1520000,
+      "Current_Win_Probability": 0.78,
+      "Competitor_Price": 3900000,
+      "Contract_Term_Months": 36,
+      "Competitor": "Competitor C",
+      "Request": "Assess whether price can be increased without materially hurting expected value."
+     },
+     {
+      "Pricing_Request_ID": "PR004",
+      "Opportunity_ID": "O007",
+      "Account_ID": "A004",
+      "Offering": "Analytics",
+      "List_Price": 1800000,
+      "Proposed_Price": 1530000,
+      "Proposed_Discount_Pct": 15,
+      "Estimated_Cost": 450000,
+      "Current_Win_Probability": 0.45,
+      "Competitor_Price": 1400000,
+      "Contract_Term_Months": 24,
+      "Competitor": "Competitor A",
+      "Request": "Recommend price based on probability, competition and margin."
+     },
+     {
+      "Pricing_Request_ID": "PR005",
+      "Opportunity_ID": "O009",
+      "Account_ID": "A005",
+      "Offering": "Automation",
+      "List_Price": 1600000,
+      "Proposed_Price": 1520000,
+      "Proposed_Discount_Pct": 5,
+      "Estimated_Cost": 608000,
+      "Current_Win_Probability": 0.85,
+      "Competitor_Price": 1550000,
+      "Contract_Term_Months": 36,
+      "Competitor": null,
+      "Request": "Find optimal price and potential margin expansion."
+     },
+     {
+      "Pricing_Request_ID": "PR006",
+      "Opportunity_ID": "O017",
+      "Account_ID": "A011",
+      "Offering": "AI Services",
+      "List_Price": 3000000,
+      "Proposed_Price": 2400000,
+      "Proposed_Discount_Pct": 20,
+      "Estimated_Cost": 510000,
+      "Current_Win_Probability": 0.6,
+      "Competitor_Price": 2500000,
+      "Contract_Term_Months": 36,
+      "Competitor": "Competitor B",
+      "Request": "Model 5%, 10%, 15%, 20% discount scenarios."
+     }
+    ]
+   }
+  },
+  {
+   "name": "Pricing_Test_Cases",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Test_ID",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Skill",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Input",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Prompt",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Expected_Result",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Test_ID": "P01",
+      "Skill": "Pricing Intelligence",
+      "Input": "PR001",
+      "Prompt": "Recommend price/discount for O003 using history, benchmark, margin, competition and win probability.",
+      "Expected_Result": "Identify 15% discount as aggressive; test lower discount scenarios; explain margin and win-probability trade-off."
+     },
+     {
+      "Test_ID": "P02",
+      "Skill": "Price Optimization",
+      "Input": "PR002",
+      "Prompt": "Optimize O010 pricing across discount scenarios.",
+      "Expected_Result": "20% discount creates low margin; quantify expected value and recommend commercially defensible range subject to evidence."
+     },
+     {
+      "Test_ID": "P03",
+      "Skill": "Price Elasticity",
+      "Input": "PR003",
+      "Prompt": "Assess whether A009/Analytics can sustain higher pricing.",
+      "Expected_Result": "Use strong health, 78% probability, low 5% discount, high margin and benchmark to test price uplift."
+     },
+     {
+      "Test_ID": "P04",
+      "Skill": "Competitive Pricing",
+      "Input": "PR004",
+      "Prompt": "Compare proposed price to competitor and benchmark.",
+      "Expected_Result": "Identify competitive pressure and evaluate price vs win probability rather than blindly matching competitor."
+     },
+     {
+      "Test_ID": "P05",
+      "Skill": "Margin Optimization",
+      "Input": "PR005",
+      "Prompt": "Find potential margin recovery without excessive win-rate risk.",
+      "Expected_Result": "Show expected margin/value at multiple price points and identify potential uplift."
+     },
+     {
+      "Test_ID": "P06",
+      "Skill": "Discount Governance",
+      "Input": "PR006",
+      "Prompt": "Detect whether proposed 20% discount breaches pricing norms/floor.",
+      "Expected_Result": "Flag high discount vs benchmark and low margin; require approval/exception rationale."
+     },
+     {
+      "Test_ID": "P07",
+      "Skill": "Pricing Leakage",
+      "Input": "ALL",
+      "Prompt": "Find accounts/opportunities with unusual discounts or pricing below benchmark.",
+      "Expected_Result": "Identify A006/A011/A002 as high-discount/high-risk candidates and quantify potential leakage."
+     },
+     {
+      "Test_ID": "P08",
+      "Skill": "Portfolio Pricing",
+      "Input": "ALL",
+      "Prompt": "Identify offerings with systematic underpricing.",
+      "Expected_Result": "Compare historical discount distributions and margins by offering/segment/region."
+     },
+     {
+      "Test_ID": "P09",
+      "Skill": "Scenario Pricing",
+      "Input": "PR006",
+      "Prompt": "Model 5%, 10%, 15%, 20% discount outcomes.",
+      "Expected_Result": "Calculate price, gross profit, margin, expected revenue/value and trade-offs for each scenario."
+     },
+     {
+      "Test_ID": "P10",
+      "Skill": "Pricing Executive Brief",
+      "Input": "ALL",
+      "Prompt": "Produce executive pricing intelligence summary.",
+      "Expected_Result": "Highlight leakage, margin opportunities, competitive pressure, governance exceptions and recommended actions."
+     }
+    ]
+   }
+  },
+  {
+   "name": "Pricing_Summary",
+   "table": {
+    "schema": {
+     "fields": [
+      {
+       "name": "Metric",
+       "type": "string",
+       "extDtype": "str"
+      },
+      {
+       "name": "Value",
+       "type": "number"
+      },
+      {
+       "name": "Interpretation",
+       "type": "string",
+       "extDtype": "str"
+      }
+     ],
+     "pandas_version": "1.4.0"
+    },
+    "data": [
+     {
+      "Metric": "Total Historical List Price",
+      "Value": null,
+      "Interpretation": "Aggregate list-price exposure in test data"
+     },
+     {
+      "Metric": "Total Actual Price",
+      "Value": null,
+      "Interpretation": "Aggregate realized/proposed price"
+     },
+     {
+      "Metric": "Average Discount %",
+      "Value": null,
+      "Interpretation": "Historical average discount"
+     },
+     {
+      "Metric": "High Discount Deals (>=15%)",
+      "Value": null,
+      "Interpretation": "Potential governance review population"
+     },
+     {
+      "Metric": "Low Margin Deals (<20%)",
+      "Value": null,
+      "Interpretation": "Potential margin-risk population"
+     },
+     {
+      "Metric": "Average Gross Margin %",
+      "Value": null,
+      "Interpretation": "Portfolio margin baseline"
+     }
+    ]
+   }
+  }
+ ]
+}
