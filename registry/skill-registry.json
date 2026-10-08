@@ -15,18 +15,6 @@
    ],
    "used_by_agents": [
     "opportunity-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "propensity_model.py",
-    "reply_check.py"
    ]
   },
   {
@@ -48,27 +36,6 @@
    "used_by_agents": [
     "account-intelligence-agent",
     "opportunity-agent"
-   ],
-   "scripts": [
-    "account_change_diff.py",
-    "account_plan_builder.py",
-    "account_prioritizer.py",
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "opportunity_builder.py",
-    "opportunity_scorer.py",
-    "propensity_model.py",
-    "reply_check.py",
-    "scenario_model.py",
-    "ts_forecast.py",
-    "twin_update.py",
-    "whitespace_matrix.py"
    ]
   },
   {
@@ -85,14 +52,6 @@
    "used_by_agents": [
     "action-workflow-agent",
     "business-orchestrator"
-   ],
-   "scripts": [
-    "action_manager.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "policy_gate.py",
-    "registry.py"
    ]
   },
   {
@@ -102,9 +61,6 @@
    "capabilities": [],
    "used_by_agents": [
     "dashboard-intelligence-agent"
-   ],
-   "scripts": [
-    "render_dashboard.py"
    ]
   },
   {
@@ -115,15 +71,6 @@
    "used_by_agents": [
     "business-orchestrator",
     "data-intelligence-agent"
-   ],
-   "scripts": [
-    "context_discovery.py",
-    "delta_engine.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "reply_check.py"
    ]
   },
   {
@@ -140,21 +87,6 @@
    "used_by_agents": [
     "business-orchestrator",
     "executive-decision-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "driver_tree.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "kpi_engine.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "pipeline_whatif.py",
-    "reply_check.py",
-    "ts_forecast.py",
-    "winloss_analyzer.py"
    ]
   },
   {
@@ -194,17 +126,6 @@
     "relationship-agent",
     "research-agent",
     "solution-architect-agent"
-   ],
-   "scripts": [
-    "competitive_threads.py",
-    "delta_engine.py",
-    "evidence_validator.py",
-    "graph_build.py",
-    "handoff_packet.py",
-    "learning_manager.py",
-    "memory_graph.py",
-    "model_router.py",
-    "reply_check.py"
    ]
   },
   {
@@ -214,31 +135,6 @@
    "capabilities": [],
    "used_by_agents": [
     "business-orchestrator"
-   ],
-   "scripts": [
-    "__pycache__",
-    "account_plan_builder.py",
-    "action_manager.py",
-    "agent_planner.py",
-    "competitive_threads.py",
-    "context_discovery.py",
-    "cross_domain_correlator.py",
-    "decision_record.py",
-    "delta_engine.py",
-    "domain_delta.py",
-    "evidence_validator.py",
-    "financial_intel.py",
-    "handoff_packet.py",
-    "kpi_engine.py",
-    "learning_manager.py",
-    "marketing_signals.py",
-    "memory_graph.py",
-    "model_router.py",
-    "opportunity_builder.py",
-    "policy_gate.py",
-    "registry.py",
-    "trace.py",
-    "twin_state.py"
    ]
   },
   {
@@ -254,17 +150,6 @@
    ],
    "used_by_agents": [
     "business-orchestrator"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py",
-    "watch_evaluator.py"
    ]
   },
   {
@@ -283,18 +168,6 @@
     "competitive-thread-agent",
     "deal-strategy-agent",
     "opportunity-agent"
-   ],
-   "scripts": [
-    "competitive_watch.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py",
-    "winloss_analyzer.py"
    ]
   },
   {
@@ -310,11 +183,6 @@
    ],
    "used_by_agents": [
     "competitive-thread-agent"
-   ],
-   "scripts": [
-    "competitive_threads.py",
-    "evidence_validator.py",
-    "memory_graph.py"
    ]
   },
   {
@@ -332,23 +200,6 @@
     "account-intelligence-agent",
     "customer-growth-agent",
     "dashboard-intelligence-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "domain_delta.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "graph_build.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "propensity_model.py",
-    "reply_check.py",
-    "ts_forecast.py",
-    "twin_state.py",
-    "twin_update.py"
    ]
   },
   {
@@ -364,21 +215,6 @@
    ],
    "used_by_agents": [
     "business-orchestrator"
-   ],
-   "scripts": [
-    "account_prioritizer.py",
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "kpi_engine.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py",
-    "signal_correlator.py",
-    "signal_ranker.py"
    ]
   },
   {
@@ -394,19 +230,6 @@
    ],
    "used_by_agents": [
     "dashboard-intelligence-agent"
-   ],
-   "scripts": [
-    "competitive_threads.py",
-    "cross_domain_correlator.py",
-    "dashboard_builder.py",
-    "dashboard_state.py",
-    "demo_provider.py",
-    "domain_delta.py",
-    "evidence_validator.py",
-    "financial_intel.py",
-    "marketing_signals.py",
-    "memory_graph.py",
-    "production_provider.py"
    ]
   },
   {
@@ -422,22 +245,6 @@
    ],
    "used_by_agents": [
     "data-intelligence-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "context_discovery.py",
-    "data_profiler.py",
-    "delta_engine.py",
-    "domain_delta.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "graph_build.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py",
-    "ts_forecast.py"
    ]
   },
   {
@@ -454,19 +261,6 @@
    "used_by_agents": [
     "deal-strategy-agent",
     "pipeline-forecast-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "deal_risk_model.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "pricing_model.py",
-    "reply_check.py",
-    "winloss_analyzer.py"
    ]
   },
   {
@@ -483,13 +277,6 @@
    "used_by_agents": [
     "executive-decision-agent",
     "financial-intelligence-agent"
-   ],
-   "scripts": [
-    "decision_record.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "scenario_model.py"
    ]
   },
   {
@@ -505,18 +292,6 @@
    ],
    "used_by_agents": [
     "business-orchestrator"
-   ],
-   "scripts": [
-    "command_center.py",
-    "delta_engine.py",
-    "evidence_validator.py",
-    "forecast_sim.py",
-    "handoff_packet.py",
-    "kpi_engine.py",
-    "memory_graph.py",
-    "model_router.py",
-    "reply_check.py",
-    "ts_forecast.py"
    ]
   },
   {
@@ -532,11 +307,6 @@
    ],
    "used_by_agents": [
     "financial-intelligence-agent"
-   ],
-   "scripts": [
-    "evidence_validator.py",
-    "financial_intel.py",
-    "memory_graph.py"
    ]
   },
   {
@@ -546,10 +316,6 @@
    "capabilities": [],
    "used_by_agents": [
     "business-orchestrator"
-   ],
-   "scripts": [
-    "__pycache__",
-    "prompt_engine.py"
    ]
   },
   {
@@ -566,20 +332,6 @@
    "used_by_agents": [
     "customer-growth-agent",
     "opportunity-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "opportunity_builder.py",
-    "opportunity_scorer.py",
-    "propensity_model.py",
-    "reply_check.py",
-    "whitespace_matrix.py"
    ]
   },
   {
@@ -597,19 +349,6 @@
     "customer-growth-agent",
     "financial-intelligence-agent",
     "marketing-intelligence-agent"
-   ],
-   "scripts": [
-    "competitive_threads.py",
-    "cross_domain_correlator.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py",
-    "signal_correlator.py"
    ]
   },
   {
@@ -629,17 +368,6 @@
     "opportunity-agent",
     "research-agent",
     "solution-architect-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "knowledge_catalog.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py"
    ]
   },
   {
@@ -656,13 +384,6 @@
    "used_by_agents": [
     "market-intelligence-agent",
     "opportunity-agent"
-   ],
-   "scripts": [
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "reply_check.py"
    ]
   },
   {
@@ -678,12 +399,6 @@
    ],
    "used_by_agents": [
     "marketing-intelligence-agent"
-   ],
-   "scripts": [
-    "cross_domain_correlator.py",
-    "evidence_validator.py",
-    "marketing_signals.py",
-    "memory_graph.py"
    ]
   },
   {
@@ -700,16 +415,6 @@
    "used_by_agents": [
     "meeting-intelligence-agent",
     "relationship-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py"
    ]
   },
   {
@@ -725,17 +430,6 @@
    ],
    "used_by_agents": [
     "meeting-intelligence-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py"
    ]
   },
   {
@@ -753,20 +447,6 @@
    ],
    "used_by_agents": [
     "pipeline-forecast-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "deal_risk_model.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "forecast_sim.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "pipeline_whatif.py",
-    "reply_check.py"
    ]
   },
   {
@@ -783,14 +463,6 @@
    "used_by_agents": [
     "business-orchestrator",
     "governance-risk-agent"
-   ],
-   "scripts": [
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "policy_gate.py",
-    "registry.py",
-    "trace.py"
    ]
   },
   {
@@ -807,19 +479,6 @@
    "used_by_agents": [
     "deal-strategy-agent",
     "pricing-commercial-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "pricing_model.py",
-    "propensity_model.py",
-    "reply_check.py"
    ]
   },
   {
@@ -838,18 +497,6 @@
     "deal-strategy-agent",
     "meeting-intelligence-agent",
     "relationship-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "propensity_model.py",
-    "reply_check.py"
    ]
   },
   {
@@ -870,19 +517,6 @@
    ],
    "used_by_agents": [
     "customer-growth-agent"
-   ],
-   "scripts": [
-    "anomaly_detect.py",
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "propensity_model.py",
-    "reply_check.py",
-    "twin_update.py"
    ]
   },
   {
@@ -898,17 +532,6 @@
    ],
    "used_by_agents": [
     "solution-architect-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "propensity_model.py",
-    "reply_check.py"
    ]
   },
   {
@@ -926,17 +549,6 @@
     "executive-decision-agent",
     "pipeline-forecast-agent",
     "pricing-commercial-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py",
-    "scenario_model.py"
    ]
   },
   {
@@ -954,11 +566,6 @@
    ],
    "used_by_agents": [
     "solution-architect-agent"
-   ],
-   "scripts": [
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py"
    ]
   },
   {
@@ -976,18 +583,85 @@
     "competitive-intelligence-agent",
     "deal-strategy-agent",
     "outcome-learning-agent"
-   ],
-   "scripts": [
-    "data_profiler.py",
-    "entity_resolver.py",
-    "evidence_validator.py",
-    "handoff_packet.py",
-    "memory_graph.py",
-    "model_router.py",
-    "normalize.py",
-    "reply_check.py",
-    "winloss_analyzer.py"
    ]
   }
- ]
+ ],
+ "shared_scripts": [
+  "account_change_diff.py",
+  "account_plan_builder.py",
+  "account_prioritizer.py",
+  "action_manager.py",
+  "agent_planner.py",
+  "anomaly_detect.py",
+  "command_center.py",
+  "competitive_threads.py",
+  "competitive_watch.py",
+  "context_discovery.py",
+  "cross_domain_correlator.py",
+  "dashboard_builder.py",
+  "dashboard_state.py",
+  "data_profiler.py",
+  "deal_risk_model.py",
+  "decision_record.py",
+  "delta_engine.py",
+  "demo_provider.py",
+  "domain_delta.py",
+  "driver_tree.py",
+  "entity_resolver.py",
+  "evidence_validator.py",
+  "financial_intel.py",
+  "forecast_sim.py",
+  "graph_build.py",
+  "handoff_packet.py",
+  "knowledge_catalog.py",
+  "kpi_engine.py",
+  "learning_manager.py",
+  "marketing_signals.py",
+  "memory_graph.py",
+  "model_router.py",
+  "normalize.py",
+  "opportunity_builder.py",
+  "opportunity_scorer.py",
+  "pipeline_whatif.py",
+  "policy_gate.py",
+  "pricing_model.py",
+  "production_provider.py",
+  "prompt_engine.py",
+  "propensity_model.py",
+  "registry.py",
+  "render_dashboard.py",
+  "reply_check.py",
+  "scenario_model.py",
+  "signal_correlator.py",
+  "signal_ranker.py",
+  "trace.py",
+  "ts_forecast.py",
+  "twin_state.py",
+  "twin_update.py",
+  "watch_evaluator.py",
+  "whitespace_matrix.py",
+  "winloss_analyzer.py"
+ ],
+ "shared_references": [
+  "account-state-contract.md",
+  "adaptive-kpi-library.md",
+  "analytics-methods.md",
+  "business-model-taxonomy.md",
+  "connect-protocol.md",
+  "control-plane.md",
+  "deal-delta-contract.md",
+  "delegation-protocol.md",
+  "enterprise-guardrails.md",
+  "intelligence-loop.md",
+  "measurement-framework.md",
+  "memory-model.md",
+  "model-routing-policy.json",
+  "model-routing.md",
+  "nba-weights.json",
+  "orchestration.md",
+  "prediction-standards.md",
+  "semantic-model.md",
+  "signal-vocabulary.md"
+ ],
+ "layout_note": "Scripts and shared references live once at the plugin root (scripts/, references/); skill-specific references stay in each skill."
 }

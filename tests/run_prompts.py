@@ -11,7 +11,7 @@ import glob, json, os, re, subprocess, sys, tempfile
 import yaml
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")); import build_fixtures; build_fixtures.ensure()   # rebuild binary fixtures from readable SQL/JSON sources
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")); SK = f"{ROOT}/skills"
-CAT = f"{SK}/growth-discovery/references/starter-prompts"; ENG = f"{SK}/growth-discovery/scripts/prompt_engine.py"; PLN = f"{SK}/business-orchestrator/scripts/agent_planner.py"
+CAT = f"{SK}/growth-discovery/references/starter-prompts"; ENG = f"{ROOT}/scripts/prompt_engine.py"; PLN = f"{ROOT}/scripts/agent_planner.py"
 R = []
 def T(area, name, ok, detail=""): R.append((area, name, "PASS" if ok else "FAIL", str(detail)[:220]))
 def SKIP(area, name, why): R.append((area, name, "SKIP", why))
@@ -121,8 +121,8 @@ T("CTX", "no unresolved variables, brackets or double spaces anywhere (with and 
 T("CTX", "resolve: optional segment needs every variable", eng("resolve", "--text", "Find X[[ in {account} for {competitor}]].", "--account", "A")["text"] == "Find X.")
 # ---------------- TR3 contextual ----------------
 tmp = tempfile.mkdtemp(); con = None
-bundle = subprocess.run([sys.executable, f"{SK}/dashboard-intelligence/scripts/demo_provider.py", "--out", f"{tmp}/b.json"], capture_output=True, text=True)
-subprocess.run([sys.executable, f"{SK}/dashboard-intelligence/scripts/dashboard_builder.py", "--bundle", f"{tmp}/b.json", "--persona", "sales_head", "--out", f"{tmp}/c.json"], capture_output=True, text=True)
+bundle = subprocess.run([sys.executable, f"{ROOT}/scripts/demo_provider.py", "--out", f"{tmp}/b.json"], capture_output=True, text=True)
+subprocess.run([sys.executable, f"{ROOT}/scripts/dashboard_builder.py", "--bundle", f"{tmp}/b.json", "--persona", "sales_head", "--out", f"{tmp}/c.json"], capture_output=True, text=True)
 C = json.load(open(f"{tmp}/c.json"))
 r3 = eng("recommend", "--persona", "sales_head", "--contract", f"{tmp}/c.json")
 ctxs = [x for x in r3["prompts"] if x.get("tier") == "contextual"]
@@ -161,7 +161,7 @@ try:
 except Exception as e:
     PW = None
 if PW:
-    subprocess.run([sys.executable, f"{SK}/artifact-dashboard-intelligence/scripts/render_dashboard.py", "--contract", f"{tmp}/c.json", "--out", f"{tmp}/d.html"], capture_output=True)
+    subprocess.run([sys.executable, f"{ROOT}/scripts/render_dashboard.py", "--contract", f"{tmp}/c.json", "--out", f"{tmp}/d.html"], capture_output=True)
     pg = BR.new_page(viewport={"width": 1440, "height": 900}); errs = []; pg.on("pageerror", lambda e: errs.append(str(e))); pg.goto(pathlib.Path(tmp, "d.html").as_uri()); pg.wait_for_timeout(400)
     T("DSH", "suggestion row shows ≤ 5 prompts plus Explore, contextual ones marked", pg.evaluate("document.querySelectorAll('[data-query]').length") <= 5 and pg.evaluate("document.querySelectorAll('.suggest .sig').length") >= 1 and pg.evaluate("!!document.querySelector('[data-explore-open]')"))
     pg.click("[data-query='Q1']"); pg.wait_for_timeout(200)
@@ -180,7 +180,7 @@ for cid, c in CAPS.items():
     if "starter-prompts:start" not in t or any("- " + bare(p["text"]) not in t for p in c["primary_prompts"]): desync.append(cid)
 T("SYN", "every skill's Starter prompts section matches the catalog", not desync, desync)
 T("SYN", "skill frontmatter unchanged by prompts (no invented metadata)", all(set(yaml.safe_load(open(f"{SK}/{s}/SKILL.md").read().split("---")[1])) <= {"name", "description", "license", "allowed-tools", "metadata", "compatibility"} for s in SKILLS))
-rv = json.loads(subprocess.run([sys.executable, f"{SK}/platform-admin/scripts/registry.py", ROOT, "validate"], capture_output=True, text=True).stdout)
+rv = json.loads(subprocess.run([sys.executable, f"{ROOT}/scripts/registry.py", ROOT, "validate"], capture_output=True, text=True).stdout)
 T("REG", "registry valid; discovery skill reachable via the orchestrator", rv["status"] == "OK" and "growth-discovery" in REG["business-orchestrator"]["allowed_skills"], rv.get("errors"))
 T("REG", "no broken skill references from the catalog", all(c["routes_to"]["skill"] in SKILLS for c in CAPS.values()))
 # ---------------- report ----------------

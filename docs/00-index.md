@@ -12,7 +12,7 @@
 | 13 Migration map | Every V6.1 component → V7 location and status |
 | 14 **V7 report** | Retained, enhanced, new, incomplete, limitations, risks, V8 roadmap (IMPLEMENTED / PARTIAL / DESIGNED / PLANNED) |
 
-The V6.1 docs are in `archive-v6/`, and they still describe the skills' internal logic.
+Design documents from V4–V6.1 are archived in the repository's Git history (commit `6c75331`, folders `docs/archive-v5/` and `docs/archive-v6/`); the current architecture is described in the documents above.
 - `15-v71-intelligence.md`: V7.1 marketing, financial, and competitive-thread intelligence; memory model; test map
 - `16-v71-release-report.md`: V7.1 release report (status, deliverables, tests, security, performance, limitations)
 - `17-v72-dashboard.md`: V7.2 Dashboard Intelligence (architecture, contract, personas, visual QA, limitations)

@@ -11,7 +11,7 @@ import subprocess, json, os, sys, tempfile, shutil, glob, re, sqlite3
 import yaml, jsonschema
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")); import build_fixtures; build_fixtures.ensure()   # rebuild binary fixtures from readable SQL/JSON sources
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")); SK = f"{ROOT}/skills"; FX = f"{ROOT}/tests/fixtures"
-DS, AR = f"{SK}/dashboard-intelligence/scripts", f"{SK}/artifact-dashboard-intelligence/scripts"
+DS, AR = f"{ROOT}/scripts", f"{ROOT}/scripts"
 TMP = tempfile.mkdtemp(); R = []
 def T(area, name, ok, detail=""): R.append((area, name, "PASS" if ok else "FAIL", str(detail)[:200]))
 def SKIP(area, name, why): R.append((area, name, "SKIP", why))
@@ -53,10 +53,10 @@ T("SKL", "11 demo labelling on every demo record source", all("DEMO DATA" in e["
 # ================= AGT: Dashboard Intelligence agent =================
 man = yaml.safe_load(open(f"{ROOT}/registry/manifests/dashboard-intelligence-agent.yaml"))
 T("AGT", "1 manifest and generated agent file exist", os.path.exists(f"{ROOT}/agents/dashboard-intelligence-agent.md"))
-c_, rv = run(f"{SK}/platform-admin/scripts/registry.py", ROOT, "validate"); T("AGT", "2 registry validates with the new agent", rv.get("status") == "OK", rv.get("errors"))
+c_, rv = run(f"{ROOT}/scripts/registry.py", ROOT, "validate"); T("AGT", "2 registry validates with the new agent", rv.get("status") == "OK", rv.get("errors"))
 T("AGT", "3 least privilege: read-only, no shell, no actions", "Bash" not in man["allowed_tools"] and man["memory_permissions"] == "read" and man["action_permissions"] == [] and man["autonomy_level"] == 0)
 T("AGT", "4 tiers: default T2, T3 strategic, T4 only for high-value synthesis", man["model_routing_policy"]["default_tier"] == "T2" and "T3" in man["escalation_rules"] and "T4" in man["escalation_rules"])
-def plan(q): return run(f"{SK}/business-orchestrator/scripts/agent_planner.py", q, "--memory-db", f"{TMP}/prod.db")[1]
+def plan(q): return run(f"{ROOT}/scripts/agent_planner.py", q, "--memory-db", f"{TMP}/prod.db")[1]
 p1, p2, p3 = plan("Show me my Sanofi dashboard."), plan("Open the executive command center for Sanofi"), plan("Build me a cockpit for this account")
 T("AGT", "5 three phrasings route to the dashboard intent", [p["intent"] for p in (p1, p2, p3)] == ["dashboard"] * 3, [p["intent"] for p in (p1, p2, p3)])
 st = [s["step"] for s in p1["steps"]]
@@ -64,7 +64,7 @@ T("AGT", "6 agent designs before the contract and reviews after it", st.index("d
 T("AGT", "7 numbers run at T0 by the orchestrator, not the agent", all(s["tier"] == "T0" and s["agent"] == "business-orchestrator" for s in p1["steps"] if s["step"] in ("dashboard_contract", "render_artifact")))
 T("AGT", "8 domain agents discovered from the registry", {"financial-intelligence-agent", "marketing-intelligence-agent", "competitive-thread-agent"} <= set(p1["dynamic_agents"]), p1["dynamic_agents"])
 T("AGT", "9 V7.1 routing unaffected", plan("What's changing in this account?")["intent"] == "account_change" and plan("Build a complete account strategy.")["intent"] == "account_strategy")
-_, cn = run(f"{SK}/platform-admin/scripts/registry.py", ROOT, "can", "dashboard-intelligence-agent", "--tool", "Bash"); T("AGT", "10 registry refuses shell to the agent", cn.get("allowed") is False, cn)
+_, cn = run(f"{ROOT}/scripts/registry.py", ROOT, "can", "dashboard-intelligence-agent", "--tool", "Bash"); T("AGT", "10 registry refuses shell to the agent", cn.get("allowed") is False, cn)
 # ================= CON: Dashboard Contract =================
 T("CON", "1 demo contract valid", not list(V.iter_errors(C)))
 T("CON", "2 production contract valid", not list(V.iter_errors(PC)), [e.message[:80] for e in list(V.iter_errors(PC))[:3]])

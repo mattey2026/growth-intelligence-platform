@@ -3,6 +3,9 @@ name: dashboard-intelligence
 description: Dashboard Intelligence — decides what dashboard experience a user needs and produces a renderer-independent Dashboard Contract (schemas/dashboard.schema.json) — dashboard selection and composition, persona-adapted KPIs and visualizations, insights, anomalies, trends, cross-domain signals, drill-down paths, evidence, recommended actions, scenarios, comparisons, filters and state — with every number computed in code (T0) and nothing fabricated. Use when someone asks to "show my dashboard", "build a command center", "executive view", "account dashboard", "open the Sanofi dashboard", or when a dashboard needs data refreshed. Rendering is done by artifact-dashboard-intelligence.
 ---
 
+> Shared scripts and references live at the plugin root: `../../scripts/` and `../../references/` from this skill's folder.
+
+
 # Dashboard Intelligence
 
 Version 7.2 · Used by the **dashboard-intelligence-agent** and the Business Orchestrator (`dashboard` intent)
@@ -11,12 +14,12 @@ Version 7.2 · Used by the **dashboard-intelligence-agent** and the Business Orc
 
 ## Pipeline
 1. **Provider → bundle.**
-   - `scripts/demo_provider.py`: demo inputs, run through the real V7.1 engines.
-   - `scripts/production_provider.py`: Business Memory, CRM export, billing, P&L, operations, and filings.
+   - `../../scripts/demo_provider.py`: demo inputs, run through the real V7.1 engines.
+   - `../../scripts/production_provider.py`: Business Memory, CRM export, billing, P&L, operations, and filings.
 
    Both emit the same bundle. The production provider lists its `data_gaps` and never fills them.
-2. **Builder → contract (T0).** `scripts/dashboard_builder.py --bundle b.json --persona <p> --role <r> --out contract.json --validate`
-3. **Render.** `skills/artifact-dashboard-intelligence/scripts/render_dashboard.py --contract contract.json --out dashboard.html`, then publish it as an artifact.
+2. **Builder → contract (T0).** `../../scripts/dashboard_builder.py --bundle b.json --persona <p> --role <r> --out contract.json --validate`
+3. **Render.** `../../scripts/render_dashboard.py --contract contract.json --out dashboard.html`, then publish it as an artifact.
 
 ## What this skill defines
 | Capability | Where it is defined |
@@ -37,7 +40,7 @@ Version 7.2 · Used by the **dashboard-intelligence-agent** and the Business Orc
 | **Scenario analysis** | `scenarios[]`: MODELED, with baseline, assumptions, scenario, delta and variants |
 | **Filtering and cross-filtering** | `filters[]` plus facets on every object. KPIs carry precomputed `by_facet` values |
 | **Comparison** | `comparisons{}`: eight modes, each only when its data exists; the rest are listed in `comparisons_unavailable` |
-| **Dashboard state** | `state_defaults` in the contract; per-viewer state in browser storage; server-side state via `scripts/dashboard_state.py` (tenant-bound) |
+| **Dashboard state** | `state_defaults` in the contract; per-viewer state in browser storage; server-side state via `../../scripts/dashboard_state.py` (tenant-bound) |
 | **Design system rules** | `references/dashboard-design-system.md` |
 
 ## Rules

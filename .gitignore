@@ -30,3 +30,6 @@ tests/fixtures/*.xlsx
 evals/fixtures/*.db
 *.tmp.xlsx
 *.db.tmp
+
+# Generated demo dashboard (python tools/build_demo_dashboard.py)
+examples/

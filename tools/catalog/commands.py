@@ -15,7 +15,7 @@ Request: $ARGUMENTS
 
 How to handle this (do not answer from this file; it only routes):
 1. If the request above is empty, or is only an account, company or opportunity name, show this capability's starter prompts:
-   run the growth-discovery skill's `scripts/prompt_engine.py menu --capability {cid}` (add `--account <name>` when one is known
+   run the plugin's `scripts/prompt_engine.py menu --capability {cid}` (add `--account <name>` when one is known
    and `--persona <persona>` when the user's role is known). Show the six prompts in business language, as a numbered list or,
    where the surface supports it, as tappable options; offer "More prompts". Never show internal names. Run the one the user picks.
 2. Otherwise, handle the request with the **business-orchestrator** skill exactly as if it had been typed, passing this
@@ -33,7 +33,7 @@ HUB = """Growth Intelligence · **{name}**
 
 Request: $ARGUMENTS
 
-If the request above is empty or only names an account, show the front door: run the growth-discovery skill's
+If the request above is empty or only names an account, show the front door: run the plugin's
 `scripts/prompt_engine.py {cmd}` (add `--account <name>` and `--persona <persona>` when known). Present "What would you like
 to do?" with the six prompts, then "Explore capabilities" with its categories, in business language only. Run the prompt the
 user picks through the business-orchestrator skill. Otherwise, handle the request with the business-orchestrator skill exactly

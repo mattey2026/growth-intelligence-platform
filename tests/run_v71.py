@@ -8,7 +8,7 @@ business-model adaptability (D22) and missing-data degradation (D23).
 import subprocess, json, os, sys, shutil, tempfile, sqlite3, glob, yaml
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")); import build_fixtures; build_fixtures.ensure()   # rebuild binary fixtures from readable SQL/JSON sources
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..")); FX = f"{ROOT}/tests/fixtures"; SK = f"{ROOT}/skills"
-S = lambda skill, f: f"{SK}/{skill}/scripts/{f}"
+S = lambda skill, f: f"{ROOT}/scripts/{f}"
 OS = lambda f: S("business-orchestrator", f)
 TMP = tempfile.mkdtemp(); MEM = f"{TMP}/mem.db"; shutil.copy(f"{FX}/growth_memory_v7.db", MEM)
 R = []

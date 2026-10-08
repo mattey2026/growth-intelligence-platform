@@ -3,6 +3,9 @@ name: growth-discovery
 description: Growth Intelligence front door — shows curated, ready-to-run business prompts so users never need to know which capability exists. Use when the user asks "what can you do", "help me get started", "show me prompts", "explore capabilities", "what should I ask", opens the platform with no specific request, types /growth or /sales, or finishes a task and would benefit from relevant next steps. Prompts adapt to the current account, persona and live signals (an accelerating competitor, a revenue anomaly, buying intent).
 ---
 
+> Shared scripts and references live at the plugin root: `../../scripts/` and `../../references/` from this skill's folder.
+
+
 # Growth Discovery: the Starter Prompt Framework
 
 Version 8.0 · The front door to the Growth Intelligence Platform. The user should think "What do I want to accomplish?", never "Which skill should I use?"
@@ -19,7 +22,7 @@ Version 8.0 · The front door to the Growth Intelligence Platform. The user shou
 5. **No second reasoning engine.** A chosen prompt is handled by the **business-orchestrator** skill exactly as if typed. When the capability is known (a clicked card, a menu or a slash command), pass it to the planner with `--capability <id>`, so routing is deterministic.
 6. **Administration** prompts appear only for administrators.
 
-## Engine (`scripts/prompt_engine.py`, JSON output)
+## Engine (`../../scripts/prompt_engine.py`, JSON output)
 | Command | Returns |
 |---|---|
 | `home [--persona P] [--account A]` | "What would you like to do?" with 6 prompts, plus Explore capabilities (Growth, Sales, Accounts, Customers, Competition, Marketing, Finance, Market, Meetings, Decisions, Dashboards, Operations) |

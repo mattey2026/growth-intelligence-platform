@@ -7,7 +7,7 @@ cases in evals/ (see EVAL column). Run from the plugin root:  python3 tests/run_
 import subprocess, json, shutil, os, sys, tempfile, sqlite3
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures")); import build_fixtures; build_fixtures.ensure()   # rebuild binary fixtures from readable SQL/JSON sources
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-OS = f"{ROOT}/skills/business-orchestrator/scripts"; FX = f"{ROOT}/tests/fixtures"
+OS = f"{ROOT}/scripts"; FX = f"{ROOT}/tests/fixtures"
 TMP = tempfile.mkdtemp(); MEM = f"{TMP}/mem.db"; shutil.copy(f"{FX}/growth_memory_v7.db", MEM)
 POL = f"{FX}/tenant-policy.example.yaml"; WB1, WB2 = f"{FX}/workbook_v1_2026-09-29.xlsx", f"{FX}/workbook_v2_2026-10-13.xlsx"
 R = []
@@ -58,7 +58,7 @@ p = plan("A new EU regulation on AI in banking was announced — what does it me
 chain = [s["agent"] for s in p["steps"]]
 T(13, "Market event impact", chain.index("research-agent") < chain.index("market-intelligence-agent") < chain.index("customer-growth-agent"), "research → market implications → account exposure")
 # 14: scenario planning, running the v5 scenario engine
-T(14, "Scenario planning", plan("What if win rates drop 10 points next quarter?")["intent"] == "scenario" and os.path.exists(f"{ROOT}/skills/decision-intelligence/scripts/scenario_model.py"), "scenario intent; scenario engine available to the decision agent")
+T(14, "Scenario planning", plan("What if win rates drop 10 points next quarter?")["intent"] == "scenario" and os.path.exists(f"{ROOT}/scripts/scenario_model.py"), "scenario intent; scenario engine available to the decision agent")
 # 15: executive decision (Decision Memory, owner-only approval)
 memo = {"situation": "O010 scope cut to $8.1M; AE requests 18%", "options": [
     {"name": "Hold ≤12% with give/get", "summary": "", "financial_impact": "margin kept", "strategic_impact": "", "risks": "loss risk", "dependencies": ""},
@@ -67,10 +67,10 @@ memo = {"situation": "O010 scope cut to $8.1M; AE requests 18%", "options": [
     "what_would_change": "competitor bid below list by >15%", "decision_owner": "CRO", "decision_deadline": "2026-10-31", "required_approval": "CRO"}
 json.dump(memo, open(f"{TMP}/memo.json", "w"))
 bad = dict(memo, options=memo["options"][:1]); json.dump(bad, open(f"{TMP}/bad.json", "w"))
-c1, _ = run(f"{ROOT}/skills/decision-intelligence/scripts/decision_record.py", MEM, "validate", f"{TMP}/bad.json")
-_, pr = run(f"{ROOT}/skills/decision-intelligence/scripts/decision_record.py", MEM, "propose", f"{TMP}/memo.json", "--entity", "O010")
-c3, wrong = run(f"{ROOT}/skills/decision-intelligence/scripts/decision_record.py", MEM, "approve", pr["proposal"], "--by", "AE")
-_, ok = run(f"{ROOT}/skills/decision-intelligence/scripts/decision_record.py", MEM, "approve", pr["proposal"], "--by", "CRO")
+c1, _ = run(f"{ROOT}/scripts/decision_record.py", MEM, "validate", f"{TMP}/bad.json")
+_, pr = run(f"{ROOT}/scripts/decision_record.py", MEM, "propose", f"{TMP}/memo.json", "--entity", "O010")
+c3, wrong = run(f"{ROOT}/scripts/decision_record.py", MEM, "approve", pr["proposal"], "--by", "AE")
+_, ok = run(f"{ROOT}/scripts/decision_record.py", MEM, "approve", pr["proposal"], "--by", "CRO")
 T(15, "Executive decision", c1 == 1 and c3 == 1 and ok.get("status") == "in_force", "1-option memo rejected; AE cannot approve; CRO approval → decision in force", "evals/strategist-pricing-decision")
 # 16–17: action lifecycle and outcome
 AM = f"{OS}/action_manager.py"
@@ -86,8 +86,7 @@ _, au = run(AM, MEM, "audit", a["action_id"])
 T(16, "Action execution (auditable, no step skipping)", cx == 1 and ex.get("state") == "executed" and len(au) >= 5, f"skip-to-execute refused; gate={g['decision']}; audit {len(au)} entries")
 T(17, "Outcome tracking", oc.get("state") == "outcome_linked", "action → outcome linked in ledger")
 # 18: learning is controlled (no self-modification)
-LM = f"{ROOT}/skills/business-memory/scripts/learning_manager.py"
-shutil.copy(f"{OS}/learning_manager.py", LM)
+LM = f"{OS}/learning_manager.py"   # one shared copy of every script (plugin-level scripts/)
 outs = [r[0] for r in sqlite3.connect(MEM).execute("SELECT id FROM ledger WHERE kind='outcome'")]
 _, cand = run(LM, MEM, "candidate", "--scope", "low-risk-negotiation", "--rule", "keep haircut 0.95–1.00", "--evidence-ids", ",".join(outs))
 _, ev1 = run(LM, MEM, "evaluate", cand["candidate"])
@@ -105,10 +104,10 @@ json.dump({"agent": "customer-growth-agent", "facts": [{"entity": "A012", "attri
 _, cf = run(f"{OS}/evidence_validator.py", "conflicts", f"{TMP}/r1.json", f"{TMP}/r2.json")
 T(19, "Contradictory data", conf >= 1 and cf["count"] == 1, f"{conf} memory belief transition(s) recorded; cross-agent value conflict detected with resolution rule")
 # 20: missing data → unsupported KPIs, not invented
-_, k = run(f"{ROOT}/skills/executive-command-center/scripts/kpi_engine.py", WB2, "--profile", f"{FX}/../fixtures/profile.json" if os.path.exists(f"{FX}/profile.json") else f"{TMP}/p.json", ok=(0, 1))
+_, k = run(f"{ROOT}/scripts/kpi_engine.py", WB2, "--profile", f"{FX}/../fixtures/profile.json" if os.path.exists(f"{FX}/profile.json") else f"{TMP}/p.json", ok=(0, 1))
 if isinstance(k, str):
-    run(f"{ROOT}/skills/business-context-discovery/scripts/context_discovery.py", WB2, "--out", f"{TMP}/p.json")
-    _, k = run(f"{ROOT}/skills/executive-command-center/scripts/kpi_engine.py", WB2, "--profile", f"{TMP}/p.json")
+    run(f"{ROOT}/scripts/context_discovery.py", WB2, "--out", f"{TMP}/p.json")
+    _, k = run(f"{ROOT}/scripts/kpi_engine.py", WB2, "--profile", f"{TMP}/p.json")
 T(20, "Missing data", len(k["unsupported"]) >= 4 and any("Win rate" in u for u in k["unsupported"]), f"{len(k['unsupported'])} KPIs refused with the missing input named (e.g. {k['unsupported'][0][:48]}…)")
 # 21: unauthorized data request (RBAC, clearance, ABAC, tenant, least privilege, memory tenant isolation)
 d1 = gate(dict(BASE, data=["margin"]))[1]; d2 = gate(dict(BASE, sensitivity=["mnpi"]))[1]; d3 = gate(dict(BASE, record={"region": "APAC", "owner": "u9"}))[1]
@@ -164,7 +163,7 @@ T(30, "CEO-level business health", p["role"] == "ceo" and p["altitude"] and any(
 
 # ---- V6.1 regression
 reg = []
-_, cd = run(f"{ROOT}/skills/business-context-discovery/scripts/context_discovery.py", WB1)
+_, cd = run(f"{ROOT}/scripts/context_discovery.py", WB1)
 reg.append(("context discovery B2B ≥0.95", cd["business_model"]["value"] == "B2B" and cd["business_model"]["confidence"] >= 0.95))
 reg.append(("delta finds 13/13 planted edits", dl["materiality"]["changed_cells"] + sum(len(v.get("added", [])) for v in dl["sheets"].values() if isinstance(v, dict)) == 13))
 routes = {"compute weighted pipeline aggregate": "T0", "classify uploaded dataset entities": "T1", "summarize account A009 status": "T2", "account plan and strategy for A006": "T3"}
@@ -177,7 +176,7 @@ reg.append(("stateful alerts NEW→SUPPRESS→UPDATE", (x1, x2, x3) == ("FIRE_NE
 reg.append(("KPI engine: pipeline $52.8M after refresh", abs(next(x["value"] for x in k["kpis"] if x["name"] == "Open pipeline") - 52.8e6) < 1))
 _, pk1 = run(f"{OS}/handoff_packet.py", MEM, "--task", "x", "--tier", "T3", "--entity", "O010", "--scope", "discount")
 reg.append(("packets carry decisions in force", "Decisions in force" in pk1 and "12%" in pk1))
-_, rv = run(f"{ROOT}/skills/platform-admin/scripts/registry.py", ROOT, "validate")
+_, rv = run(f"{ROOT}/scripts/registry.py", ROOT, "validate")
 reg.append(("registry valid, all skills reachable", rv["status"] == "OK"))
 reg.append(("v6.1 tier agents kept", all(os.path.exists(f"{ROOT}/agents/{a}.md") for a in ["growth-light", "growth-analyst", "growth-strategist", "growth-expert"])))
 

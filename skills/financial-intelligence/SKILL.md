@@ -3,6 +3,9 @@ name: financial-intelligence
 description: Financial Intelligence — analyzes an account's or the business's financials (revenue, growth, margins, EBITDA, cash flow, capex, debt, cash, working capital, DSO, business-unit and geographic performance, investment, M&A, restructuring, cost pressure, technology investment), computing every metric deterministically in code with source, date and confidence, never fabricating missing values, and translating financial signals into commercial implications. Use for "show me the financial story", "how is this company doing financially", "margin trend", "can they fund this", "what do their results mean for us", or when an account plan, opportunity or decision needs financial evidence.
 ---
 
+> Shared scripts and references live at the plugin root: `../../scripts/` and `../../references/` from this skill's folder.
+
+
 # Financial Intelligence
 
 Version 7.1 · Used by the **financial-intelligence-agent** (and account, opportunity, orchestrator, and decision flows)
@@ -10,7 +13,7 @@ Version 7.1 · Used by the **financial-intelligence-agent** (and account, opport
 ## Operating instructions
 1. **Collect sourced facts.** Use public filings and results releases (Research agent: WebSearch/WebFetch, cited) or internal finance data. Write them as long-format facts, each with `source`, `source_date`, and `basis` (reported / non_gaap / secondary / estimate).
 2. **Compute (T0; never in the LLM):**
-   `python scripts/financial_intel.py --facts f.json [--events e.json] --model <B2B|B2C|B2B2C> [--public] --memory-db <db> --out fi.json`
+   `python ../../scripts/financial_intel.py --facts f.json [--events e.json] --model <B2B|B2C|B2B2C> [--public] --memory-db <db> --out fi.json`
 3. **Interpret (T2; T3 for strategic implications).** Tell the financial story from `metrics`, `trends`, `material_changes`, and `signals`. Present `commercial_implications` as **hypotheses**.
 4. **Hand off.** Pass the output to `growth-signal-orchestrator` (patterns P2 and P3), `growth-opportunity-discovery`, `account-intelligence-swot-planning` (section 2), and `decision-intelligence`.
 

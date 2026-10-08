@@ -3,6 +3,9 @@ name: competitive-thread-intelligence
 description: Competitive Thread Intelligence — maintains persistent CompetitiveThreads in Business Memory so competitor signals about the same account and competitor form one evolving story (chronology, velocity, acceleration or weakening, counter-evidence, resolution) linked to opportunities, stakeholders, campaigns, financial, relationship and market signals, with a predicted next event, recommended actions and recorded outcome. Use for "where are competitors gaining ground", "what is Competitor X doing in this account", "is this competitive threat getting worse", "update the competitive picture", or whenever a new competitor signal arrives.
 ---
 
+> Shared scripts and references live at the plugin root: `../../scripts/` and `../../references/` from this skill's folder.
+
+
 # Competitive Thread Intelligence
 
 Version 7.1 · Used by the **competitive-thread-agent** (and the deal, account, and orchestrator flows)
@@ -14,7 +17,7 @@ Stored in the memory file (tables `competitive_threads` and `thread_signals`), t
 
 ## Operating instructions
 1. **For every new competitor signal:**
-   `python scripts/competitive_threads.py <db> ingest signals.json [--asof DATE]`
+   `python ../../scripts/competitive_threads.py <db> ingest signals.json [--asof DATE]`
    This runs: signal → memory lookup → thread matching (same tenant + account + competitor + compatible family, within 180 days) → update or create → recompute (velocity, momentum, confidence, risk, prediction, actions) → persist (the thread plus `CompetitiveEvent` and `CompetitiveHypothesis` objects).
 2. **Link context:** `competitive_threads.py <db> link <thread> --opportunity O --stakeholder C --campaign M --financial-signal F --relationship-signal R --market-signal S`.
 3. **Read:** `get <thread>` · `query --account A | --competitor C | --opportunity O | --status S | --since D` · `snapshot --account A` (for the twin and delta).

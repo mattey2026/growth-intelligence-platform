@@ -3,13 +3,16 @@ name: artifact-dashboard-intelligence
 description: Artifact Dashboard renderer — turns a Dashboard Contract (schemas/dashboard.schema.json) into the Enterprise Growth Command Center, an interactive, self-contained Claude Artifact in the Growth Intelligence Design System (light/dark, 12-column grid, KPI strip, state of the business, what changed, trends, growth drivers, opportunity radar, risk matrix, competitive threads and timeline, financial, marketing, relationship map, SWOT, health, actions, scenario lab, comparisons, drill-down, evidence drawer, cross-filtering, Ask Intelligence). Use after dashboard-intelligence has built a contract, when the user wants to see or publish the dashboard. Contains no business logic.
 ---
 
+> Shared scripts and references live at the plugin root: `../../scripts/` and `../../references/` from this skill's folder.
+
+
 # Artifact Dashboard Intelligence (renderer)
 
 Version 7.2 · The first renderer for the Dashboard Contract. React, Next.js, portal or mobile renderers can replace it without touching the intelligence layer.
 
 ## Use
 ```
-python scripts/render_dashboard.py --contract contract.json --out /mnt/user-data/outputs/<entity>-command-center.html
+python ../../scripts/render_dashboard.py --contract contract.json --out /mnt/user-data/outputs/<entity>-command-center.html
 ```
 Then publish it with the Artifact tool. The script validates the contract against the schema and refuses to render an invalid one.
 

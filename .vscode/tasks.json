@@ -82,7 +82,7 @@
       "type": "process",
       "command": "${command:python.interpreterPath}",
       "args": [
-        "skills/platform-admin/scripts/registry.py",
+        "scripts/registry.py",
         ".",
         "validate"
       ],

@@ -6,7 +6,7 @@
 | **Dashboard suite** | `python3 tests/run_dashboard.py` | none (headless Chromium) | **83 tests**: skill 11, agent 10, contract 11, rendering 10, cross-filter 10, drill-down 10, persona 6, evidence 5, scenario 5, responsive/design 5. Browser tests are reported as SKIPPED (never passed) if Chromium is unavailable |
 | **V7.1 suite** | `python3 tests/run_v71.py` | none | **104 tests** in 10 areas (below), including the Sanofi end-to-end test (D21), business-model adaptability (D22), and missing data (D23) |
 | **V7 regression** | `python3 tests/run_offline.py` | none | 30 V7 scenarios plus 8 V6.1 regression checks |
-| **Structure** | `python3 tests/validate_strict.py .` · `python3 skills/platform-admin/scripts/registry.py . validate` · `claude plugin validate .` · `claude plugin validate ./agents` | none | YAML and frontmatter, registry consistency, official plugin schema |
+| **Structure** | `python3 tests/validate_strict.py .` · `python3 scripts/registry.py . validate` · `claude plugin validate .` · `claude plugin validate ./agents` | none | YAML and frontmatter, registry consistency, official plugin schema |
 | **Live evals** | `bash tests/run_agent_tests.sh` (step 4) | **yes** (your account) | 14 cases: 4 new in V7.1, 1 in V7.2 (`dashboard-agent`), 1 in V8 (`discovery`): `marketing-agent`, `financial-agent`, `competitive-thread-agent`, `sanofi-strategy-v71` |
 
 ## V7.1 areas

@@ -25,7 +25,7 @@ In VS Code: **Terminal → Run Task → "Test: all suites"**.
 | To change | Do this |
 |---|---|
 | Starter prompts or slash commands | Edit `tools/catalog/catalog_data.py`, run `python tools/catalog/regenerate.py`, then `python tests/run_prompts.py`. Never hand-edit the generated YAML, `commands/*.md`, or the "Starter prompts" sections in SKILL.md files |
-| An agent | Edit `registry/manifests/<agent>.yaml`, then run `python skills/platform-admin/scripts/registry.py . build`. `agents/*.md` files are generated |
+| An agent | Edit `registry/manifests/<agent>.yaml`, then run `python scripts/registry.py . build`. `agents/*.md` files are generated |
 | The demo dashboard | `python tools/build_demo_dashboard.py`, then open `examples/enterprise-growth-command-center.html` |
 
 ## Install as a Claude Code plugin

@@ -3,6 +3,9 @@ name: marketing-intelligence
 description: Marketing Intelligence — turns raw marketing signals (email, web, webinars, events, intent data, executive briefings, campaigns) into account-level commercial intelligence — engagement change, executive engagement, buying-intent surges, campaign-to-account and campaign-to-opportunity influence (always labelled correlation unless tested), and evidence-backed commercial hypotheses — adapting to B2B accounts, B2C segments or B2B2C partners. Use for "what is marketing telling us", "is this account engaging", "which campaigns influenced this deal", "any buying intent", or when an account plan or opportunity needs marketing evidence.
 ---
 
+> Shared scripts and references live at the plugin root: `../../scripts/` and `../../references/` from this skill's folder.
+
+
 # Marketing Intelligence
 
 Version 7.1 · Used by the **marketing-intelligence-agent** (and the orchestrator, opportunity, and customer-growth flows)
@@ -10,7 +13,7 @@ Version 7.1 · Used by the **marketing-intelligence-agent** (and the orchestrato
 ## Operating instructions
 1. **Load context.** The Business Context Profile gives the business model: B2B → accounts; B2C → segments; B2B2C → partners plus end-consumer demand. Recall the previous `AccountEngagement` from memory for the delta.
 2. **Run the engine (T0):**
-   `python scripts/marketing_signals.py --signals s.json [--contacts c.json] [--opportunities o.json] [--campaigns m.json] [--initiatives i.json] --model <B2B|B2C|B2B2C> --asof <date> --memory-db <db> --out mk.json`
+   `python ../../scripts/marketing_signals.py --signals s.json [--contacts c.json] [--opportunities o.json] [--campaigns m.json] [--initiatives i.json] --model <B2B|B2C|B2B2C> --asof <date> --memory-db <db> --out mk.json`
 3. **Interpret (T2).** Explain the material engagement changes, who is engaging (by role), and whether intent is surging. Only the hypotheses the engine produced may be presented as hypotheses.
 4. **Hand off.** Pass the output to `growth-signal-orchestrator` (`cross_domain_correlator.py --marketing mk.json`) for pattern P1 and compound patterns.
 
