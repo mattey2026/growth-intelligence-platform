@@ -62,6 +62,15 @@ Prompts adapt to **who you are** (13 personas: Investor · CEO · CFO · COO · 
 
 **34 capabilities · 204 headline prompts · 342 more by category · 38 slash commands.** The platform covers far more than sales:
 
+### From enterprise data to intelligent decisions
+
+The platform connects enterprise systems to business memory, specialist agents, cross-domain analysis, prediction, governance, and a decision-focused command center. The diagram below summarizes the architecture and the business questions it is designed to help answer.
+
+<p align="center"><img src="docs/assets/what-it-can-do.svg" alt="Growth Intelligence Platform: enterprise data flows through Claude, business memory, specialist agents, cross-domain intelligence, analytics and governance into a growth command center, with example business use cases" width="100%"></p>
+
+> **Demo note:** Dashboard values shown in the illustration are illustrative examples, not live customer data or production results.
+
+
 | Area | Capability | Command | Try |
 |:--|:--|:--|:--|
 | 📈 **Growth** | **Business Analysis** | `/bi` | _Analyze my business._ |
